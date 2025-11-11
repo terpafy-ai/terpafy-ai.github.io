@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - chore/publish_github_action
   workflow_dispatch:
 
 permissions:
