@@ -3,7 +3,7 @@
 > **Digital Health Assistant for SEC Patients**  
 > A modern, mobile-responsive one-page landing page built with React, Vite, and Tailwind CSS.
 
-[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?logo=github)](https://github.com/[username]/terpafy-lp)
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?logo=github)](https://github.com/[username]/terpafy-ai)
 
 ---
 
@@ -40,8 +40,8 @@ Terpafy is a digital health assistant that provides secure and empathetic suppor
 
 ```bash
 # Clone the repository
-git clone https://github.com/[username]/terpafy-lp.git
-cd terpafy-lp
+git clone https://github.com/[username]/terpafy-ai.git
+cd terpafy-ai
 
 # Install dependencies
 npm install
@@ -97,7 +97,7 @@ The application will be available at `http://localhost:5173`
 ## 🏗️ Project Structure
 
 ```
-terpafy-lp/
+terpafy-ai/
 ├── .github/workflows/     # CI/CD configuration
 ├── public/                # Static assets
 ├── src/
@@ -124,7 +124,7 @@ npm run deploy
 #### Option 2: Automatic Deployment (Recommended)
 1. Push code to GitHub `main` branch
 2. GitHub Actions automatically builds and deploys
-3. Site available at: `https://[username].github.io/terpafy-lp/`
+3. Site available at: `https://[username].github.io/terpafy-ai/`
 
 #### Option 3: Enable GitHub Pages
 1. Go to **Repository → Settings → Pages**
