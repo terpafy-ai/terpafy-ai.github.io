@@ -1,0 +1,270 @@
+{
+  "hero": {
+    "title": "Seu Assistente de Saúde Digital",
+    "subtitle": "Cuidado e ciência, na palma da sua mão. Suporte seguro para seu tratamento SEC via WhatsApp.",
+    "cta": "Começar Agora no WhatsApp",
+    "whatsappMessage": "Olá! Gostaria de saber mais sobre o Terpafy.",
+    "badges": {
+      "secure": "Seguro e Privado",
+      "medical": "Grau Médico",
+      "easy": "Fácil de Usar"
+    }
+  },
+  "features": {
+    "title": "Tudo o Que Você Precisa para Seu Tratamento",
+    "subtitle": "Ferramentas abrangentes projetadas para apoiar sua jornada de saúde com o tratamento do Sistema Endocanabinoide.",
+    "items": {
+      "monitoring": {
+        "title": "Monitoramento de Sintomas",
+        "description": "Acompanhe seus sintomas e progresso do tratamento com registros diários fáceis de usar."
+      },
+      "reminders": {
+        "title": "Lembretes Inteligentes",
+        "description": "Nunca perca uma dose com lembretes de medicação personalizados via WhatsApp."
+      },
+      "security": {
+        "title": "Seguro e Privado",
+        "description": "Seus dados de saúde são criptografados e protegidos com segurança de grau médico."
+      },
+      "education": {
+        "title": "Conteúdo Educacional",
+        "description": "Acesse informações confiáveis sobre seu tratamento SEC e dicas de bem-estar."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Comece em três passos simples e assuma o controle da sua jornada de saúde.",
+    "steps": {
+      "connect": {
+        "title": "Conecte via WhatsApp",
+        "description": "Inicie uma conversa com nosso assistente digital através do WhatsApp - sem necessidade de baixar aplicativo."
+      },
+      "track": {
+        "title": "Acompanhe Seu Tratamento",
+        "description": "Registre seus sintomas, ingestão de medicamentos e receba lembretes personalizados diariamente."
+      },
+      "monitor": {
+        "title": "Monitore o Progresso",
+        "description": "Visualize suas tendências de saúde e compartilhe insights com seu profissional de saúde."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Benefícios para Todos",
+    "subtitle": "Projetado para apoiar tanto pacientes quanto profissionais de saúde no gerenciamento eficaz do tratamento SEC.",
+    "patients": {
+      "title": "Para Pacientes",
+      "subtitle": "Capacitando você a assumir o controle da sua jornada de saúde",
+      "items": {
+        "never": {
+          "title": "Nunca Perca uma Dose",
+          "description": "Lembretes oportunos garantem a adesão ao tratamento"
+        },
+        "privacy": {
+          "title": "Privacidade em Primeiro Lugar",
+          "description": "Seus dados de saúde são criptografados e seguros"
+        },
+        "communication": {
+          "title": "Comunicação Fácil",
+          "description": "Conecte-se com sua equipe de cuidados sem problemas"
+        }
+      }
+    },
+    "professionals": {
+      "title": "Para Profissionais de Saúde",
+      "subtitle": "Ferramentas para aprimorar o cuidado e monitoramento do paciente",
+      "items": {
+        "realtime": {
+          "title": "Monitoramento em Tempo Real",
+          "description": "Acompanhe o progresso e adesão do paciente"
+        },
+        "insights": {
+          "title": "Insights Baseados em Dados",
+          "description": "Tome decisões de tratamento informadas"
+        },
+        "workflow": {
+          "title": "Fluxo de Trabalho Eficiente",
+          "description": "Simplifique a comunicação com o paciente"
+        }
+      }
+    },
+    "trust": {
+      "lgpd": "Conforme LGPD",
+      "encryption": "Criptografia 256-bit",
+      "support": "Suporte 24/7"
+    }
+  },
+  "cta": {
+    "title": "Pronto para Assumir o Controle da Sua Saúde?",
+    "subtitle": "Junte-se a milhares de pacientes que já estão gerenciando seu tratamento SEC com o Terpafy. Comece sua jornada hoje.",
+    "button": "Começar Grátis no WhatsApp",
+    "whatsappMessage": "Olá! Quero começar a usar o Terpafy.",
+    "learnMore": "Saiba Mais",
+    "note": "Sem cartão de crédito necessário • Grátis para começar • Conforme LGPD"
+  },
+  "footer": {
+    "description": "Seu assistente de saúde digital para tratamento SEC. Cuidado e ciência, na palma da sua mão.",
+    "phone": "+55 11 96001-1592",
+    "quickLinks": {
+      "title": "Links Rápidos",
+      "features": "Recursos",
+      "howItWorks": "Como Funciona",
+      "benefits": "Benefícios",
+      "about": "Sobre Nós"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "contact": "Contato",
+      "contactMessage": "Olá! Tenho uma dúvida sobre a Terpafy. Podem me ajudar?"
+    },
+    "copyright": "Todos os direitos reservados.",
+    "disclaimer": "Aviso Médico: Esta é uma ferramenta de suporte à saúde. Sempre consulte seu profissional de saúde para aconselhamento médico."
+  },
+  "legal": {
+    "backToHome": "Voltar para Início"
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdate": "Última Atualização",
+    "intro": "Esta Política de Privacidade descreve como a Terpafy (Desenvolvedora), responsável pelo MVP Assistente de Saúde para Pacientes do Sistema Endocanabinoide (SEC) via WhatsApp, coleta, usa, armazena e protege os dados pessoais e sensíveis dos usuários, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).",
+    "section1": {
+      "title": "1. Identificação e Contato da Controladora",
+      "description": "A Terpafy é um projeto em fase de Produto Mínimo Viável (MVP), atualmente operado pela Terpafy (Desenvolvedora).",
+      "status": "Status Legal",
+      "statusText": "A Terpafy opera como um projeto em fase de validação, não possuindo, neste momento, registro de Pessoa Jurídica (CNPJ). A responsabilidade legal pela proteção dos dados é da Controladora (Desenvolvedora).",
+      "contact": "Contato para Privacidade (DPO)"
+    },
+    "section2": {
+      "title": "2. Dados Coletados e Finalidade",
+      "description": "Coletamos dados para fornecer o serviço de assistência de saúde, monitoramento e educação.",
+      "table": {
+        "category": "Categoria de Dados",
+        "examples": "Exemplos de Dados Coletados",
+        "purpose": "Finalidade do Tratamento",
+        "legal": "Base Legal (LGPD)",
+        "personal": "Dados Pessoais",
+        "personalExamples": "Nome, Número de Telefone (WhatsApp ID), Horário de Uso",
+        "personalPurpose": "Identificação do usuário, comunicação via WhatsApp, envio de lembretes e suporte técnico",
+        "personalLegal": "Execução de Contrato (Art. 7º, V)",
+        "sensitive": "Dados Sensíveis de Saúde",
+        "sensitiveExamples": "Sintomas, Dosagens de medicamentos, Diário de Bem-Estar, Relatos de Efeitos",
+        "sensitivePurpose": "Monitoramento da adesão e eficácia do tratamento com cannabis medicinal, geração de relatórios de progresso",
+        "sensitiveLegal": "Consentimento Específico (Art. 11, I) e Proteção da Vida/Saúde (Art. 11, II, f)",
+        "usage": "Dados de Uso",
+        "usageExamples": "Interações com o assistente (mensagens enviadas/recebidas), dados técnicos da plataforma WhatsApp",
+        "usagePurpose": "Melhoria da qualidade do serviço, treinamento do modelo de Inteligência Artificial (LLM)",
+        "usageLegal": "Legítimo Interesse (Art. 7º, IX)"
+      }
+    },
+    "section3": {
+      "title": "3. Tratamento de Dados Sensíveis e Consentimento",
+      "description": "O tratamento dos Dados Sensíveis de Saúde é realizado sob rigoroso controle e é a finalidade central do MVP.",
+      "consent": "Consentimento",
+      "consentText": "Ao iniciar o uso do Assistente de Saúde, o usuário deve fornecer consentimento específico e destacado para o tratamento de seus dados de saúde. Sem este consentimento, o serviço de monitoramento e diário de sintomas não poderá ser prestado.",
+      "anonymization": "Anonimização",
+      "anonymizationText": "Os dados de saúde podem ser anonimizados e utilizados em estudos estatísticos e de melhoria do serviço, sem que possam ser vinculados ao usuário individual."
+    },
+    "section4": {
+      "title": "4. Compartilhamento de Dados",
+      "description": "A Terpafy se compromete a não vender ou alugar seus dados pessoais. O compartilhamento ocorre apenas nas seguintes hipóteses:",
+      "doctor": "Com o Médico/Profissional de Saúde",
+      "doctorText": "Apenas mediante consentimento expresso e específico do paciente, para que o profissional possa monitorar o progresso do tratamento.",
+      "operators": "Com Operadores",
+      "operatorsText": "Com empresas de tecnologia (ex: provedores de nuvem, API do WhatsApp) que processam os dados em nome da Terpafy, sob cláusulas contratuais de confidencialidade e segurança.",
+      "legal": "Obrigação Legal",
+      "legalText": "Para cumprir determinações legais, judiciais ou administrativas."
+    },
+    "section5": {
+      "title": "5. Segurança e Riscos (LGPD)",
+      "description": "Reconhecendo a natureza sensível dos dados de saúde e o status de MVP:",
+      "measures": "Medidas de Segurança",
+      "measuresText": "Utilizamos medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, destruição, perda, alteração ou divulgação. Isso inclui criptografia de dados em trânsito e em repouso.",
+      "risk": "Risco da Ausência de CNPJ",
+      "riskText": "O usuário reconhece que, por estar em fase de MVP e sem CNPJ, a Controladora é uma entidade em formação. Embora a Controladora se esforce para cumprir a LGPD, a ausência de uma estrutura jurídica formal pode, em tese, dificultar a responsabilização em caso de incidentes.",
+      "whatsapp": "Plataforma WhatsApp",
+      "whatsappText": "O usuário reconhece que o serviço é prestado através da plataforma WhatsApp, cujas políticas de privacidade e segurança são de responsabilidade da Meta Platforms, Inc."
+    },
+    "section6": {
+      "title": "6. Direitos do Titular (LGPD)",
+      "description": "O titular dos dados possui os seguintes direitos, que podem ser exercidos a qualquer momento através do contato indicado:",
+      "right1": "Confirmação da existência de tratamento",
+      "right2": "Acesso aos dados",
+      "right3": "Correção de dados incompletos, inexatos ou desatualizados",
+      "right4": "Anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade",
+      "right5": "Revogação do consentimento"
+    },
+    "section7": {
+      "title": "7. Retenção e Eliminação de Dados",
+      "description": "Os dados são retidos apenas pelo tempo necessário para cumprir as finalidades descritas ou para cumprir obrigações legais. O usuário pode solicitar a eliminação de seus dados a qualquer momento, exceto aqueles que a lei exige que sejam mantidos."
+    },
+    "section8": {
+      "title": "8. Alterações na Política",
+      "description": "Esta Política de Privacidade pode ser atualizada. Recomendamos que o usuário a revise periodicamente. O uso continuado do serviço após qualquer alteração implica aceitação da nova política."
+    },
+    "contact": {
+      "title": "Contato",
+      "description": "Para dúvidas ou solicitações relacionadas à privacidade e proteção de dados:"
+    }
+  },
+  "terms": {
+    "title": "Termos de Serviço",
+    "lastUpdate": "Última Atualização",
+    "intro": "Estes Termos de Serviço regem o uso do MVP Assistente de Saúde para Pacientes do Sistema Endocanabinoide (SEC), fornecido pela Terpafy (Desenvolvedora). Ao utilizar o Serviço via WhatsApp, o usuário concorda com estes Termos.",
+    "section1": {
+      "title": "1. O Serviço e Sua Natureza",
+      "nature": "Natureza do Serviço",
+      "natureText": "O Serviço é um Assistente de Saúde Digital baseado em Inteligência Artificial (IA) e operado via WhatsApp. Ele fornece lembretes de dosagem, registro de sintomas, conteúdo educacional e suporte informativo.",
+      "limitation": "Limitação Médica",
+      "limitationText": "O Serviço NÃO É UM SUBSTITUTO PARA A CONSULTA MÉDICA. O Assistente não realiza diagnósticos, não prescreve tratamentos e não deve ser utilizado em situações de emergência médica. As informações fornecidas são de natureza informativa e de suporte à adesão.",
+      "mvp": "Fase de MVP",
+      "mvpText": "O Serviço está em fase de Produto Mínimo Viável (MVP). Isso significa que pode haver interrupções, erros ou limitações nas funcionalidades. O usuário aceita utilizar o Serviço ciente de sua natureza experimental e em desenvolvimento."
+    },
+    "section2": {
+      "title": "2. Uso do Serviço via WhatsApp",
+      "platform": "Plataforma de Terceiros",
+      "platformText": "O Serviço depende da plataforma WhatsApp. O usuário deve cumprir os Termos de Serviço e Políticas de Privacidade do WhatsApp. A Terpafy não se responsabiliza por quaisquer problemas ou interrupções causadas pela plataforma WhatsApp.",
+      "communication": "Comunicação",
+      "communicationText": "O usuário concorda em receber mensagens automatizadas e informativas da Terpafy através do número de telefone cadastrado no WhatsApp.",
+      "responsibility": "Responsabilidade do Usuário",
+      "responsibilityText": "O usuário é o único responsável pela precisão e veracidade das informações de saúde que insere no diário de sintomas e dosagens."
+    },
+    "section3": {
+      "title": "3. Propriedade Intelectual",
+      "content": "Conteúdo da Terpafy",
+      "contentText": "Todo o conteúdo educacional, o software do assistente e a identidade visual (logotipo, cores, tipografia) são de propriedade da Terpafy (Desenvolvedora) e protegidos por leis de propriedade intelectual.",
+      "usage": "Uso Pessoal",
+      "usageText": "O usuário recebe uma licença limitada, não exclusiva e intransferível para usar o Serviço apenas para fins pessoais e de suporte ao seu tratamento de saúde."
+    },
+    "section4": {
+      "title": "4. Limitação de Responsabilidade",
+      "critical": "ESTE É UM PONTO CRÍTICO DEVIDO À NATUREZA DE SAÚDE E AO STATUS DE MVP:",
+      "noGuarantee": "Não Garantia Médica",
+      "noGuaranteeText": "A Terpafy (Desenvolvedora) e seus criadores não garantem que o uso do Serviço resultará em melhorias específicas de saúde ou que as informações fornecidas são 100% livres de erros. O usuário assume total responsabilidade por suas decisões de saúde.",
+      "noCNPJ": "Ausência de CNPJ",
+      "noCNPJText": "O usuário reconhece que a Terpafy opera como um projeto em fase de MVP e não possui CNPJ. Em caso de disputas legais, a responsabilidade será limitada à Controladora (Desenvolvedora) e aos termos estabelecidos neste documento.",
+      "damages": "Danos",
+      "damagesText": "Em nenhuma circunstância a Terpafy será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais decorrentes do uso ou da incapacidade de usar o Serviço."
+    },
+    "section5": {
+      "title": "5. Disposições Gerais",
+      "acceptance": "Aceitação",
+      "acceptanceText": "O uso contínuo do Serviço constitui a aceitação integral destes Termos.",
+      "changes": "Alterações",
+      "changesText": "A Terpafy reserva-se o direito de modificar estes Termos a qualquer momento. O usuário será notificado sobre alterações substanciais.",
+      "law": "Lei Aplicável",
+      "lawText": "Estes Termos são regidos pelas leis da República Federativa do Brasil, incluindo a LGPD.",
+      "jurisdiction": "Foro"
+    },
+    "contact": {
+      "title": "Contato",
+      "description": "Para dúvidas ou comunicação sobre estes Termos:"
+    },
+    "disclaimer": {
+      "title": "Aviso Legal",
+      "text": "Por se tratar de documentos legais que envolvem dados sensíveis e responsabilidade civil, é altamente recomendável que estes textos sejam revisados e validados por um advogado especializado em Direito Digital e LGPD antes de serem publicados e utilizados."
+    }
+  }
+}

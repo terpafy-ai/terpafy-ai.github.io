@@ -1,27 +1,74 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand color tokens — will be updated in Phase 2 from Figma exports */
-  --color-primary: oklch(0.55 0.18 145);
-  --color-primary-foreground: oklch(0.98 0 0);
+  /* ─── Brand Colors — source: figma-export/colors.md ─── */
 
-  --color-secondary: oklch(0.75 0.12 145);
-  --color-secondary-foreground: oklch(0.15 0 0);
+  /* Primary: Terpafy Pulse (Red) */
+  --color-primary: #f2594b;
+  --color-primary-dark: #b33327;
+  --color-primary-light: #f1877d;
+  --color-primary-lighter: #f2bcb7;
+  --color-primary-lightest: #eedddb;
+  --color-primary-foreground: #f6f6f6;
 
-  --color-background: oklch(0.98 0 0);
-  --color-foreground: oklch(0.15 0 0);
+  /* Secondary: Signal Intelligence (Yellow) */
+  --color-secondary: #eaf205;
+  --color-secondary-dark: #b0b601;
+  --color-secondary-light: #eff470;
+  --color-secondary-lighter: #ecefa3;
+  --color-secondary-lightest: #eeefcc;
+  --color-secondary-foreground: #3a3a3a;
 
-  --color-muted: oklch(0.95 0 0);
-  --color-muted-foreground: oklch(0.45 0 0);
+  /* Accent: Connected Flow (Cyan) */
+  --color-accent: #0aeded;
+  --color-accent-dark: #06aeae;
+  --color-accent-light: #78e9e9;
+  --color-accent-lighter: #b1eded;
+  --color-accent-lightest: #d9eded;
+  --color-accent-foreground: #3a3a3a;
 
-  --color-border: oklch(0.9 0 0);
-  --color-input: oklch(0.9 0 0);
-  --color-ring: oklch(0.55 0.18 145);
+  /* Accent Green: Living Science (Olive) */
+  --color-accent-green: #93a603;
+  --color-accent-green-dark: #4a5402;
+  --color-accent-green-light: #bdc580;
+  --color-accent-green-foreground: #f6f6f6;
 
-  --color-destructive: oklch(0.55 0.22 27);
-  --color-destructive-foreground: oklch(0.98 0 0);
+  /* Neutrals */
+  --color-foreground: #3a3a3a;
+  --color-foreground-muted: #5c6068;
+  --color-background: #f6f6f6;
+  --color-background-dark: #3a3a3a;
+  --color-background-light: #d6d1dc;
+  --color-muted: #e8d8e9;
+  --color-muted-foreground: #5c6068;
+  --color-border: #d6d6d6;
+  --color-input: #d6d6d6;
 
+  /* Brand Secondaries */
+  --color-neutral-dark: #592e25;
+  --color-neutral-warm: #d9bfb0;
+
+  /* Semantic */
+  --color-ring: #f2594b;
+  --color-destructive: #b33327;
+  --color-destructive-foreground: #f6f6f6;
+  --color-success: #93a603;
+  --color-warning: #eaf205;
+  --color-error: #b33327;
+
+  /* ─── Typography — source: figma-export/typography.md ─── */
+  --font-heading: "Anton", serif;
+  --font-body: "Inter", "Gotham", "Montserrat", sans-serif;
+
+  /* ─── Border Radius ─── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
   --radius: 0.5rem;
+
+  /* ─── Spacing scale base ─── */
+  --spacing: 0.25rem;
 }
 
 @layer base {
@@ -34,9 +81,19 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 }
