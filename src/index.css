@@ -1,37 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  /* Brand color tokens — will be updated in Phase 2 from Figma exports */
+  --color-primary: oklch(0.55 0.18 145);
+  --color-primary-foreground: oklch(0.98 0 0);
+
+  --color-secondary: oklch(0.75 0.12 145);
+  --color-secondary-foreground: oklch(0.15 0 0);
+
+  --color-background: oklch(0.98 0 0);
+  --color-foreground: oklch(0.15 0 0);
+
+  --color-muted: oklch(0.95 0 0);
+  --color-muted-foreground: oklch(0.45 0 0);
+
+  --color-border: oklch(0.9 0 0);
+  --color-input: oklch(0.9 0 0);
+  --color-ring: oklch(0.55 0.18 145);
+
+  --color-destructive: oklch(0.55 0.22 27);
+  --color-destructive-foreground: oklch(0.98 0 0);
+
+  --radius: 0.5rem;
+}
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+
   body {
-    font-family: 'Open Sans', sans-serif;
-    color: #2C2C2C;
-    background-color: white;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-[#1E642E] hover:bg-[#164A22] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200;
-  }
-  
-  .btn-secondary {
-    @apply bg-[#9ACD32] hover:bg-[#7BA428] text-[#1E642E] font-semibold py-3 px-6 rounded-md transition-colors duration-200;
-  }
-  
-  .card {
-    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
