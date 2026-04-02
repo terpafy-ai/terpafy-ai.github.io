@@ -1,9 +1,14 @@
 {
   "hero": {
-    "title": "Seu Assistente de Saúde Digital",
-    "subtitle": "Cuidado e ciência, na palma da sua mão. Suporte seguro para seu tratamento SEC via WhatsApp.",
-    "cta": "Começar Agora no WhatsApp",
-    "whatsappMessage": "Olá! Gostaria de saber mais sobre o Terpafy.",
+    "badge": "Terpafy Grow · Disponível agora",
+    "titleLine1": "Seu cultivo tem dúvidas.",
+    "titleLine2": "O Terpafy",
+    "titleLine3": "tem respostas.",
+    "title": "Seu cultivo tem dúvidas. O Terpafy Grow tem respostas.",
+    "subtitle": "Um especialista em cultivo de cannabis — disponível para orientar sua planta, do iniciante ao avançado, no momento em que você precisar.",
+    "cta": "Falar com o Terpafy Grow",
+    "ctaSecondary": "Ver como funciona",
+    "whatsappMessage": "Olá! Quero orientação sobre meu cultivo com o Terpafy Grow.",
     "badges": {
       "secure": "Seguro e Privado",
       "medical": "Grau Médico",
@@ -11,81 +16,85 @@
     }
   },
   "features": {
-    "title": "Tudo o Que Você Precisa para Seu Tratamento",
-    "subtitle": "Ferramentas abrangentes projetadas para apoiar sua jornada de saúde com o tratamento do Sistema Endocanabinoide.",
+    "label": "O Terpafy Grow",
+    "title": "Um especialista em cultivo. Disponível agora.",
+    "subtitle": "Não é uma busca. Não é um fórum. É uma conversa com um especialista em cultivo de cannabis que entende o seu contexto e orienta com base no que está acontecendo na sua planta agora.",
+    "cta": "Falar com o Terpafy Grow",
     "items": {
       "monitoring": {
-        "title": "Monitoramento de Sintomas",
-        "description": "Acompanhe seus sintomas e progresso do tratamento com registros diários fáceis de usar."
+        "title": "Diagnóstico de Plantas",
+        "description": "Descreva o que está vendo e receba orientação precisa sobre sua planta."
       },
       "reminders": {
-        "title": "Lembretes Inteligentes",
-        "description": "Nunca perca uma dose com lembretes de medicação personalizados via WhatsApp."
+        "title": "Gestão de Ciclos",
+        "description": "Acompanhe etapas do cultivo, rega, nutrição e iluminação com suporte inteligente."
       },
       "security": {
-        "title": "Seguro e Privado",
-        "description": "Seus dados de saúde são criptografados e protegidos com segurança de grau médico."
+        "title": "Privacidade Total",
+        "description": "Suas informações de cultivo são protegidas e nunca compartilhadas sem consentimento."
       },
       "education": {
-        "title": "Conteúdo Educacional",
-        "description": "Acesse informações confiáveis sobre seu tratamento SEC e dicas de bem-estar."
+        "title": "Base de Conhecimento",
+        "description": "Genética, substrato, poda, colheita, extração — tudo em uma conversa."
       }
     }
   },
   "howItWorks": {
-    "title": "Como Funciona",
-    "subtitle": "Comece em três passos simples e assuma o controle da sua jornada de saúde.",
+    "label": "Como funciona",
+    "title": "Cada conversa. Uma orientação real.",
+    "subtitle": "Sem aplicativo, sem cadastro. Só você, sua planta e o Terpafy Grow.",
     "steps": {
       "connect": {
         "title": "Conecte via WhatsApp",
-        "description": "Inicie uma conversa com nosso assistente digital através do WhatsApp - sem necessidade de baixar aplicativo."
+        "description": "Inicie uma conversa com o Terpafy Grow pelo WhatsApp — sem baixar nenhum aplicativo."
       },
       "track": {
-        "title": "Acompanhe Seu Tratamento",
-        "description": "Registre seus sintomas, ingestão de medicamentos e receba lembretes personalizados diariamente."
+        "title": "Descreva sua planta",
+        "description": "Conte o que está vendo: sintomas, estágio, ambiente. O especialista entende seu contexto."
       },
       "monitor": {
-        "title": "Monitore o Progresso",
-        "description": "Visualize suas tendências de saúde e compartilhe insights com seu profissional de saúde."
+        "title": "Receba orientação precisa",
+        "description": "Cada resposta é personalizada para o seu cultivo, baseada no que você descreveu agora."
       }
     }
   },
   "benefits": {
-    "title": "Benefícios para Todos",
-    "subtitle": "Projetado para apoiar tanto pacientes quanto profissionais de saúde no gerenciamento eficaz do tratamento SEC.",
+    "label": "Para quem",
+    "title": "Cada perfil. Um ganho real.",
+    "subtitle": "O Terpafy Grow foi construído para quem está na ponta da produção — e para quem depende da qualidade dessa ponta para cuidar de pessoas.",
     "patients": {
-      "title": "Para Pacientes",
-      "subtitle": "Capacitando você a assumir o controle da sua jornada de saúde",
+      "title": "Para Cultivadores",
+      "subtitle": "Do iniciante ao avançado, com orientação no momento certo",
       "items": {
         "never": {
-          "title": "Nunca Perca uma Dose",
-          "description": "Lembretes oportunos garantem a adesão ao tratamento"
+          "title": "Nunca Fique Sem Resposta",
+          "description": "Especialista disponível a qualquer hora do dia"
         },
         "privacy": {
-          "title": "Privacidade em Primeiro Lugar",
-          "description": "Seus dados de saúde são criptografados e seguros"
+          "title": "Privacidade Garantida",
+          "description": "Suas informações de cultivo são totalmente protegidas"
         },
         "communication": {
-          "title": "Comunicação Fácil",
-          "description": "Conecte-se com sua equipe de cuidados sem problemas"
+          "title": "Só o WhatsApp",
+          "description": "Sem app extra, sem cadastro complicado"
         }
       }
     },
     "professionals": {
-      "title": "Para Profissionais de Saúde",
-      "subtitle": "Ferramentas para aprimorar o cuidado e monitoramento do paciente",
+      "title": "Para Associações e Clínicas",
+      "subtitle": "Qualidade no cultivo reflete diretamente no tratamento do paciente",
       "items": {
         "realtime": {
-          "title": "Monitoramento em Tempo Real",
-          "description": "Acompanhe o progresso e adesão do paciente"
+          "title": "Orientação Técnica em Escala",
+          "description": "Cultivadores assistidos produzem com mais consistência e qualidade"
         },
         "insights": {
-          "title": "Insights Baseados em Dados",
-          "description": "Tome decisões de tratamento informadas"
+          "title": "Rastreabilidade da Origem",
+          "description": "Conecte cultivo, extração e resultado clínico com mais confiança"
         },
         "workflow": {
-          "title": "Fluxo de Trabalho Eficiente",
-          "description": "Simplifique a comunicação com o paciente"
+          "title": "Integração com o Ecossistema",
+          "description": "Terpafy Grow conecta-se com Care, Med e Assoc"
         }
       }
     },
@@ -96,32 +105,36 @@
     }
   },
   "cta": {
-    "title": "Pronto para Assumir o Controle da Sua Saúde?",
-    "subtitle": "Junte-se a milhares de pacientes que já estão gerenciando seu tratamento SEC com o Terpafy. Comece sua jornada hoje.",
-    "button": "Começar Grátis no WhatsApp",
-    "whatsappMessage": "Olá! Quero começar a usar o Terpafy.",
-    "learnMore": "Saiba Mais",
-    "note": "Sem cartão de crédito necessário • Grátis para começar • Conforme LGPD"
+    "quote": "Toda jornada desconectada gera incerteza.",
+    "title": "Comece sua orientação agora.",
+    "subtitle": "O Terpafy Grow começa onde o problema começa: na orientação ao cultivador. Cada conversa transforma dúvida em previsibilidade.",
+    "button": "Falar com o Terpafy Grow",
+    "whatsappMessage": "Olá! Quero começar a usar o Terpafy Grow.",
+    "learnMore": "Ver como funciona",
+    "note": "Gratuito para começar · Sem cartão de crédito · Privacidade garantida"
   },
   "footer": {
-    "description": "Seu assistente de saúde digital para tratamento SEC. Cuidado e ciência, na palma da sua mão.",
+    "tagline": "A inteligência que conecta a jornada da cannabis, do cultivo ao cuidado, para um bem-estar previsível e seguro.",
+    "description": "Seu especialista em cultivo de cannabis medicinal via WhatsApp.",
     "phone": "+55 11 96001-1592",
     "quickLinks": {
-      "title": "Links Rápidos",
-      "features": "Recursos",
-      "howItWorks": "Como Funciona",
-      "benefits": "Benefícios",
-      "about": "Sobre Nós"
+      "title": "Produto",
+      "features": "Como Funciona",
+      "howItWorks": "O Consultor",
+      "benefits": "Para Quem",
+      "about": "Sobre"
     },
     "legal": {
       "title": "Legal",
-      "privacy": "Política de Privacidade",
-      "terms": "Termos de Serviço",
+      "privacy": "Privacidade e Segurança",
+      "terms": "Termos e Condições",
+      "compliance": "Compliance e Ética",
       "contact": "Contato",
       "contactMessage": "Olá! Tenho uma dúvida sobre a Terpafy. Podem me ajudar?"
     },
-    "copyright": "Todos os direitos reservados.",
-    "disclaimer": "Aviso Médico: Esta é uma ferramenta de suporte à saúde. Sempre consulte seu profissional de saúde para aconselhamento médico."
+    "suite": "Terpafy Grow · Care · Med · Assoc · Marketplace",
+    "copyright": "© {{year}} Terpafy. Todos os direitos reservados.",
+    "disclaimer": "Esta ferramenta é de suporte ao cultivo. Não substitui orientação médica profissional."
   },
   "legal": {
     "backToHome": "Voltar para Início"
@@ -266,5 +279,17 @@
       "title": "Aviso Legal",
       "text": "Por se tratar de documentos legais que envolvem dados sensíveis e responsabilidade civil, é altamente recomendável que estes textos sejam revisados e validados por um advogado especializado em Direito Digital e LGPD antes de serem publicados e utilizados."
     }
+  },
+  "nav": {
+    "home": "Início",
+    "features": "Como Funciona",
+    "howItWorks": "O Consultor",
+    "benefits": "Para Quem",
+    "cta": "Falar com o Grow"
+  },
+  "lang": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
   }
 }

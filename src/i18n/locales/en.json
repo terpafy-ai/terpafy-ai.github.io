@@ -1,91 +1,100 @@
 {
   "hero": {
-    "title": "Your Digital Health Assistant",
-    "subtitle": "Care and science, in the palm of your hand. Secure support for your SEC treatment via WhatsApp.",
-    "cta": "Start Now on WhatsApp",
-    "whatsappMessage": "Hello! I would like to know more about Terpafy.",
+    "badge": "Terpafy Grow · Available now",
+    "titleLine1": "Your cultivation has doubts.",
+    "titleLine2": "Terpafy",
+    "titleLine3": "has answers.",
+    "title": "Your cultivation has doubts. Terpafy Grow has answers.",
+    "subtitle": "A cannabis cultivation specialist — available to guide your plant, from beginner to advanced, whenever you need.",
+    "cta": "Talk to Terpafy Grow",
+    "ctaSecondary": "See how it works",
+    "whatsappMessage": "Hi! I want guidance on my cultivation with Terpafy Grow.",
     "badges": {
       "secure": "Secure & Private",
-      "medical": "Medical-Grade",
+      "medical": "Medical Grade",
       "easy": "Easy to Use"
     }
   },
   "features": {
-    "title": "Everything You Need for Your Treatment",
-    "subtitle": "Comprehensive tools designed to support your health journey with the Endocannabinoid System treatment.",
+    "label": "Terpafy Grow",
+    "title": "A cultivation specialist. Available now.",
+    "subtitle": "Not a search engine. Not a forum. A conversation with a cannabis cultivation specialist who understands your context and guides based on what's happening with your plant right now.",
+    "cta": "Talk to Terpafy Grow",
     "items": {
       "monitoring": {
-        "title": "Symptom Monitoring",
-        "description": "Track your symptoms and treatment progress with easy-to-use daily logs."
+        "title": "Plant Diagnosis",
+        "description": "Describe what you see and receive accurate guidance for your plant."
       },
       "reminders": {
-        "title": "Smart Reminders",
-        "description": "Never miss a dose with personalized medication reminders via WhatsApp."
+        "title": "Cycle Management",
+        "description": "Track cultivation stages, watering, nutrition, and lighting with smart support."
       },
       "security": {
-        "title": "Secure & Private",
-        "description": "Your health data is encrypted and protected with medical-grade security."
+        "title": "Full Privacy",
+        "description": "Your cultivation information is protected and never shared without consent."
       },
       "education": {
-        "title": "Educational Content",
-        "description": "Access reliable information about your SEC treatment and wellness tips."
+        "title": "Knowledge Base",
+        "description": "Genetics, substrate, pruning, harvest, extraction — all in one conversation."
       }
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Get started in three simple steps and take control of your health journey.",
+    "label": "How it works",
+    "title": "Every conversation. Real guidance.",
+    "subtitle": "No app, no sign-up. Just you, your plant, and Terpafy Grow.",
     "steps": {
       "connect": {
         "title": "Connect via WhatsApp",
-        "description": "Start a conversation with our digital assistant through WhatsApp - no app download needed."
+        "description": "Start a conversation with Terpafy Grow on WhatsApp — no app to download."
       },
       "track": {
-        "title": "Track Your Treatment",
-        "description": "Log your symptoms, medication intake, and receive personalized reminders daily."
+        "title": "Describe your plant",
+        "description": "Tell us what you see: symptoms, stage, environment. The specialist understands your context."
       },
       "monitor": {
-        "title": "Monitor Progress",
-        "description": "View your health trends and share insights with your healthcare provider."
+        "title": "Get precise guidance",
+        "description": "Every answer is personalized for your cultivation, based on what you described right now."
       }
     }
   },
   "benefits": {
-    "title": "Benefits for Everyone",
-    "subtitle": "Designed to support both patients and healthcare professionals in managing SEC treatment effectively.",
+    "label": "Who it's for",
+    "title": "Every profile. Real gains.",
+    "subtitle": "Terpafy Grow was built for those at the tip of production — and for those who depend on that quality to care for people.",
     "patients": {
-      "title": "For Patients",
-      "subtitle": "Empowering you to take control of your health journey",
+      "title": "For Growers",
+      "subtitle": "From beginner to advanced, with guidance at the right time",
       "items": {
         "never": {
-          "title": "Never Miss a Dose",
-          "description": "Timely reminders ensure treatment adherence"
+          "title": "Never Left Without an Answer",
+          "description": "Specialist available anytime for your cultivation"
         },
         "privacy": {
-          "title": "Privacy First",
-          "description": "Your health data is encrypted and secure"
+          "title": "Privacy Guaranteed",
+          "description": "Your cultivation information is fully protected"
         },
         "communication": {
-          "title": "Easy Communication",
-          "description": "Connect with your care team seamlessly"
+          "title": "Just WhatsApp",
+          "description": "No extra app, no complicated sign-up"
         }
       }
     },
     "professionals": {
-      "title": "For Healthcare Professionals",
-      "subtitle": "Tools to enhance patient care and monitoring",
+      "title": "For Associations & Clinics",
+      "subtitle": "Quality in cultivation directly reflects in patient treatment",
       "items": {
         "realtime": {
-          "title": "Real-Time Monitoring",
-          "description": "Track patient progress and adherence"
+          "title": "Technical Guidance at Scale",
+          "description": "Assisted growers produce with more consistency and quality"
         },
         "insights": {
-          "title": "Data-Driven Insights",
-          "description": "Make informed treatment decisions"
+          "title": "Origin Traceability",
+          "description": "Connect cultivation, extraction, and clinical results with more confidence"
         },
         "workflow": {
-          "title": "Efficient Workflow",
-          "description": "Streamline patient communication"
+          "title": "Ecosystem Integration",
+          "description": "Terpafy Grow connects with Care, Med, and Assoc"
         }
       }
     },
@@ -96,32 +105,36 @@
     }
   },
   "cta": {
-    "title": "Ready to Take Control of Your Health?",
-    "subtitle": "Join thousands of patients who are already managing their SEC treatment with Terpafy. Start your journey today.",
-    "button": "Start Free on WhatsApp",
-    "whatsappMessage": "Hello! I want to start using Terpafy.",
-    "learnMore": "Learn More",
-    "note": "No credit card required • Free to start • LGPD compliant"
+    "quote": "Every disconnected journey creates uncertainty.",
+    "title": "Start your guidance now.",
+    "subtitle": "Terpafy Grow starts where the problem starts: at the grower's guidance. Each conversation transforms doubt into predictability.",
+    "button": "Talk to Terpafy Grow",
+    "whatsappMessage": "Hi! I want to start using Terpafy Grow.",
+    "learnMore": "See how it works",
+    "note": "Free to start · No credit card · Privacy guaranteed"
   },
   "footer": {
-    "description": "Your digital health assistant for SEC treatment. Care and science, in the palm of your hand.",
+    "tagline": "The intelligence that connects the cannabis journey, from cultivation to care, for predictable and safe well-being.",
+    "description": "Your cannabis cultivation specialist via WhatsApp.",
     "phone": "+55 11 96001-1592",
     "quickLinks": {
-      "title": "Quick Links",
-      "features": "Features",
-      "howItWorks": "How It Works",
-      "benefits": "Benefits",
-      "about": "About Us"
+      "title": "Product",
+      "features": "How It Works",
+      "howItWorks": "The Advisor",
+      "benefits": "Who It's For",
+      "about": "About"
     },
     "legal": {
       "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
+      "privacy": "Privacy & Security",
+      "terms": "Terms & Conditions",
+      "compliance": "Compliance & Ethics",
       "contact": "Contact",
-      "contactMessage": "Hello! I have a question about Terpafy. Can you help me?"
+      "contactMessage": "Hi! I have a question about Terpafy. Can you help?"
     },
-    "copyright": "All rights reserved.",
-    "disclaimer": "Medical Disclaimer: This is a health support tool. Always consult your healthcare provider for medical advice."
+    "suite": "Terpafy Grow · Care · Med · Assoc · Marketplace",
+    "copyright": "© {{year}} Terpafy. All rights reserved.",
+    "disclaimer": "This tool supports cultivation. It does not replace professional medical guidance."
   },
   "legal": {
     "backToHome": "Back to Home"
@@ -266,5 +279,17 @@
       "title": "Legal Notice",
       "text": "As these are legal documents involving sensitive data and civil liability, it is highly recommended that these texts be reviewed and validated by a lawyer specialized in Digital Law and LGPD before being published and used."
     }
+  },
+  "nav": {
+    "home": "Home",
+    "features": "How It Works",
+    "howItWorks": "The Advisor",
+    "benefits": "Who It's For",
+    "cta": "Talk to Grow"
+  },
+  "lang": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
   }
 }
