@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/common/Logo";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
-const WHATSAPP_NUMBER =
-  import.meta.env.VITE_WHATSAPP_NUMBER ?? "5511960011592";
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? "";
 
 /**
  * Site footer — matches Figma: coral/red background, logo, tagline,
