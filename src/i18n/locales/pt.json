@@ -71,8 +71,10 @@
     }
   },
   "bigChat": {
-    "title1": "Bem-vindo ao ",
+    "title1": "Bem-vindo ao",
+    "title2": "Terpafy",
     "titleBrand": "Grow",
+    "comingSoon": "Em breve — Terpafy Grow está chegando.",
     "subtitle": "Um especialista em cultivo de cannabis disponível para orientar sua planta",
     "placeholder": "Escreva sua dúvida...",
     "defend": "O que defendemos",
