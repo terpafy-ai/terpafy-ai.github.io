@@ -61,7 +61,7 @@ export function ChatButton({
       type="button"
       onClick={handleClick}
       className={cn(
-        "relative inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3",
+        "relative inline-flex items-center justify-center gap-2 rounded-[4px] bg-primary pl-8 pr-6 py-4",
         "text-base font-semibold text-primary-foreground",
         "transition-colors hover:bg-primary-dark focus-visible:outline-none",
         "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",

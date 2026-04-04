@@ -48,10 +48,10 @@ export function Features() {
             className="size-[24px] text-[#f2594b]"
             aria-hidden="true"
           />
-          <p className="text-[14px] font-bold text-[#3a3a3a]">
+          <p className="text-[14px] font-bold text-[#f2594b]">
             {t("features.highlightTitle")} · {t("features.highlightSub")}
           </p>
-          <p className="text-[13px] font-medium text-[#848484]">
+          <p className="text-[13px] font-medium text-[#f2887e]">
             {t("features.highlightBody")}
           </p>
         </div>
