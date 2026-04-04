@@ -106,14 +106,17 @@ export function HowItWorks() {
 
       {/* ── Desktop composition (no horizontal padding — positions are from 1200px edge) ── */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
-        <div className="relative overflow-visible" style={{ minHeight: 510 }}>
-          {/* Logo marks — behind everything */}
+        <div className="relative overflow-visible" style={{ minHeight: 570 }}>
+          {/* Logo marks — behind everything.
+              SVG has width="100%" height="100%" which prevents intrinsic ratio
+              detection; we must supply explicit pixel height (viewBox 495.866×490.6
+              → 540 × (490.6/495.866) ≈ 534 px). */}
           <img
             src={imgLogoMarks}
             alt=""
             aria-hidden="true"
             className="absolute"
-            style={{ left: 85, top: 0, width: 540, height: "auto", zIndex: 0 }}
+            style={{ left: 85, top: 0, width: 540, height: 534, zIndex: 0 }}
           />
 
           {/* Person photo — circular crop, above logo */}

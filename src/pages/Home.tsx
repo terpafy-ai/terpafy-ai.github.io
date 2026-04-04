@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/Hero";
-import { EcosystemBanner } from "@/components/common/EcosystemBanner";
 import { Problem } from "@/components/sections/Problem";
 import { Features } from "@/components/sections/Features";
 import { ChatCTA } from "@/components/sections/ChatCTA";
@@ -12,7 +11,6 @@ export function Home() {
   return (
     <main>
       <Hero />
-      <EcosystemBanner />
       <Problem />
       <Features />
       <ChatCTA />
