@@ -24,8 +24,8 @@ export function ChatTranscript({ messages, className }: ChatTranscriptProps) {
             className={cn(
               "flex max-w-[80%] flex-col gap-1 px-4 py-4 backdrop-blur-[16px]",
               msg.role === "user"
-                ? "rounded-[10px_10px_10px_5px] bg-[rgba(242,89,75,0.2)]"
-                : "rounded-[10px_10px_5px_10px] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)]",
+                ? "rounded-[10px_10px_10px_5px] border border-[#f2594b] bg-[rgba(242,89,75,0.2)]"
+                : "rounded-[10px_10px_5px_10px] border border-[#3a3a3a] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)]",
             )}
           >
             <p className="text-sm font-medium leading-[150%] text-[#3a3a3a]">
