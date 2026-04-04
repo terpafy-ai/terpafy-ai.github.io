@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ChevronDown, Globe } from "lucide-react";
+import { ArrowDown, Global } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 
 const LANGUAGES = [
@@ -71,9 +71,10 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
         )}
       >
-        <Globe className="h-4 w-4" aria-hidden="true" />
+        <Global variant="Bold" className="h-4 w-4" aria-hidden="true" />
         {currentLabel}
-        <ChevronDown
+        <ArrowDown
+          variant="Bold"
           className={cn(
             "h-3.5 w-3.5 transition-transform",
             open && "rotate-180",

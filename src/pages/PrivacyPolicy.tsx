@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import {
   ArrowLeft,
   User,
-  Database,
-  ShieldCheck,
-  Share2,
+  Data,
+  ShieldTick,
+  Share,
   Lock,
-  Scale,
+  Weight,
   Archive,
-  Bell,
-  Mail,
-} from "lucide-react";
+  Notification,
+  Sms,
+} from "vuesax-icons-react";
 import { Section } from "@/components/layout/Section";
 
 const LAST_UPDATED = new Date(2025, 0, 1);
@@ -37,7 +37,7 @@ export function PrivacyPolicy() {
           to="/"
           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
         >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          <ArrowLeft variant="Bold" className="h-4 w-4" aria-hidden="true" />
           {t("legal.backToHome")}
         </Link>
 
@@ -60,7 +60,7 @@ export function PrivacyPolicy() {
               id="privacy-s1"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <User className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <User variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section1.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -92,7 +92,7 @@ export function PrivacyPolicy() {
               id="privacy-s2"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Database className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Data variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section2.title")}
             </h2>
             <div className="space-y-4 text-foreground-muted">
@@ -170,7 +170,7 @@ export function PrivacyPolicy() {
               id="privacy-s3"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <ShieldCheck className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <ShieldTick variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section3.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -196,7 +196,7 @@ export function PrivacyPolicy() {
               id="privacy-s4"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Share2 className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Share variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section4.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -228,7 +228,7 @@ export function PrivacyPolicy() {
               id="privacy-s5"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Lock className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Lock variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section5.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -260,7 +260,7 @@ export function PrivacyPolicy() {
               id="privacy-s6"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Scale className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Weight variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section6.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -281,7 +281,7 @@ export function PrivacyPolicy() {
               id="privacy-s7"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Archive className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Archive variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section7.title")}
             </h2>
             <p className="leading-relaxed text-foreground-muted">
@@ -295,7 +295,7 @@ export function PrivacyPolicy() {
               id="privacy-s8"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Bell className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Notification variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.section8.title")}
             </h2>
             <p className="leading-relaxed text-foreground-muted">
@@ -309,7 +309,7 @@ export function PrivacyPolicy() {
               id="privacy-contact"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Mail className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Sms variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("privacy.contact.title")}
             </h2>
             <div className="space-y-2 leading-relaxed text-foreground-muted">

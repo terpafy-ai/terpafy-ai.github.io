@@ -2,13 +2,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
-  Smartphone,
+  Mobile,
   MessageSquare,
-  FileText,
-  AlertTriangle,
-  FileCheck,
-  Mail,
-} from "lucide-react";
+  DocumentText,
+  Warning2,
+  DocumentForward,
+  Sms,
+} from "vuesax-icons-react";
 import { Section } from "@/components/layout/Section";
 
 const LAST_UPDATED = new Date(2025, 0, 1);
@@ -34,7 +34,7 @@ export function TermsOfService() {
           to="/"
           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
         >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          <ArrowLeft variant="Bold" className="h-4 w-4" aria-hidden="true" />
           {t("legal.backToHome")}
         </Link>
 
@@ -57,7 +57,7 @@ export function TermsOfService() {
               id="terms-s1"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Smartphone className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Mobile variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.section1.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -88,7 +88,7 @@ export function TermsOfService() {
               id="terms-s2"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <MessageSquare className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <MessageSquare variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.section2.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -119,7 +119,7 @@ export function TermsOfService() {
               id="terms-s3"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <FileText className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <DocumentText variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.section3.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -144,7 +144,7 @@ export function TermsOfService() {
               id="terms-s4"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <AlertTriangle className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Warning2 variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.section4.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -180,7 +180,7 @@ export function TermsOfService() {
               id="terms-s5"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <FileCheck className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <DocumentForward variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.section5.title")}
             </h2>
             <div className="space-y-3 leading-relaxed text-foreground-muted">
@@ -217,7 +217,7 @@ export function TermsOfService() {
               id="terms-contact"
               className="mb-4 flex items-center gap-2 text-xl font-bold"
             >
-              <Mail className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <Sms variant="Bold" className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.contact.title")}
             </h2>
             <div className="space-y-2 leading-relaxed text-foreground-muted">
@@ -242,7 +242,7 @@ export function TermsOfService() {
               id="terms-disclaimer"
               className="mb-2 flex items-center gap-2 text-base font-bold"
             >
-              <AlertTriangle className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <Warning2 variant="Bold" className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
               {t("terms.disclaimer.title")}
             </h2>
             <p className="text-sm leading-relaxed text-foreground-muted">

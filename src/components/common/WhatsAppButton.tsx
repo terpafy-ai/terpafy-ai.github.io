@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? "";
@@ -39,7 +39,7 @@ export function WhatsAppButton({
           className,
         )}
       >
-        <MessageCircle className="h-4 w-4" aria-hidden="true" />
+        <MessageCircle variant="Bold" className="h-4 w-4" aria-hidden="true" />
         {children ?? t("cta.button")}
       </a>
     );
@@ -58,7 +58,7 @@ export function WhatsAppButton({
         className,
       )}
     >
-      <MessageCircle className="h-5 w-5" aria-hidden="true" />
+      <MessageCircle variant="Bold" className="h-5 w-5" aria-hidden="true" />
       {children ?? t("cta.button")}
     </a>
   );

@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { MessageCircle, Leaf, Sparkles } from "lucide-react";
+import { MessageCircle, Tree, LampOn } from "vuesax-icons-react";
 import { Section } from "@/components/layout/Section";
 
-const STEP_ICONS = [MessageCircle, Leaf, Sparkles] as const;
+const STEP_ICONS = [MessageCircle, Tree, LampOn] as const;
 const STEP_KEYS = ["connect", "track", "monitor"] as const;
 
 /**
@@ -51,7 +51,7 @@ export function HowItWorks() {
                   <span className="text-xs font-semibold text-primary/60">
                     {stepNumber}
                   </span>
-                  <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                  <Icon variant="Bold" className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="mb-2 text-lg font-bold text-foreground">
