@@ -11,10 +11,10 @@ export function Home() {
   return (
     <main>
       <Hero />
-      <Problem />
-      <Features />
       <ChatCTA />
       <BigChat />
+      <Problem />
+      <Features />
       <HowItWorks />
       <Benefits />
       <CTA />
