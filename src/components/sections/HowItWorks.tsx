@@ -146,9 +146,11 @@ export function HowItWorks() {
             <UserBubble time={userMsg2?.time ?? ""}>{userMsg2?.text}</UserBubble>
           </div>
 
-          {/* Last bot message — plain text, no bubble (node 37:1766) */}
+          {/* Last bot message — plain text, no bubble (node 37:1766).
+              bg-background ensures the text reads against the page colour
+              rather than the asterisk blade that partially underlaps it. */}
           <p
-            className="absolute text-[14px] font-medium leading-[1.5] text-[#3a3a3a]"
+            className="absolute bg-background text-[14px] font-medium leading-[1.5] text-[#3a3a3a]"
             style={{ left: 406, top: 424, width: 625, zIndex: 20 }}
           >
             {botMsg2?.text}
