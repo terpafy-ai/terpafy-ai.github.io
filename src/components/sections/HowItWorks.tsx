@@ -1,71 +1,82 @@
 import { useTranslation } from "react-i18next";
-import { MessageCircle, Tree, LampOn } from "vuesax-icons-react";
-import { Section } from "@/components/layout/Section";
+import { ChatButton } from "@/components/common/ChatButton";
+import { ChatTranscript, type Message } from "@/components/common/ChatTranscript";
 
-const STEP_ICONS = [MessageCircle, Tree, LampOn] as const;
-const STEP_KEYS = ["connect", "track", "monitor"] as const;
+const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 /**
- * HowItWorks section — Figma: 3 numbered steps (01/02/03) with icons.
+ * HowItWorks section — chat transcript + two Capacidade detail cards.
  * id="how-it-works" for smooth-scroll anchor.
  */
 export function HowItWorks() {
   const { t } = useTranslation();
 
+  const messages = t("howItWorks.transcript.messages", {
+    returnObjects: true,
+  }) as Message[];
+
   return (
-    <section id="how-it-works" className="bg-muted/40">
-      <Section size="lg">
+    <section id="how-it-works" className="bg-background py-16 sm:py-24">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary">
-            <span className="inline-block h-px w-6 bg-primary" aria-hidden="true" />
+        <div className="mb-12">
+          <p className="mb-4 flex items-center gap-3 text-[20px] font-normal text-[#f2594b]">
+            <span className="inline-block h-px w-8 bg-[#f2594b]" aria-hidden="true" />
             {t("howItWorks.label")}
-            <span className="inline-block h-px w-6 bg-primary" aria-hidden="true" />
           </p>
-          <h2 className="font-heading text-4xl font-black leading-tight text-foreground sm:text-5xl">
+          <h2 className="text-[40px] font-bold leading-tight text-[#3a3a3a]">
             {t("howItWorks.title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-foreground-muted">
-            {t("howItWorks.subtitle")}
-          </p>
         </div>
 
-        {/* Steps */}
-        <div className="relative grid gap-8 sm:grid-cols-3">
-          {/* Connector line — desktop only */}
-          <div
-            className="absolute left-1/6 right-1/6 top-10 hidden h-px bg-border sm:block"
-            aria-hidden="true"
-          />
+        {/* Two-column layout */}
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+          {/* Left — chat transcript */}
+          <ChatTranscript messages={messages} />
 
-          {STEP_KEYS.map((key, index) => {
-            const Icon = STEP_ICONS[index];
-            const stepNumber = String(index + 1).padStart(2, "0");
-            return (
-              <div
-                key={key}
-                className="relative flex flex-col items-center gap-4 text-center"
-              >
-                {/* Step number badge */}
-                <div className="relative z-10 flex h-20 w-20 flex-col items-center justify-center rounded-full border-2 border-primary/20 bg-background">
-                  <span className="text-xs font-semibold text-primary/60">
-                    {stepNumber}
-                  </span>
-                  <Icon variant="Bold" className="h-6 w-6 text-primary" aria-hidden="true" />
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-bold text-foreground">
-                    {t(`howItWorks.steps.${key}.title`)}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-foreground-muted">
-                    {t(`howItWorks.steps.${key}.description`)}
+          {/* Right — Capacidade cards */}
+          <div className="mt-8 flex flex-col gap-6 lg:mt-0">
+            {CAPACITY_KEYS.map((key) => {
+              const bullets = t(`howItWorks.capacities.${key}.bullets`, {
+                returnObjects: true,
+              }) as string[];
+
+              return (
+                <div
+                  key={key}
+                  className="rounded-xl border border-border bg-background p-6"
+                >
+                  <p className="text-4xl font-black leading-none text-foreground/10">
+                    {t(`howItWorks.capacities.${key}.number`)}
                   </p>
+                  <p className="mt-2 font-mono text-xs uppercase tracking-widest text-primary">
+                    {t(`howItWorks.capacities.${key}.label`)}
+                  </p>
+                  <h3 className="mt-1 text-xl font-bold text-foreground">
+                    {t(`howItWorks.capacities.${key}.title`)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">
+                    {t(`howItWorks.capacities.${key}.body`)}
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    {bullets.map((bullet, i) => (
+                      <li key={i} className="text-sm text-foreground/70">
+                        · {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6">
+                    <ChatButton variant="inline">
+                      {t(`howItWorks.capacities.${key}.cta`)}
+                    </ChatButton>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </Section>
+      </div>
     </section>
   );
 }
+

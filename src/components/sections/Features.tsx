@@ -4,9 +4,9 @@ import { ChatButton } from "@/components/common/ChatButton";
 
 const FEATURE_KEYS = [
   "knowledge",
-  "adaptive",
-  "immediate",
-  "contextual",
+  "adapts",
+  "available",
+  "diagnosis",
   "explains",
   "ecosystem",
 ] as const;

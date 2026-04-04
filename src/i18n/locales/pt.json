@@ -48,15 +48,15 @@
         "title": "Conhecimento especializado",
         "description": "VPD, pH, EC, perfil de terpenos, manejo de nutrientes, pragas, poda, floração — profundidade técnica real sobre cannabis."
       },
-      "adaptive": {
+      "adapts": {
         "title": "Adapta ao seu nível",
         "description": "Iniciante ou avançado. A linguagem, a profundidade e o tipo de orientação mudam de acordo com quem está perguntando."
       },
-      "immediate": {
+      "available": {
         "title": "Na hora que você precisa",
         "description": "Problemas de cultivo não esperam. A orientação está disponível quando o cultivador identifica o problema — não no dia seguinte."
       },
-      "contextual": {
+      "diagnosis": {
         "title": "Diagnóstico contextual",
         "description": "Pergunta o que precisa antes de orientar. Não entrega respostas prontas — entrega diagnósticos baseados no seu caso."
       },
@@ -85,19 +85,40 @@
   "howItWorks": {
     "label": "Como funciona",
     "title": "Cada conversa. Uma orientação real.",
-    "subtitle": "Sem aplicativo, sem cadastro. Só você, sua planta e o Terpafy Grow.",
-    "steps": {
-      "connect": {
-        "title": "Conecte via WhatsApp",
-        "description": "Inicie uma conversa com o Terpafy Grow pelo WhatsApp — sem baixar nenhum aplicativo."
+    "transcript": {
+      "messages": [
+        { "role": "user", "time": "11:15", "text": "As folhas do meio estão com manchas amarelas entre as nervuras." },
+        { "role": "bot",  "time": "11:15", "text": "Manchas entre nervuras — boa observação. Para confirmar: qual substrato e qual pH você está irrigando?" },
+        { "role": "user", "time": "11:18", "text": "Coco coir, pH 5.9." },
+        { "role": "bot",  "time": "11:19", "text": "Coco em pH 5.9 bloqueia a absorção de magnésio — esse é o quadro clássico de deficiência de Mg por pH baixo. Corrija para 6.0–6.2 e adicione 1g/L de sulfato de magnésio por 2 semanas. Quer o passo a passo?" }
+      ]
+    },
+    "capacities": {
+      "diagnosis": {
+        "number": "01",
+        "label": "Diagnóstico",
+        "title": "Pergunta o que precisa saber antes de orientar.",
+        "body": "O Terpafy Grow não entrega respostas prontas. Entende o contexto do seu cultivo — fase, substrato, sintomas, condições — antes de indicar qualquer ação. Isso faz a diferença entre uma orientação que funciona e uma que piora o problema.",
+        "bullets": [
+          "Faz as perguntas certas para entender o seu caso, sem jargão desnecessário",
+          "Identifica a causa mais provável antes de recomendar a solução",
+          "Orienta como confirmar o diagnóstico pelos sinais visuais da planta",
+          "Indica quando o problema é urgente versus quando pode ser monitorado"
+        ],
+        "cta": "Falar com o Terpafy Grow"
       },
-      "track": {
-        "title": "Descreva sua planta",
-        "description": "Conte o que está vendo: sintomas, estágio, ambiente. O especialista entende seu contexto."
-      },
-      "monitor": {
-        "title": "Receba orientação precisa",
-        "description": "Cada resposta é personalizada para o seu cultivo, baseada no que você descreveu agora."
+      "adaptation": {
+        "number": "02",
+        "label": "Adaptação",
+        "title": "Do iniciante ao avançado, sem trocar de canal.",
+        "body": "O Terpafy Grow identifica o seu nível e adapta a profundidade da orientação. Quem está começando não recebe uma aula técnica. Quem já domina o básico não recebe respostas simplificadas.",
+        "bullets": [
+          "Linguagem acessível para quem está plantando as primeiras mudas, sem intimidar",
+          "Profundidade técnica real para quem trabalha com VPD, DLI, EC e perfil de terpenos",
+          "Explica o raciocínio, não só a ação, para quem quer aprender junto",
+          "O mesmo especialista acompanha a evolução do cultivador ao longo do tempo"
+        ],
+        "cta": "Falar com o Terpafy Grow"
       }
     }
   },
