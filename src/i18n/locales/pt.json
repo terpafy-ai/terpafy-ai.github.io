@@ -13,6 +13,21 @@
       "secure": "Seguro e Privado",
       "medical": "Grau Médico",
       "easy": "Fácil de Usar"
+    },
+    "orientaTags": [
+      "Cultivadores iniciantes",
+      "Produtores intermediários",
+      "Growers avançados",
+      "Associação de pacientes"
+    ],
+    "ecosystemLabel": "PARTE DO ECOSSISTEMA",
+    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "chatWidget": {
+      "header": "Terpafy Grow · Cultivation Specialist",
+      "subheader": "Talk to Terpafy Grow now.",
+      "welcome": "Bem-vindo ao TerpafyGrow",
+      "welcomeSub": "Um especialista em cultivo de cannabis disponível para orientar sua planta",
+      "placeholder": "Escreva sua dúvida..."
     }
   },
   "features": {
@@ -278,6 +293,21 @@
     "disclaimer": {
       "title": "Aviso Legal",
       "text": "Por se tratar de documentos legais que envolvem dados sensíveis e responsabilidade civil, é altamente recomendável que estes textos sejam revisados e validados por um advogado especializado em Direito Digital e LGPD antes de serem publicados e utilizados."
+    }
+  },
+  "problem": {
+    "label": "O problema",
+    "title": "O cultivador tem dúvida. A internet tem opinião. São coisas diferentes.",
+    "stat": "73%",
+    "statLabel": "dos pacientes relatam variação de resultado entre lotes do mesmo produto.",
+    "body": "Fóruns, grupos de WhatsApp e buscas no Google oferecem informação em quantidade — mas sem contexto, sem responsabilidade técnica e sem conhecimento do seu cultivo específico. O resultado é tentativa, erro e lote comprometido.",
+    "cta": "Falar com o Terpafy Grow",
+    "ctaSecondary": "Ver como funciona",
+    "cards": {
+      "generic": { "title": "Respostas genéricas que não resolvem", "body": "Fóruns e grupos entregam opiniões contraditórias. O cultivador aplica a orientação errada e perde tempo — e às vezes o lote inteiro." },
+      "late": { "title": "Problemas identificados tarde demais", "body": "Deficiências, desvios de pH, pragas — sem orientação no momento certo, o dano já está feito quando o cultivador percebe." },
+      "variation": { "title": "Variação entre lotes sem explicação", "body": "O cultivador repete o processo e obtém resultados diferentes. Sem orientação estruturada, impossível saber o que mudou." },
+      "noFeedback": { "title": "Nenhum retorno sobre o que o produto produz", "body": "O cultivador entrega e não sabe mais nada. Não há ciclo de informação entre o que é produzido e o que o paciente experimenta." }
     }
   },
   "nav": {

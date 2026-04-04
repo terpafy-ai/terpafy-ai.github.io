@@ -13,6 +13,21 @@
       "secure": "Secure & Private",
       "medical": "Medical Grade",
       "easy": "Easy to Use"
+    },
+    "orientaTags": [
+      "Beginner growers",
+      "Intermediate producers",
+      "Advanced growers",
+      "Patient associations"
+    ],
+    "ecosystemLabel": "PART OF THE ECOSYSTEM",
+    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "chatWidget": {
+      "header": "Terpafy Grow · Cultivation Specialist",
+      "subheader": "Talk to Terpafy Grow now.",
+      "welcome": "Welcome to TerpafyGrow",
+      "welcomeSub": "A cannabis cultivation specialist available to guide your plant",
+      "placeholder": "Type your question..."
     }
   },
   "features": {
@@ -278,6 +293,21 @@
     "disclaimer": {
       "title": "Legal Notice",
       "text": "As these are legal documents involving sensitive data and civil liability, it is highly recommended that these texts be reviewed and validated by a lawyer specialized in Digital Law and LGPD before being published and used."
+    }
+  },
+  "problem": {
+    "label": "The problem",
+    "title": "The grower has doubts. The internet has opinions. Those are different things.",
+    "stat": "73%",
+    "statLabel": "of patients report variation in results between batches of the same product.",
+    "body": "Forums, WhatsApp groups and Google searches offer information in quantity — but without context, without technical accountability and without knowledge of your specific cultivation. The result is trial, error and a compromised batch.",
+    "cta": "Talk to Terpafy Grow",
+    "ctaSecondary": "See how it works",
+    "cards": {
+      "generic": { "title": "Generic answers that don't solve anything", "body": "Forums and groups deliver contradictory opinions. The grower applies the wrong guidance and wastes time — and sometimes the entire batch." },
+      "late": { "title": "Problems identified too late", "body": "Deficiencies, pH deviations, pests — without guidance at the right moment, the damage is already done when the grower notices." },
+      "variation": { "title": "Batch variation without explanation", "body": "The grower repeats the process and gets different results. Without structured guidance, it's impossible to know what changed." },
+      "noFeedback": { "title": "No feedback on what the product produces", "body": "The grower delivers and hears nothing more. There is no information cycle between what is produced and what the patient experiences." }
     }
   },
   "nav": {

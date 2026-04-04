@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRight, TickCircle } from "vuesax-icons-react";
+import { TickCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
-import { WhatsAppButton } from "@/components/common/WhatsAppButton";
-import { ChatPreview } from "@/components/common/ChatPreview";
+import { ChatButton } from "@/components/common/ChatButton";
+import { ChatPreviewWidget } from "@/components/common/ChatPreviewWidget";
 
 /**
  * Hero section — Figma reference: node 13:4694 (left column) + 13:4600 (chat preview).
@@ -10,6 +10,8 @@ import { ChatPreview } from "@/components/common/ChatPreview";
  */
 export function Hero() {
   const { t } = useTranslation();
+  const orientaTags = t("hero.orientaTags", { returnObjects: true }) as unknown as string[];
+  const ecosystemPills = t("hero.ecosystemPills", { returnObjects: true }) as unknown as string[];
 
   function handleLearnMore(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
@@ -22,9 +24,9 @@ export function Hero() {
       className="relative flex min-h-[90dvh] items-center bg-background pt-16"
     >
       <div className="mx-auto w-full max-w-[1200px] px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-        <div className="flex items-center gap-12 lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           {/* ── Left column ── */}
-          <div className="min-w-0 flex-1">
+          <div className="min-w-0">
             {/* Badge — Figma: bordered pill with checkmark icon */}
             <div className="mb-8 inline-flex items-center gap-2 rounded-[4px] border border-primary bg-primary/10 px-8 py-4">
               <span className="text-[20px] font-normal text-primary">{t("hero.badge")}</span>
@@ -52,16 +54,45 @@ export function Hero() {
               {t("hero.subtitle")}
             </p>
 
+            {/* ORIENTA tag list */}
+            <p className="mt-6 flex flex-wrap gap-x-3 text-sm text-foreground-muted">
+              {orientaTags.map((tag, i) => (
+                <span key={tag}>
+                  {i > 0 && <span aria-hidden="true"> · </span>}
+                  {tag}
+                </span>
+              ))}
+            </p>
+
+            {/* Ecosystem pill row */}
+            <div className="mt-4">
+              <span className="text-xs font-medium uppercase tracking-widest text-foreground-muted">
+                {t("hero.ecosystemLabel")}
+              </span>
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                {ecosystemPills.map((pill, i) => (
+                  <span
+                    key={pill}
+                    className={
+                      i === 0
+                        ? "rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
+                        : "rounded-full bg-muted px-3 py-1 text-xs text-foreground-muted"
+                    }
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* CTA row — Figma: Large buttons, rounded-[4px] */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <WhatsAppButton
+              <ChatButton
                 variant="primary"
-                messageKey="hero.whatsappMessage"
                 className="rounded-[4px] px-8 py-4 text-[20px] font-normal"
               >
                 {t("hero.cta")}
-                <ArrowRight variant="Bold" className="h-5 w-5 shrink-0" aria-hidden="true" />
-              </WhatsAppButton>
+              </ChatButton>
 
               <a
                 href="#how-it-works"
@@ -78,9 +109,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* ── Right column — chat preview (desktop only) ── */}
-          <div className="hidden shrink-0 lg:block">
-            <ChatPreview />
+          {/* ── Right column — chat preview widget ── */}
+          <div className="lg:flex lg:items-center">
+            <ChatPreviewWidget />
           </div>
         </div>
       </div>
