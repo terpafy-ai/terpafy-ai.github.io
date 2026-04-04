@@ -11,7 +11,7 @@ Institutional landing page for **Terpafy** — a digital health assistant for me
 | Layer | Technology |
 |-------|-----------|
 | Framework | React 19 |
-| Language | TypeScript 5 |
+| Language | TypeScript 6 |
 | Build tool | Vite 7 |
 | Styling | Tailwind CSS v4 (CSS-first, `@theme`) |
 | Components | shadcn/ui (Radix primitives) |
@@ -39,6 +39,7 @@ cp .env.example .env
 | Variable | Description |
 |----------|-------------|
 | `VITE_WHATSAPP_NUMBER` | WhatsApp phone number for CTA buttons (digits only, with country code, no `+`) |
+| `VITE_CHAT_URL` | Chat platform URL — leave blank to show "em breve" (coming soon) state on CTA buttons |
 | `VITE_API_URL` | Courier API base URL (optional, reserved for future use) |
 
 ---
@@ -89,7 +90,7 @@ src/
 ├── components/
 │   ├── common/              # Logo, LanguageSwitcher, WhatsAppButton
 │   ├── layout/              # Header, Footer, Section
-│   ├── sections/            # Hero, Features, HowItWorks, Benefits, CTA
+│   ├── sections/            # Hero, Problem, Features, BigChat, HowItWorks, Benefits, CTA
 │   └── ui/                  # shadcn/ui primitives (Button, Card, Badge…)
 ├── pages/
 │   ├── Home.tsx             # Composes all homepage sections
