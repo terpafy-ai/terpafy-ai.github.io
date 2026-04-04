@@ -89,7 +89,7 @@ export function Hero() {
       </div>
 
       {/* ── ORIENTA — full-bleed strip, Figma: 41:1049 ── */}
-      <div className="border-t border-[rgba(58,58,58,0.2)] bg-[rgba(238,221,220,0.2)]">
+      <div className="border-t border-[rgba(58,58,58,0.2)] bg-white">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 py-5 md:flex-row md:items-center md:gap-[39px] md:py-[30px]">
             <span className="shrink-0 text-[12px] text-foreground">{t("hero.orientaLabel")}</span>
@@ -107,7 +107,7 @@ export function Hero() {
       </div>
 
       {/* ── Ecosystem — full-bleed strip, Figma: 41:1065 ── */}
-      <div className="border-t border-[rgba(58,58,58,0.2)] bg-[rgba(147,166,3,0.1)]">
+      <div className="border-t border-[rgba(58,58,58,0.2)] bg-white">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:py-[28px]">
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-[39px]">
