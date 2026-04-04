@@ -10,10 +10,75 @@ interface ChatMsg {
   text: string;
 }
 
+/** Shared bubble wrapper — reused for both desktop (absolute) and mobile (flex) layouts. */
+function UserBubble({
+  children,
+  time,
+  className,
+}: {
+  children: React.ReactNode;
+  time: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "overflow-hidden rounded-[10px_10px_10px_5px] border border-[#f2594b] bg-[rgba(242,89,75,0.2)] backdrop-blur-[16px]",
+        className,
+      )}
+    >
+      <div className="px-[10px] pt-[15px] pb-[15px]">
+        <p className="text-[14px] font-medium leading-[1.5] text-[#3a3a3a]">{children}</p>
+        <p className="mt-1 text-right text-[12px] font-medium leading-[1.5] text-[#3a3a3a]">
+          {time}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function BotBubble({
+  children,
+  time,
+  className,
+}: {
+  children: React.ReactNode;
+  time: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "overflow-hidden rounded-[10px_10px_5px_10px] border border-[#3a3a3a] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)] backdrop-blur-[16px]",
+        className,
+      )}
+    >
+      <div className="px-[15px] pt-[15px] pb-[15px]">
+        <p className="text-[14px] font-medium leading-[1.5] text-[#3a3a3a]">{children}</p>
+        <p className="mt-1 text-right text-[12px] font-medium leading-[1.5] text-[#3a3a3a]">
+          {time}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 /**
- * HowItWorks section — person + Terpafy logo marks on the left,
- * floating chat conversation on the right (no card container).
- * id="how-it-works" for smooth-scroll anchor.
+ * HowItWorks — Figma node 2067:2769
+ *
+ * Layout: OVERLAPPING composition. Person+logo sit on the left; chat bubbles
+ * float to the right starting at ~40% width, layered OVER the person image.
+ * This is NOT a two-column flex layout.
+ *
+ * Desktop positions derived from Figma canvas coords (1440px frame, 100px
+ * left margin = 1240px content) scaled to 1200px: factor ≈ 0.968
+ *
+ *   Logo marks SVG :  left=85   top=0    width=540  (z-index 0)
+ *   Person circle  :  left=49   top=43   size=403    (z-index 10)
+ *   User bubble 1  :  left=478  top=65   width=390   (z-index 20)
+ *   Bot bubble     :  left=545  top=180  width=500   (z-index 20)
+ *   User bubble 2  :  left=478  top=308  width=143   (z-index 20)
+ *   Bot plain text :  left=406  top=424  width=625   (z-index 20)
  */
 export function HowItWorks() {
   const { t } = useTranslation();
@@ -22,11 +87,13 @@ export function HowItWorks() {
     returnObjects: true,
   }) as ChatMsg[];
 
+  const [userMsg1, botMsg1, userMsg2, botMsg2] = messages;
+
   return (
     <section id="how-it-works" className="bg-background py-16 sm:py-24">
+      {/* ── Header (padded) ───────────────────────────────────────────── */}
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12">
+        <div className="mb-10">
           <p className="mb-4 flex items-center gap-3 text-[20px] font-normal text-[#f2594b]">
             <span className="inline-block h-px w-8 bg-[#f2594b]" aria-hidden="true" />
             {t("howItWorks.label")}
@@ -35,93 +102,88 @@ export function HowItWorks() {
             {t("howItWorks.title")}
           </h2>
         </div>
+      </div>
 
-        {/* Content: person left + chat right */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-          {/* Left — Person + Logo marks composition (desktop only)
-               Based on Figma Group 39 (599.72×843.2px) scaled to 0.83×:
-               — Logo marks: left 64px, top 140px, width 508px (intentionally overflows right)
-               — Person circle: left 59px, top 260px, size 413×413px                           */}
+      {/* ── Desktop composition (no horizontal padding — positions are from 1200px edge) ── */}
+      <div className="mx-auto hidden max-w-[1200px] lg:block">
+        <div className="relative overflow-visible" style={{ minHeight: 510 }}>
+          {/* Logo marks — behind everything */}
+          <img
+            src={imgLogoMarks}
+            alt=""
+            aria-hidden="true"
+            className="absolute"
+            style={{ left: 85, top: 0, width: 540, height: "auto", zIndex: 0 }}
+          />
+
+          {/* Person photo — circular crop, above logo */}
           <div
-            className="relative hidden flex-shrink-0 lg:block"
-            style={{ width: "497px", height: "700px" }}
+            className="absolute overflow-hidden rounded-full"
+            style={{ left: 49, top: 43, width: 403, height: 403, zIndex: 10 }}
           >
-            {/* Red Terpafy logo marks SVG — behind person (z-index default/0) */}
             <img
-              src={imgLogoMarks}
-              alt=""
-              aria-hidden="true"
-              style={{
-                position: "absolute",
-                left: "64px",
-                top: "140px",
-                width: "508px",
-                height: "auto",
-              }}
+              src={imgPerson}
+              alt="Especialista Terpafy Grow"
+              className="h-full w-full object-cover object-top"
             />
-            {/* Person photo — circular crop via border-radius, above logo (z-index 10) */}
-            <div
-              className="absolute z-10 overflow-hidden rounded-full"
-              style={{
-                left: "59px",
-                top: "260px",
-                width: "413px",
-                height: "413px",
-              }}
-            >
-              <img
-                src={imgPerson}
-                alt="Especialista Terpafy Grow"
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
           </div>
 
-          {/* Right — Chat messages (floating bubbles, no container card) */}
-          <div className="flex flex-1 flex-col gap-4">
-            {messages.map((msg, i) => {
-              const isUser = msg.role === "user";
-              const isLastBot = msg.role === "bot" && i === messages.length - 1;
-
-              // Last bot message: plain text, no bubble (matches Figma node 37:1766)
-              if (isLastBot) {
-                return (
-                  <p
-                    key={i}
-                    className="max-w-[90%] text-sm font-medium leading-[1.5] text-[#3a3a3a]"
-                  >
-                    {msg.text}
-                  </p>
-                );
-              }
-
-              return (
-                <div
-                  key={i}
-                  className={cn("flex", isUser ? "justify-end" : "justify-start")}
-                >
-                  <div
-                    className={cn(
-                      "flex max-w-[80%] flex-col gap-1 overflow-hidden px-4 py-4 backdrop-blur-[16px]",
-                      isUser
-                        ? "rounded-[10px_10px_10px_5px] border border-[#f2594b] bg-[rgba(242,89,75,0.2)]"
-                        : "rounded-[10px_10px_5px_10px] border border-[#3a3a3a] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)]",
-                    )}
-                  >
-                    <p className="text-sm font-medium leading-[150%] text-[#3a3a3a]">
-                      {msg.text}
-                    </p>
-                    <span className="self-end text-xs font-medium leading-[150%] text-[#3a3a3a]">
-                      {msg.time}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
+          {/* User bubble 1 (node 37:1682) — top-right of composition */}
+          <div className="absolute" style={{ left: 478, top: 65, width: 390, zIndex: 20 }}>
+            <UserBubble time={userMsg1?.time ?? ""}>{userMsg1?.text}</UserBubble>
           </div>
+
+          {/* Bot bubble (node 37:1679) */}
+          <div className="absolute" style={{ left: 545, top: 180, width: 500, zIndex: 20 }}>
+            <BotBubble time={botMsg1?.time ?? ""}>{botMsg1?.text}</BotBubble>
+          </div>
+
+          {/* User bubble 2 (node 37:1773) */}
+          <div className="absolute" style={{ left: 478, top: 308, width: 143, zIndex: 20 }}>
+            <UserBubble time={userMsg2?.time ?? ""}>{userMsg2?.text}</UserBubble>
+          </div>
+
+          {/* Last bot message — plain text, no bubble (node 37:1766) */}
+          <p
+            className="absolute text-[14px] font-medium leading-[1.5] text-[#3a3a3a]"
+            style={{ left: 406, top: 424, width: 625, zIndex: 20 }}
+          >
+            {botMsg2?.text}
+          </p>
         </div>
+      </div>
+
+      {/* ── Mobile layout — simple stacked chat (hidden on desktop) ─────── */}
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 px-4 sm:px-6 lg:hidden">
+        {messages.map((msg, i) => {
+          const isUser = msg.role === "user";
+          const isLastMsg = i === messages.length - 1 && !isUser;
+
+          if (isLastMsg) {
+            return (
+              <p key={i} className="text-sm font-medium leading-[1.5] text-[#3a3a3a]">
+                {msg.text}
+              </p>
+            );
+          }
+
+          return (
+            <div key={i} className={cn("flex", isUser ? "justify-end" : "justify-start")}>
+              {isUser ? (
+                <UserBubble time={msg.time} className="max-w-[80%]">
+                  {msg.text}
+                </UserBubble>
+              ) : (
+                <BotBubble time={msg.time} className="max-w-[80%]">
+                  {msg.text}
+                </BotBubble>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 }
+
 
