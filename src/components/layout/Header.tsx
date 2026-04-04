@@ -5,12 +5,12 @@ import { HambergerMenu, CloseCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/common/Logo";
 import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
-import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { ChatButton } from "@/components/common/ChatButton";
 
 const NAV_LINKS = [
   { labelKey: "nav.features", href: "/#features" },
   { labelKey: "nav.howItWorks", href: "/#how-it-works" },
-  { labelKey: "nav.benefits", href: "/#benefits" },
+  { labelKey: "nav.forWho", href: "/#for-who" },
 ] as const;
 
 /**
@@ -176,13 +176,9 @@ export function Header() {
 
         {/* CTA */}
         <div className="border-t border-border px-4 py-4">
-          <WhatsAppButton
-            variant="primary"
-            messageKey="hero.whatsappMessage"
-            className="w-full justify-center"
-          >
+          <ChatButton variant="primary" className="w-full justify-center">
             {t("nav.cta")}
-          </WhatsAppButton>
+          </ChatButton>
         </div>
       </div>
     </>
