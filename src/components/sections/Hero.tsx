@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { TickCircle } from "vuesax-icons-react";
+import { AirplaneSquare, TickCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
 import { ChatPreviewWidget } from "@/components/common/ChatPreviewWidget";
@@ -54,34 +54,46 @@ export function Hero() {
               {t("hero.subtitle")}
             </p>
 
-            {/* ORIENTA tag list */}
-            <p className="mt-6 flex flex-wrap gap-x-3 text-sm text-foreground-muted">
-              {orientaTags.map((tag, i) => (
-                <span key={tag}>
-                  {i > 0 && <span aria-hidden="true"> · </span>}
-                  {tag}
-                </span>
-              ))}
-            </p>
-
-            {/* Ecosystem pill row */}
-            <div className="mt-4">
-              <span className="text-xs font-medium uppercase tracking-widest text-foreground-muted">
-                {t("hero.ecosystemLabel")}
-              </span>
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                {ecosystemPills.map((pill, i) => (
-                  <span
-                    key={pill}
-                    className={
-                      i === 0
-                        ? "rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
-                        : "rounded-full bg-muted px-3 py-1 text-xs text-foreground-muted"
-                    }
-                  >
-                    {pill}
-                  </span>
+            {/* ORIENTA tag list — Figma: 41:589. Stacked items with airplane icon. */}
+            <div className="mt-6 flex items-start gap-4">
+              <div className="flex shrink-0 items-center gap-3 self-stretch py-0.5">
+                <span className="text-[12px] text-foreground">ORIENTA</span>
+                <div className="w-px self-stretch bg-foreground/20" />
+              </div>
+              <div className="flex flex-col gap-2">
+                {orientaTags.map((tag) => (
+                  <div key={tag} className="flex items-center gap-2">
+                    <AirplaneSquare variant="Bold" className="h-5 w-5 shrink-0 text-foreground" aria-hidden="true" />
+                    <span className="text-[12px] text-foreground">{tag}</span>
+                  </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Ecosystem section — Figma: 41:636 */}
+            <div className="mt-6 flex items-start gap-4">
+              <div className="flex shrink-0 items-center gap-3 self-stretch py-0.5">
+                <span className="text-[12px] uppercase tracking-widest text-[#93a603]">
+                  {t("hero.ecosystemLabel")}
+                </span>
+                <div className="w-px self-stretch bg-foreground/20" />
+              </div>
+              <div className="flex flex-col gap-3">
+                <p className="text-[12px] text-foreground">{t("hero.ecosystemDescription")}</p>
+                <div className="flex flex-wrap gap-x-[10px] gap-y-[7px]">
+                  {ecosystemPills.map((pill, i) => (
+                    <span
+                      key={pill}
+                      className={
+                        i === 0
+                          ? "rounded-[4px] border border-[#93a603] bg-[rgba(147,166,3,0.1)] px-2.5 py-2 text-[10px] text-[#93a603]"
+                          : "rounded-[4px] border border-[#8a8a8a] bg-[rgba(138,138,138,0.1)] px-2.5 py-2 text-[10px] text-[#8a8a8a]"
+                      }
+                    >
+                      {pill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 

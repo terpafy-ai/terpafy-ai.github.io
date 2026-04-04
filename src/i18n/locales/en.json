@@ -21,6 +21,7 @@
       "Patient associations"
     ],
     "ecosystemLabel": "PART OF THE ECOSYSTEM",
+    "ecosystemDescription": "Terpafy Grow is the gateway to the Terpafy ecosystem. The data generated here connects cultivation to patient care and medical research.",
     "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
     "chatWidget": {
       "header": "Terpafy Grow · Cultivation Specialist",
