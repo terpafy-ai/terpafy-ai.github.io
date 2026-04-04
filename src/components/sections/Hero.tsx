@@ -54,49 +54,6 @@ export function Hero() {
               {t("hero.subtitle")}
             </p>
 
-            {/* ORIENTA tag list — Figma: 41:589. Stacked items with airplane icon. */}
-            <div className="mt-6 flex items-start gap-4">
-              <div className="flex shrink-0 items-center gap-3 self-stretch py-0.5">
-                <span className="text-[12px] text-foreground">ORIENTA</span>
-                <div className="w-px self-stretch bg-foreground/20" />
-              </div>
-              <div className="flex flex-col gap-2">
-                {orientaTags.map((tag) => (
-                  <div key={tag} className="flex items-center gap-2">
-                    <AirplaneSquare variant="Bold" className="h-5 w-5 shrink-0 text-foreground" aria-hidden="true" />
-                    <span className="text-[12px] text-foreground">{tag}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Ecosystem section — Figma: 41:636 */}
-            <div className="mt-6 flex items-start gap-4">
-              <div className="flex shrink-0 items-center gap-3 self-stretch py-0.5">
-                <span className="text-[12px] uppercase tracking-widest text-[#93a603]">
-                  {t("hero.ecosystemLabel")}
-                </span>
-                <div className="w-px self-stretch bg-foreground/20" />
-              </div>
-              <div className="flex flex-col gap-3">
-                <p className="text-[12px] text-foreground">{t("hero.ecosystemDescription")}</p>
-                <div className="flex flex-wrap gap-x-[10px] gap-y-[7px]">
-                  {ecosystemPills.map((pill, i) => (
-                    <span
-                      key={pill}
-                      className={
-                        i === 0
-                          ? "rounded-[4px] border border-[#93a603] bg-[rgba(147,166,3,0.1)] px-2.5 py-2 text-[10px] text-[#93a603]"
-                          : "rounded-[4px] border border-[#8a8a8a] bg-[rgba(138,138,138,0.1)] px-2.5 py-2 text-[10px] text-[#8a8a8a]"
-                      }
-                    >
-                      {pill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* CTA row — Figma: Large buttons, rounded-[4px] */}
             <div className="mt-8 flex flex-wrap gap-4">
               <ChatButton
@@ -124,6 +81,43 @@ export function Hero() {
           {/* ── Right column — chat preview widget ── */}
           <div className="lg:flex lg:items-center">
             <ChatPreviewWidget />
+          </div>
+        </div>
+
+        {/* ── ORIENTA — full-width horizontal bar below grid, Figma: 41:589 ── */}
+        <div className="mt-8 flex flex-wrap items-center gap-x-[39px] gap-y-2 border-t border-border pt-6">
+          <span className="shrink-0 text-[12px] text-foreground">ORIENTA</span>
+          <div className="hidden h-[23px] w-px bg-foreground/20 sm:block" aria-hidden="true" />
+          {orientaTags.map((tag) => (
+            <div key={tag} className="flex items-center gap-2">
+              <AirplaneSquare variant="Bold" className="h-5 w-5 shrink-0 text-foreground" aria-hidden="true" />
+              <span className="text-[12px] text-foreground">{tag}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* ── Ecosystem — full-width horizontal bar, Figma: 41:636 ── */}
+        <div className="mt-4 flex flex-wrap items-center gap-x-[18px] gap-y-4">
+          <div className="flex flex-wrap items-center gap-x-[39px] gap-y-2">
+            <span className="shrink-0 text-[12px] uppercase tracking-widest text-[#93a603]">
+              {t("hero.ecosystemLabel")}
+            </span>
+            <div className="hidden h-[23px] w-px bg-foreground/20 sm:block" aria-hidden="true" />
+            <p className="max-w-[600px] text-[12px] text-foreground">{t("hero.ecosystemDescription")}</p>
+          </div>
+          <div className="ml-auto flex flex-wrap gap-x-[10px] gap-y-[7px]">
+            {ecosystemPills.map((pill, i) => (
+              <span
+                key={pill}
+                className={
+                  i === 0
+                    ? "rounded-[4px] border border-[#93a603] bg-[rgba(147,166,3,0.1)] px-2.5 py-2 text-[10px] text-[#93a603]"
+                    : "rounded-[4px] border border-[#8a8a8a] bg-[rgba(138,138,138,0.1)] px-2.5 py-2 text-[10px] text-[#8a8a8a]"
+                }
+              >
+                {pill}
+              </span>
+            ))}
           </div>
         </div>
       </div>

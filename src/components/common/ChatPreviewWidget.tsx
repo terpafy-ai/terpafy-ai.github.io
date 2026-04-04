@@ -55,19 +55,36 @@ function TypingDots() {
 }
 
 export function ChatPreviewWidget() {
-  const [showSoon, setShowSoon] = useState(false);
+  const [value, setValue] = useState("");
+  const [userMsg, setUserMsg] = useState("");
+  const [botSoon, setBotSoon] = useState(false);
+  const [isTyping, setIsTyping] = useState(true);
 
   function handleSend() {
+    const text = value.trim();
+    if (!text) return;
+
     if (CHAT_URL) {
       window.open(CHAT_URL, "_blank", "noopener,noreferrer");
-    } else {
-      setShowSoon(true);
-      setTimeout(() => setShowSoon(false), 2500);
+      return;
     }
+
+    setValue("");
+    setUserMsg(text);
+    setIsTyping(true);
+    setBotSoon(false);
+    setTimeout(() => {
+      setIsTyping(false);
+      setBotSoon(true);
+    }, 1500);
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") handleSend();
   }
 
   return (
-    <div className="relative flex h-[580px] w-[355px] flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#222] select-none">
+    <div className="relative flex h-[580px] w-[355px] flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#222]">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0 opacity-10" aria-hidden="true">
         <div className="absolute left-1/4 top-1/2 size-56 -translate-y-1/2 rounded-full bg-primary blur-[100px]" />
@@ -117,15 +134,29 @@ export function ChatPreviewWidget() {
           text="Minha planta tá com as pontas das folhas queimando. Uso coco coir."
           time="11:15"
         />
-        <TypingDots />
+        {userMsg && <MessageBubble isAgent={false} text={userMsg} time="agora" />}
+        {isTyping && !botSoon && <TypingDots />}
+        {botSoon && (
+          <MessageBubble
+            isAgent
+            text="Em breve! O Terpafy Grow estará disponível para te orientar. 🚀"
+            time="agora"
+          />
+        )}
       </div>
 
       {/* ── Input bar ── */}
       <div className="relative z-10 shrink-0 px-3 pb-3 pt-1">
         <div className="flex items-center gap-2 rounded-[10px] border border-white/20 bg-white/5 px-3 py-1.5 backdrop-blur-md">
-          <span className="flex-1 text-[15px] font-medium text-white/30">
-            Escreva sua dúvida…
-          </span>
+          <input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Escreva sua dúvida…"
+            className="flex-1 bg-transparent text-[15px] font-medium text-white placeholder:text-white/30 focus:outline-none"
+            aria-label="Escreva sua dúvida"
+          />
           <button
             type="button"
             onClick={handleSend}
@@ -134,18 +165,9 @@ export function ChatPreviewWidget() {
               background:
                 "linear-gradient(91.96deg, rgba(242,89,75,0.7) 16.64%, rgba(242,89,75,0.8) 117.28%)",
             }}
-            aria-label="Abrir chat"
+            aria-label="Enviar mensagem"
           >
             <Send variant="Bold" className="size-5 text-white" aria-hidden="true" />
-            {showSoon && (
-              <span
-                className="absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-medium text-[#222]"
-                role="status"
-                aria-live="polite"
-              >
-                Em breve 🚀
-              </span>
-            )}
           </button>
         </div>
       </div>
