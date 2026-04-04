@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
 const imgPerson = "/assets/how-it-works-person.png";
-const imgMask = "/assets/how-it-works-mask.svg";
 
 interface ChatMsg {
   role: "user" | "bot";
@@ -39,29 +38,36 @@ export function HowItWorks() {
 
         {/* Content: person left + chat right */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-          {/* Left — Person + Logo marks composition (desktop only) */}
-          <div className="relative hidden h-[520px] w-[400px] flex-shrink-0 lg:block">
-            {/* Red Terpafy decorative logo marks — positioned top-right, behind person */}
+          {/* Left — Person + Logo marks composition (desktop only)
+               Based on Figma Group 39 (599.72×843.2px) scaled to 0.83×:
+               — Logo marks: left 64px, top 140px, width 508px (intentionally overflows right)
+               — Person circle: left 59px, top 260px, size 413×413px                           */}
+          <div
+            className="relative hidden flex-shrink-0 lg:block"
+            style={{ width: "497px", height: "700px" }}
+          >
+            {/* Red Terpafy logo marks SVG — behind person (z-index default/0) */}
             <img
               src={imgLogoMarks}
               alt=""
               aria-hidden="true"
-              className="absolute right-0 top-0 h-[340px] w-[340px]"
-            />
-            {/* Person photo with organic circular mask */}
-            <div
-              className="absolute bottom-0 left-0 h-[480px] w-[360px] [transform:scaleX(-1)]"
               style={{
-                maskImage: `url(${imgMask})`,
-                WebkitMaskImage: `url(${imgMask})`,
-                maskSize: "532px 532px",
-                WebkitMaskSize: "532px 532px",
-                maskPosition: "-69px 92px",
-                WebkitMaskPosition: "-69px 92px",
-                maskRepeat: "no-repeat",
-                WebkitMaskRepeat: "no-repeat",
-                maskMode: "alpha",
-              } as React.CSSProperties}
+                position: "absolute",
+                left: "64px",
+                top: "140px",
+                width: "508px",
+                height: "auto",
+              }}
+            />
+            {/* Person photo — circular crop via border-radius, above logo (z-index 10) */}
+            <div
+              className="absolute z-10 overflow-hidden rounded-full"
+              style={{
+                left: "59px",
+                top: "260px",
+                width: "413px",
+                height: "413px",
+              }}
             >
               <img
                 src={imgPerson}
