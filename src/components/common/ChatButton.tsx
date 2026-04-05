@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MessageSquare } from "vuesax-icons-react";
+import { ArrowRight } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 
 const CHAT_URL = import.meta.env.VITE_CHAT_URL ?? "";
@@ -45,7 +45,7 @@ export function ChatButton({
           className,
         )}
       >
-        <MessageSquare variant="Bold" className="h-4 w-4" aria-hidden="true" />
+        <ArrowRight variant="Bold" className="h-4 w-4" aria-hidden="true" />
         {children ?? t("cta.button")}
         {showSoon && (
           <span className="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-2.5 py-1 text-xs font-medium text-background">
@@ -62,14 +62,14 @@ export function ChatButton({
       onClick={handleClick}
       className={cn(
         "relative inline-flex items-center justify-center gap-2 rounded-[4px] bg-primary pl-8 pr-6 py-4",
-        "text-base font-semibold text-primary-foreground",
+        "text-base font-normal leading-4 text-primary-foreground",
         "transition-colors hover:bg-primary-dark focus-visible:outline-none",
         "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         className,
       )}
     >
-      <MessageSquare variant="Bold" className="h-5 w-5" aria-hidden="true" />
       {children ?? t("cta.button")}
+      <ArrowRight variant="Bold" className="h-5 w-5" aria-hidden="true" />
       {showSoon && (
         <span
           className="absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-3 py-1.5 text-xs font-medium text-background"
