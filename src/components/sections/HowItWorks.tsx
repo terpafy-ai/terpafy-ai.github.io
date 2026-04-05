@@ -9,6 +9,7 @@ const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
 const imgPerson = "/assets/how-it-works-person.png";
 const imgPersonFull = "/assets/how-it-works-person-full.png";
+const imgPerson2 = "/assets/how-it-works-person-2.png";
 
 interface ChatMsg {
   role: "user" | "bot";
@@ -159,6 +160,52 @@ export function HowItWorks() {
 
           {/* Last bot message — BotBubble (node 37:1766) */}
           <div className="absolute" style={{ left: 406, top: 424, width: 677, zIndex: 30 }}>
+            <BotBubble time={botMsg2?.time ?? ""}>{botMsg2?.text}</BotBubble>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Desktop composition 2 — right-side woman (node 2058:2766) ─── */}
+      <div className="mx-auto hidden max-w-[1200px] lg:block">
+        <div className="relative overflow-visible" style={{ minHeight: 520 }}>
+          {/* Logo marks — right side, behind oval (node 33:442) */}
+          <img
+            src={imgLogoMarks}
+            alt=""
+            aria-hidden="true"
+            className="absolute"
+            style={{ left: 466, top: 0, width: 480, height: 480, zIndex: 10 }}
+          />
+
+          {/* Oval woman — right side, circular crop (node 2058:2766 mask group) */}
+          <div
+            className="absolute overflow-hidden rounded-full"
+            style={{ left: 530, top: 42, width: 500, height: 500, zIndex: 20 }}
+          >
+            <img
+              src={imgPerson2}
+              alt="Especialista Terpafy Grow"
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
+
+          {/* User bubble 1 (node 37:1864) */}
+          <div className="absolute" style={{ left: 173, top: 41, width: 403, zIndex: 30 }}>
+            <UserBubble time={userMsg1?.time ?? ""}>{userMsg1?.text}</UserBubble>
+          </div>
+
+          {/* Bot bubble 1 (node 37:1858) */}
+          <div className="absolute" style={{ left: 0, top: 156, width: 517, zIndex: 30 }}>
+            <BotBubble time={botMsg1?.time ?? ""}>{botMsg1?.text}</BotBubble>
+          </div>
+
+          {/* User bubble 2 — "Coco coir, pH 5.9." (node 37:1867) */}
+          <div className="absolute" style={{ left: 357, top: 265, width: 143, zIndex: 30 }}>
+            <UserBubble time={userMsg2?.time ?? ""}>{userMsg2?.text}</UserBubble>
+          </div>
+
+          {/* Bot bubble 2 (node 37:1861) */}
+          <div className="absolute" style={{ left: 0, top: 384, width: 677, zIndex: 30 }}>
             <BotBubble time={botMsg2?.time ?? ""}>{botMsg2?.text}</BotBubble>
           </div>
         </div>
