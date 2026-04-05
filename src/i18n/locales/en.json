@@ -409,11 +409,13 @@
     }
   },
   "market": {
-    "label": "Market context",
+    "label": "––– Market context",
     "title": "The market grew in regulation. Not in guidance.",
     "paradoxTitle": "The industry paradox",
     "paradoxBody1": "Medical cannabis has more access and regulation than ever, but growers still decide based on forums and intuition.",
     "paradoxBody2": "Groups and forums offer information in volume, but without context, without technical responsibility, and without knowledge of each producer's specific cultivation.",
+    "paradoxBox2Rest": "fills the gap: specialized, contextualized guidance that transforms each conversation into the beginning of a data cycle connected to care.",
+    "paradoxBox3": "Isolated cultivation software delivers dashboards, but doesn't guide what to do with the data, and doesn't connect results to patient outcomes.",
     "stats": {
       "market": {
         "value": "US$ 57B",
@@ -429,6 +431,7 @@
     "closing": "Terpafy Grow doesn't compete with forums or crop management software. It defines a new category: the entry point of an ecosystem that connects cultivation to care. The differentiator is the cycle that begins with every conversation."
   },
   "principles": {
+    "label": "––– Principles",
     "title": "The filters that guide every recommendation.",
     "preamble": "These are not decorative values. They are the criteria that determine how the specialist guides, what the platform does, and how each participant in the ecosystem is treated.",
     "items": {

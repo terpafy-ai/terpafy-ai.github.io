@@ -409,11 +409,13 @@
     }
   },
   "market": {
-    "label": "Contexto de mercado",
+    "label": "––– Contexto de mercado",
     "title": "El mercado creció en regulación. No en orientación.",
     "paradoxTitle": "La paradoja de la industria",
     "paradoxBody1": "El cannabis medicinal tiene más acceso y regulación que nunca, pero el cultivador sigue tomando decisiones basadas en foros e intuición.",
     "paradoxBody2": "Los grupos y foros ofrecen información en volumen, pero sin contexto, sin responsabilidad técnica y sin conocimiento del cultivo específico de cada productor.",
+    "paradoxBox2Rest": "ocupa el vacío: orientación especializada y contextualizada que transforma cada conversación en el inicio de un ciclo de datos conectado al cuidado.",
+    "paradoxBox3": "El software de cultivo aislado entrega dashboards, pero no orienta sobre qué hacer con los datos, y no conecta los resultados con los desenlaces del paciente.",
     "stats": {
       "market": {
         "value": "US$ 57 mil mm",
@@ -429,6 +431,7 @@
     "closing": "Terpafy Grow no compite con foros ni con software de cultivo. Define una nueva categoría: el punto de entrada de un ecosistema que conecta el cultivo con el cuidado. El diferencial es el ciclo que comienza en cada conversación."
   },
   "principles": {
+    "label": "––– Principios",
     "title": "Los filtros que guían cada orientación.",
     "preamble": "Estos no son valores decorativos. Son los criterios que determinan cómo orienta el especialista, qué hace la plataforma y cómo se trata a cada participante del ecosistema.",
     "items": {

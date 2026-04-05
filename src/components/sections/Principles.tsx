@@ -9,10 +9,6 @@ const PRINCIPLE_KEYS = [
   "simplify",
 ] as const;
 
-/**
- * Principles section — 6 cards in 3-column grid.
- * Each card: large muted number badge, mono label, title, body.
- */
 export function Principles() {
   const { t } = useTranslation();
 
@@ -21,10 +17,13 @@ export function Principles() {
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 max-w-2xl">
+          <p className="mb-4 text-[20px] font-normal text-[#f2594b]">
+            {t("principles.label")}
+          </p>
           <h2 className="mb-4 text-[40px] font-bold leading-tight text-[#3a3a3a]">
             {t("principles.title")}
           </h2>
-          <p className="text-[15px] leading-relaxed text-[#848484]">
+          <p className="text-[13px] font-medium leading-relaxed text-[#848484]">
             {t("principles.preamble")}
           </p>
         </div>
@@ -34,20 +33,20 @@ export function Principles() {
           {PRINCIPLE_KEYS.map((key) => (
             <div
               key={key}
-              className="rounded-[4px] border border-[#3a3a3a]/10 bg-[rgba(58,58,58,0.03)] p-8"
+              className="rounded-[4px] border border-[#3a3a3a] bg-[rgba(255,255,255,0.5)] px-[21px] pb-[26px] pt-[27px] backdrop-blur-[10px]"
             >
-              {/* Number badge */}
-              <p className="text-5xl font-black leading-none text-[#3a3a3a]/10">
+              {/* Number */}
+              <p className="text-[10px] font-normal text-[#f2594b]">
                 {t(`principles.items.${key}.number`)}
               </p>
 
               {/* Title */}
-              <p className="mt-3 text-[18px] font-bold text-[#3a3a3a]">
+              <p className="mt-3 text-[14px] font-semibold text-[#3a3a3a]">
                 {t(`principles.items.${key}.title`)}
               </p>
 
               {/* Body */}
-              <p className="mt-3 text-[14px] leading-relaxed text-[#848484]">
+              <p className="mt-3 text-[14px] font-medium leading-relaxed text-[#848484]">
                 {t(`principles.items.${key}.body`)}
               </p>
             </div>
