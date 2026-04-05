@@ -12,14 +12,6 @@ export function Footer() {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* ── Decorative wing circles — two arcs creating V valley at footer top ── */}
-      <div className="overflow-hidden bg-background" aria-hidden="true">
-        <div className="relative h-16 sm:h-24">
-          <div className="absolute left-[-8%] top-0 h-[280px] w-[55%] rounded-full bg-primary sm:h-[380px]" />
-          <div className="absolute right-[-8%] top-0 h-[280px] w-[55%] rounded-full bg-primary sm:h-[380px]" />
-        </div>
-      </div>
-
       <div className="mx-auto max-w-[1200px] px-4 py-10 sm:px-6 lg:px-8">
         {/* ── Top section: brand (left) + legal links (right) ───────────── */}
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">

@@ -7,9 +7,6 @@ import { ChatButton } from "@/components/common/ChatButton";
 const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
-const imgPerson = "/assets/how-it-works-person.png";
-const imgPersonFull = "/assets/how-it-works-person-full.png";
-const imgPerson2 = "/assets/how-it-works-person-2.png";
 
 interface ChatMsg {
   role: "user" | "bot";
@@ -113,16 +110,7 @@ export function HowItWorks() {
       {/* ── Desktop composition (no horizontal padding — positions are from 1200px edge) ── */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
         <div className="relative overflow-visible" style={{ minHeight: 640 }}>
-          {/* Full woman — transparent PNG, background behind everything (node 33:453) */}
-          <img
-            src={imgPersonFull}
-            alt=""
-            aria-hidden="true"
-            className="absolute"
-            style={{ left: 0, top: 0, width: 480, height: 640, objectFit: "contain", objectPosition: "bottom left", zIndex: 0 }}
-          />
-
-          {/* Logo marks — above the full woman, behind the oval crop (node 33:442) */}
+          {/* Logo marks — behind the oval crop (node 33:442) */}
           <img
             src={imgLogoMarks}
             alt=""
@@ -130,18 +118,6 @@ export function HowItWorks() {
             className="absolute"
             style={{ left: 85, top: 0, width: 540, height: 534, zIndex: 10 }}
           />
-
-          {/* Oval woman — circular crop, on top of logo marks (node 37:1674) */}
-          <div
-            className="absolute overflow-hidden rounded-full"
-            style={{ left: 49, top: 43, width: 403, height: 403, zIndex: 20 }}
-          >
-            <img
-              src={imgPerson}
-              alt="Especialista Terpafy Grow"
-              className="h-full w-full object-cover object-top"
-            />
-          </div>
 
           {/* User bubble 1 (node 37:1682) — top-right of composition */}
           <div className="absolute" style={{ left: 478, top: 65, width: 390, zIndex: 30 }}>
@@ -176,18 +152,6 @@ export function HowItWorks() {
             className="absolute"
             style={{ left: 466, top: 0, width: 480, height: 480, zIndex: 10 }}
           />
-
-          {/* Oval woman — right side, circular crop (node 2058:2766 mask group) */}
-          <div
-            className="absolute overflow-hidden rounded-full"
-            style={{ left: 530, top: 42, width: 500, height: 500, zIndex: 20 }}
-          >
-            <img
-              src={imgPerson2}
-              alt="Especialista Terpafy Grow"
-              className="h-full w-full object-cover object-top"
-            />
-          </div>
 
           {/* User bubble 1 (node 37:1864) */}
           <div className="absolute" style={{ left: 173, top: 41, width: 403, zIndex: 30 }}>
