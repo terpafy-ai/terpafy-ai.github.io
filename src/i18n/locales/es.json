@@ -92,6 +92,7 @@
   },
   "howItWorks": {
     "label": "Cómo funciona",
+    "capabilityLabel": "Capacidad",
     "title": "Cada conversación. Una orientación real.",
     "transcript": {
       "messages": [

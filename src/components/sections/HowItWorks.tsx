@@ -1,5 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { I3DCubeScan } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
+import { ChatButton } from "@/components/common/ChatButton";
+
+const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
 const imgPerson = "/assets/how-it-works-person.png";
@@ -186,6 +190,52 @@ export function HowItWorks() {
             </div>
           );
         })}
+      </div>
+
+      {/* ── Capacities ───────────────────────────────────────────────── */}
+      <div className="mx-auto mt-16 max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-16">
+          {CAPACITY_KEYS.map((key) => {
+            const bullets = t(`howItWorks.capacities.${key}.bullets`, {
+              returnObjects: true,
+            }) as string[];
+
+            return (
+              <div key={key} className="flex flex-col gap-6">
+                {/* Badge */}
+                <span className="inline-flex self-start items-center gap-2 rounded bg-[rgba(242,89,75,0.1)] px-4 py-2 text-xs font-normal leading-3 text-[#f2594b] outline outline-1 -outline-offset-1 outline-[#f2594b]">
+                  <I3DCubeScan variant="Bold" className="h-4 w-4" aria-hidden="true" />
+                  {t("howItWorks.capabilityLabel")} {t(`howItWorks.capacities.${key}.number`)} · {t(`howItWorks.capacities.${key}.label`)}
+                </span>
+
+                {/* Title */}
+                <h3 className="max-w-[897px] text-3xl font-bold leading-9 text-[#3a3a3a]">
+                  {t(`howItWorks.capacities.${key}.title`)}
+                </h3>
+
+                {/* Body */}
+                <p className="max-w-[897px] text-xs font-medium leading-5 text-[#71717a]">
+                  {t(`howItWorks.capacities.${key}.body`)}
+                </p>
+
+                {/* Bullets */}
+                <ul className="flex flex-col gap-3">
+                  {bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-[2px] block h-5 w-5 shrink-0 bg-[#f2594b]" aria-hidden="true" />
+                      <span className="text-xs font-medium leading-5 text-[#71717a]">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <ChatButton variant="primary" className="self-start">
+                  {t(`howItWorks.capacities.${key}.cta`)}
+                </ChatButton>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

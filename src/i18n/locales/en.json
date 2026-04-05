@@ -92,6 +92,7 @@
   },
   "howItWorks": {
     "label": "How it works",
+    "capabilityLabel": "Capability",
     "title": "Every conversation. Real guidance.",
     "transcript": {
       "messages": [
