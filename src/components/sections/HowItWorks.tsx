@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { I3DCubeScan } from "vuesax-icons-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
 
 const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
-const imgPerson = "/assets/how-it-works-person.png";
+const imgPerson = "/assets/woman_howitworks.png";
 
 interface ChatMsg {
   role: "user" | "bot";
@@ -218,8 +219,10 @@ export function HowItWorks() {
                 {/* Bullets */}
                 <ul className="flex flex-col gap-3">
                   {bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-[2px] block h-5 w-5 shrink-0 bg-[#f2594b]" aria-hidden="true" />
+                    <li key={i} className="flex items-center gap-4">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f2594b]" aria-hidden="true">
+                        <ArrowRight className="h-4 w-4 text-white" />
+                      </span>
                       <span className="text-xs font-medium leading-5 text-[#71717a]">{bullet}</span>
                     </li>
                   ))}
