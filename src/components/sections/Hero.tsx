@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { AirplaneSquare, TickCircle } from "vuesax-icons-react";
+import { TickCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
 import { ChatPreviewWidget } from "@/components/common/ChatPreviewWidget";
@@ -97,7 +97,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-x-[39px] gap-y-2 md:flex-nowrap">
               {orientaTags.map((tag) => (
                 <div key={tag} className="flex shrink-0 items-center gap-2">
-                  <AirplaneSquare variant="Bold" className="size-[20px] shrink-0 text-foreground" aria-hidden="true" />
+                  <span className="block h-5 w-5 shrink-0 bg-foreground" aria-hidden="true" />
                   <span className="whitespace-nowrap text-[12px] text-foreground">{tag}</span>
                 </div>
               ))}
