@@ -7,7 +7,8 @@ import { ChatButton } from "@/components/common/ChatButton";
 const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
-const imgPerson = "/assets/woman_howitworks.png";
+const imgPerson = "/assets/how-it-works-person.png";
+const imgPersonFull = "/assets/how-it-works-person-full.png";
 
 interface ChatMsg {
   role: "user" | "bot";
@@ -78,12 +79,11 @@ function BotBubble({
  * Desktop positions derived from Figma canvas coords (1440px frame, 100px
  * left margin = 1240px content) scaled to 1200px: factor ≈ 0.968
  *
- *   Logo marks SVG :  left=85   top=0    width=540  (z-index 0)
- *   Person circle  :  left=49   top=43   size=403    (z-index 10)
- *   User bubble 1  :  left=478  top=65   width=390   (z-index 20)
- *   Bot bubble     :  left=545  top=180  width=500   (z-index 20)
- *   User bubble 2  :  left=478  top=308  width=143   (z-index 20)
- *   Bot bubble 2   :  left=406  top=424  width=677   (z-index 20)
+ * Layer order (front → back):
+ *   Bubbles        :  z=30
+ *   Oval woman     :  left=49   top=43   size=403    (z=20, node 37:1674)
+ *   Logo marks SVG :  left=85   top=0    width=540   (z=10, node 33:442)
+ *   Full woman PNG :  left=0    top=0    width=480   (z=0,  node 33:453)
  */
 export function HowItWorks() {
   const { t } = useTranslation();
@@ -112,22 +112,28 @@ export function HowItWorks() {
       {/* ── Desktop composition (no horizontal padding — positions are from 1200px edge) ── */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
         <div className="relative overflow-visible" style={{ minHeight: 640 }}>
-          {/* Logo marks — behind everything.
-              SVG has width="100%" height="100%" which prevents intrinsic ratio
-              detection; we must supply explicit pixel height (viewBox 495.866×490.6
-              → 540 × (490.6/495.866) ≈ 534 px). */}
+          {/* Full woman — transparent PNG, background behind everything (node 33:453) */}
+          <img
+            src={imgPersonFull}
+            alt=""
+            aria-hidden="true"
+            className="absolute"
+            style={{ left: 0, top: 0, width: 480, height: 640, objectFit: "contain", objectPosition: "bottom left", zIndex: 0 }}
+          />
+
+          {/* Logo marks — above the full woman, behind the oval crop (node 33:442) */}
           <img
             src={imgLogoMarks}
             alt=""
             aria-hidden="true"
             className="absolute"
-            style={{ left: 85, top: 0, width: 540, height: 534, zIndex: 0 }}
+            style={{ left: 85, top: 0, width: 540, height: 534, zIndex: 10 }}
           />
 
-          {/* Person photo — circular crop, above logo */}
+          {/* Oval woman — circular crop, on top of logo marks (node 37:1674) */}
           <div
             className="absolute overflow-hidden rounded-full"
-            style={{ left: 49, top: 43, width: 403, height: 403, zIndex: 10 }}
+            style={{ left: 49, top: 43, width: 403, height: 403, zIndex: 20 }}
           >
             <img
               src={imgPerson}
@@ -137,22 +143,22 @@ export function HowItWorks() {
           </div>
 
           {/* User bubble 1 (node 37:1682) — top-right of composition */}
-          <div className="absolute" style={{ left: 478, top: 65, width: 390, zIndex: 20 }}>
+          <div className="absolute" style={{ left: 478, top: 65, width: 390, zIndex: 30 }}>
             <UserBubble time={userMsg1?.time ?? ""}>{userMsg1?.text}</UserBubble>
           </div>
 
           {/* Bot bubble (node 37:1679) */}
-          <div className="absolute" style={{ left: 545, top: 180, width: 500, zIndex: 20 }}>
+          <div className="absolute" style={{ left: 545, top: 180, width: 500, zIndex: 30 }}>
             <BotBubble time={botMsg1?.time ?? ""}>{botMsg1?.text}</BotBubble>
           </div>
 
           {/* User bubble 2 (node 37:1773) */}
-          <div className="absolute" style={{ left: 478, top: 308, width: 143, zIndex: 20 }}>
+          <div className="absolute" style={{ left: 478, top: 308, width: 143, zIndex: 30 }}>
             <UserBubble time={userMsg2?.time ?? ""}>{userMsg2?.text}</UserBubble>
           </div>
 
           {/* Last bot message — BotBubble (node 37:1766) */}
-          <div className="absolute" style={{ left: 406, top: 424, width: 677, zIndex: 20 }}>
+          <div className="absolute" style={{ left: 406, top: 424, width: 677, zIndex: 30 }}>
             <BotBubble time={botMsg2?.time ?? ""}>{botMsg2?.text}</BotBubble>
           </div>
         </div>
