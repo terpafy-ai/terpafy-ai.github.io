@@ -5,10 +5,6 @@ import { ChatButton } from "@/components/common/ChatButton";
 
 const CARD_KEYS = ["generic", "late", "variation", "noFeedback"] as const;
 
-// Permanent assets — downloaded from Figma node 2072:2772
-const IMG_PHOTO = "/assets/problem-person.png";
-const IMG_DECO = "/assets/problem-logo-marks.svg";
-
 /**
  * Problem section — Figma: 37:1672 (image) + 37:1915 (carousel cards).
  * Two-column on desktop: content left, circular photo right.
@@ -26,10 +22,10 @@ export function Problem() {
     <section id="problem" className="bg-background py-16 sm:py-24">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
 
-        {/* ── Two-column: content + image ── */}
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        {/* ── Content ── */}
+        <div>
 
-          {/* Left — text content */}
+          {/* Text content */}
           <div>
             {/* Section label — Figma: 20px #f2594b normal */}
             <span className="text-[20px] font-normal leading-none text-[#f2594b]">
@@ -81,34 +77,6 @@ export function Problem() {
             </div>
           </div>
 
-          {/* Right — circular photo with decorative overlay — Figma node 2072:2772
-               Layout: logo marks behind (extend slightly left of circle),
-               woman in circle on top.
-               SVG has preserveAspectRatio="none" + width/height 100% so we must
-               supply explicit pixel dimensions (viewBox 540.16×534.434).
-               At width=470: height = 470 × (534.434/540.16) ≈ 465px. */}
-          <div className="flex items-center justify-center lg:justify-end">
-            <div className="relative" style={{ width: 490, height: 465 }}>
-              {/* Logo marks — behind, left-anchored, overflows left of circle */}
-              <img
-                src={IMG_DECO}
-                alt=""
-                aria-hidden="true"
-                style={{ position: "absolute", left: 0, top: 0, width: 470, height: 465, zIndex: 0 }}
-              />
-              {/* Person photo — circle, right-anchored, overlaps marks */}
-              <div
-                className="absolute overflow-hidden rounded-full"
-                style={{ right: 0, top: 0, width: 420, height: 420, zIndex: 10 }}
-              >
-                <img
-                  src={IMG_PHOTO}
-                  alt={t("problem.imageAlt")}
-                  className="h-full w-full object-cover object-[center_20%]"
-                />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* ── Horizontal snap carousel — Figma: 37:1915 ── */}
