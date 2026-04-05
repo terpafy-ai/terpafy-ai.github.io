@@ -8,6 +8,8 @@ import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
 import { ChatButton } from "@/components/common/ChatButton";
 
 const NAV_LINKS = [
+  { labelKey: "nav.home", href: "/" },
+  { labelKey: "nav.problem", href: "/#problem" },
   { labelKey: "nav.features", href: "/#features" },
   { labelKey: "nav.howItWorks", href: "/#how-it-works" },
   { labelKey: "nav.forWho", href: "/#for-who" },

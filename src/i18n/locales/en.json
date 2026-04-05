@@ -355,10 +355,11 @@
   },
   "nav": {
     "home": "Home",
-    "features": "How It Works",
-    "howItWorks": "The Advisor",
+    "problem": "The Problem",
+    "features": "Terpafy Grow",
+    "howItWorks": "How It Works",
     "benefits": "Who It's For",
-    "forWho": "For whom",
+    "forWho": "Who It's For",
     "cta": "Talk to Grow"
   },
   "lang": {

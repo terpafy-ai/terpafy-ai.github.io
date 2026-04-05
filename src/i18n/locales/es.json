@@ -355,10 +355,11 @@
   },
   "nav": {
     "home": "Inicio",
-    "features": "Cómo Funciona",
-    "howItWorks": "El Consultor",
+    "problem": "El Problema",
+    "features": "Terpafy Grow",
+    "howItWorks": "Cómo Funciona",
     "benefits": "Para Quién",
-    "forWho": "Para quién",
+    "forWho": "Para Quién",
     "cta": "Hablar con Grow"
   },
   "lang": {
