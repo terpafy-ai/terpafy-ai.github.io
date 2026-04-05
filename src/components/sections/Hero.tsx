@@ -110,10 +110,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── ChatCTA + BigChat — Figma: 13:4599, 13:4592, 41:556, 3:734 ── */}
-      <ChatCTA />
-      <BigChat />
-
       {/* ── Ecosystem — full-bleed strip, Figma: 41:1065 ── */}
       <div className="border-t border-[rgba(58,58,58,0.2)] bg-background">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
@@ -142,6 +138,10 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* ── ChatCTA + BigChat — Figma: 13:4599, 13:4592, 41:556, 3:734 ── */}
+      <ChatCTA />
+      <BigChat />
     </section>
   );
 }

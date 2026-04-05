@@ -117,12 +117,12 @@ export function Problem() {
             {CARD_KEYS.map((key) => (
               <div
                 key={key}
-                className="flex w-[300px] shrink-0 snap-start flex-col gap-[10px] rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px] sm:w-[360px]"
+                className="flex w-[300px] shrink-0 snap-start items-center overflow-clip rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px] sm:w-[360px]"
               >
                 <div className="flex items-start gap-[10px]">
                   <I3DCubeScan
                     variant="Bold"
-                    className="mt-0.5 size-[24px] shrink-0 text-[#848484]"
+                    className="size-[24px] shrink-0 text-[#848484]"
                     aria-hidden="true"
                   />
                   <div className="flex flex-col gap-[10px]">
