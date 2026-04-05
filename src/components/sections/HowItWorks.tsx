@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { I3DCubeScan } from "vuesax-icons-react";
+import { CopySuccess } from "vuesax-icons-react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
@@ -201,9 +201,9 @@ export function HowItWorks() {
             return (
               <div key={key} className="flex flex-col gap-6">
                 {/* Badge */}
-                <span className="inline-flex self-start items-center gap-2 rounded bg-[rgba(242,89,75,0.1)] px-4 py-2 text-xs font-normal leading-3 text-[#f2594b] outline outline-1 -outline-offset-1 outline-[#f2594b]">
-                  <I3DCubeScan variant="Bold" className="h-4 w-4" aria-hidden="true" />
+                <span className="inline-flex self-start items-center gap-[8px] overflow-clip rounded-[4px] border border-[#f2594b] bg-[rgba(242,89,75,0.1)] pl-[32px] pr-[24px] py-[16px] text-[12px] font-normal leading-none text-[#f2594b] whitespace-nowrap">
                   {t("howItWorks.capabilityLabel")} {t(`howItWorks.capacities.${key}.number`)} · {t(`howItWorks.capacities.${key}.label`)}
+                  <CopySuccess variant="Bold" className="h-5 w-5 shrink-0" aria-hidden="true" />
                 </span>
 
                 {/* Title */}
