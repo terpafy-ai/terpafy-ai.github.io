@@ -5,6 +5,8 @@ import { ChatButton } from "@/components/common/ChatButton";
 
 const CARD_KEYS = ["generic", "late", "variation", "noFeedback"] as const;
 
+const IMG_DECO = "/assets/problem-logo-marks.svg";
+
 /**
  * Problem section — Figma: 37:1672 (image) + 37:1915 (carousel cards).
  * Two-column on desktop: content left, circular photo right.
@@ -22,10 +24,10 @@ export function Problem() {
     <section id="problem" className="bg-background py-16 sm:py-24">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
 
-        {/* ── Content ── */}
-        <div>
+        {/* ── Two-column: content left, logo marks right ── */}
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* Text content */}
+          {/* Left — text content */}
           <div>
             {/* Section label — Figma: 20px #f2594b normal */}
             <span className="text-[20px] font-normal leading-none text-[#f2594b]">
@@ -75,6 +77,16 @@ export function Problem() {
                 {t("problem.ctaSecondary")}
               </a>
             </div>
+          </div>
+
+          {/* Right — decorative logo marks (no human image yet) */}
+          <div className="hidden items-center justify-center lg:flex lg:justify-end">
+            <img
+              src={IMG_DECO}
+              alt=""
+              aria-hidden="true"
+              style={{ width: 470, height: 465 }}
+            />
           </div>
 
         </div>
