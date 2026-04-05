@@ -2,18 +2,13 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/common/Logo";
 
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? "";
-
 /**
- * Site footer — Figma: two primary-coloured blobs protrude upward into the
- * white section above, logo + tagline left, legal links right, bottom row.
+ * Site footer — logo + tagline left, legal links right, bottom row.
+ * WhatsApp contact link removed in Phase 15.
  */
 export function Footer() {
   const { t } = useTranslation();
-
   const currentYear = new Date().getFullYear();
-  const contactMessage = encodeURIComponent(t("footer.legal.contactMessage"));
-  const contactHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${contactMessage}`;
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -45,14 +40,12 @@ export function Footer() {
             >
               {t("footer.legal.privacy")}
             </Link>
-            <a
-              href={contactHref}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/privacy"
               className="text-primary-foreground/80 transition-colors hover:text-primary-foreground"
             >
               {t("footer.legal.compliance")}
-            </a>
+            </Link>
           </nav>
         </div>
 

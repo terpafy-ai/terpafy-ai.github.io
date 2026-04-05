@@ -26,7 +26,13 @@
     "ctaSubtitle": "Ask anything about your cultivation, from basic to advanced. The specialist is here.",
     "ecosystemLabel": "PART OF THE ECOSYSTEM",
     "ecosystemDescription": "Terpafy Grow is the gateway to the Terpafy ecosystem. The data generated here connects cultivation to patient care and medical research.",
-    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "ecosystemPills": [
+      "Grow",
+      "Care",
+      "Med",
+      "Assoc",
+      "Marketing"
+    ],
     "chatWidget": {
       "header": "Terpafy Grow · Cultivation Specialist",
       "subheader": "Talk to Terpafy Grow now.",
@@ -89,10 +95,26 @@
     "title": "Every conversation. Real guidance.",
     "transcript": {
       "messages": [
-        { "role": "user", "time": "11:15", "text": "The middle leaves have yellow spots between the veins." },
-        { "role": "bot",  "time": "11:15", "text": "Spots between veins — good observation. To confirm: what substrate and what pH are you watering with?" },
-        { "role": "user", "time": "11:18", "text": "Coco coir, pH 5.9." },
-        { "role": "bot",  "time": "11:19", "text": "Coco at pH 5.9 blocks magnesium absorption — this is the classic Mg deficiency from low pH. Correct to 6.0\u20136.2 and add 1g/L of magnesium sulfate for 2 weeks. Want the step by step?" }
+        {
+          "role": "user",
+          "time": "11:15",
+          "text": "The middle leaves have yellow spots between the veins."
+        },
+        {
+          "role": "bot",
+          "time": "11:15",
+          "text": "Spots between veins — good observation. To confirm: what substrate and what pH are you watering with?"
+        },
+        {
+          "role": "user",
+          "time": "11:18",
+          "text": "Coco coir, pH 5.9."
+        },
+        {
+          "role": "bot",
+          "time": "11:19",
+          "text": "Coco at pH 5.9 blocks magnesium absorption — this is the classic Mg deficiency from low pH. Correct to 6.0–6.2 and add 1g/L of magnesium sulfate for 2 weeks. Want the step by step?"
+        }
       ]
     },
     "capacities": {
@@ -124,63 +146,17 @@
       }
     }
   },
-  "benefits": {
-    "label": "Who it's for",
-    "title": "Every profile. Real gains.",
-    "subtitle": "Terpafy Grow was built for those at the tip of production — and for those who depend on that quality to care for people.",
-    "patients": {
-      "title": "For Growers",
-      "subtitle": "From beginner to advanced, with guidance at the right time",
-      "items": {
-        "never": {
-          "title": "Never Left Without an Answer",
-          "description": "Specialist available anytime for your cultivation"
-        },
-        "privacy": {
-          "title": "Privacy Guaranteed",
-          "description": "Your cultivation information is fully protected"
-        },
-        "communication": {
-          "title": "Just WhatsApp",
-          "description": "No extra app, no complicated sign-up"
-        }
-      }
-    },
-    "professionals": {
-      "title": "For Associations & Clinics",
-      "subtitle": "Quality in cultivation directly reflects in patient treatment",
-      "items": {
-        "realtime": {
-          "title": "Technical Guidance at Scale",
-          "description": "Assisted growers produce with more consistency and quality"
-        },
-        "insights": {
-          "title": "Origin Traceability",
-          "description": "Connect cultivation, extraction, and clinical results with more confidence"
-        },
-        "workflow": {
-          "title": "Ecosystem Integration",
-          "description": "Terpafy Grow connects with Care, Med, and Assoc"
-        }
-      }
-    },
-    "trust": {
-      "lgpd": "LGPD Compliant",
-      "encryption": "256-bit Encryption",
-      "support": "24/7 Support"
-    }
-  },
   "cta": {
+    "badge": "Available now",
     "quote": "Every disconnected journey creates uncertainty.",
-    "title": "Start your guidance now.",
-    "subtitle": "Terpafy Grow starts where the problem starts: at the grower's guidance. Each conversation transforms doubt into predictability.",
+    "title": "Start with Grow. The ecosystem comes with you.",
+    "subtitle": "Terpafy Grow is available now. Ask your first question and experience the beginning of the world's first cannabis intelligence ecosystem.",
     "button": "Talk to Terpafy Grow",
-    "whatsappMessage": "Hi! I want to start using Terpafy Grow.",
-    "learnMore": "See how it works",
+    "ctaSecondary": "See how it works",
     "note": "Free to start · No credit card · Privacy guaranteed"
   },
   "footer": {
-    "tagline": "The intelligence that connects the cannabis journey, from cultivation to care, for predictable and safe well-being.",
+    "tagline": "The intelligence that connects the cannabis journey, from cultivation to care, for predictable and safe wellbeing.",
     "description": "Your cannabis cultivation specialist via WhatsApp.",
     "phone": "+55 11 96001-1592",
     "quickLinks": {
@@ -195,8 +171,7 @@
       "privacy": "Privacy & Security",
       "terms": "Terms & Conditions",
       "compliance": "Compliance & Ethics",
-      "contact": "Contact",
-      "contactMessage": "Hi! I have a question about Terpafy. Can you help?"
+      "contact": "Contact"
     },
     "suite": "Terpafy Grow · Care · Med · Assoc · Marketplace",
     "copyright": "© {{year}} Terpafy. All rights reserved.",
@@ -356,10 +331,22 @@
     "cta": "Talk to Terpafy Grow",
     "ctaSecondary": "See how it works",
     "cards": {
-      "generic": { "title": "Generic answers that don't solve anything", "body": "Forums and groups deliver contradictory opinions. The grower applies the wrong guidance and wastes time — and sometimes the entire batch." },
-      "late": { "title": "Problems identified too late", "body": "Deficiencies, pH deviations, pests — without guidance at the right moment, the damage is already done when the grower notices." },
-      "variation": { "title": "Batch variation without explanation", "body": "The grower repeats the process and gets different results. Without structured guidance, it's impossible to know what changed." },
-      "noFeedback": { "title": "No feedback on what the product produces", "body": "The grower delivers and hears nothing more. There is no information cycle between what is produced and what the patient experiences." }
+      "generic": {
+        "title": "Generic answers that don't solve anything",
+        "body": "Forums and groups deliver contradictory opinions. The grower applies the wrong guidance and wastes time — and sometimes the entire batch."
+      },
+      "late": {
+        "title": "Problems identified too late",
+        "body": "Deficiencies, pH deviations, pests — without guidance at the right moment, the damage is already done when the grower notices."
+      },
+      "variation": {
+        "title": "Batch variation without explanation",
+        "body": "The grower repeats the process and gets different results. Without structured guidance, it's impossible to know what changed."
+      },
+      "noFeedback": {
+        "title": "No feedback on what the product produces",
+        "body": "The grower delivers and hears nothing more. There is no information cycle between what is produced and what the patient experiences."
+      }
     }
   },
   "nav": {
@@ -374,5 +361,107 @@
     "pt": "Português",
     "en": "English",
     "es": "Español"
+  },
+  "positioning": {
+    "title": "Not just another group. Guidance with responsibility.",
+    "isLabel": "Terpafy Grow is:",
+    "isNotLabel": "Terpafy Grow is not:",
+    "is": [
+      "Specialized technical guidance on cannabis",
+      "Contextual diagnosis, not a generic answer",
+      "Language adapted to your level",
+      "The entry point to the Terpafy ecosystem",
+      "Available now, for any grower"
+    ],
+    "isNot": [
+      "An informal WhatsApp forum or group",
+      "A search with context-free results",
+      "An isolated crop management software",
+      "A platform for recreational cultivation",
+      "A tool disconnected from care"
+    ]
+  },
+  "forWho": {
+    "label": "Who it's for",
+    "title": "Every profile. A real gain.",
+    "subtitle": "Terpafy Grow was built for those at the front line of production — and for those who depend on the quality of that front line to care for people.",
+    "personas": {
+      "beginner": {
+        "title": "Beginner Grower",
+        "subtitle": "Just getting started",
+        "body": "You don't need to master VPD, EC or pH on day one. Terpafy Grow adapts language and depth to what you already know — and helps you understand what's happening with your plant now, without searching in multiple places at once."
+      },
+      "association": {
+        "title": "Association Director",
+        "subtitle": "The manager who needs to guarantee",
+        "body": "What's produced in your operation reaches patients who depend on it. Grow acts as ongoing technical support: validates cultivation decisions, anticipates problems and ensures guidance is aligned with the standard your association needs to maintain."
+      },
+      "advanced": {
+        "title": "Advanced Grower",
+        "subtitle": "The grower who wants precision",
+        "body": "You already know how to grow. What's missing is a verification point that contextualizes what the data shows — unstable pH, light stress, nutrient interactions — and helps you make precise decisions without forum noise. The specialist is here for that."
+      },
+      "doctor": {
+        "title": "Prescribing Physician",
+        "subtitle": "The clinician who needs a basis",
+        "body": "The efficacy of what you prescribe starts with cultivation. Terpafy Grow connects the cultivation specialist to the prescribing physician — ensuring the plant profile behind the guidance matches what the patient needs, based on evidence and traceability."
+      }
+    }
+  },
+  "market": {
+    "label": "Market context",
+    "title": "The market grew in regulation. Not in guidance.",
+    "paradoxTitle": "The industry paradox",
+    "paradoxBody1": "Medical cannabis has more access and regulation than ever, but growers still decide based on forums and intuition.",
+    "paradoxBody2": "Groups and forums offer information in volume, but without context, without technical responsibility, and without knowledge of each producer's specific cultivation.",
+    "stats": {
+      "market": {
+        "value": "US$ 57B",
+        "label": "Global cannabis market by 2028",
+        "description": "Growth driven by regulation and demand for evidence-based treatments. Traceability and standardization become requirements, not differentiators."
+      },
+      "traceability": {
+        "value": "+90%",
+        "label": "Of operations without structured traceability",
+        "description": "Most licensed growers still rely on manual processes. The advancing regulatory standard demands data infrastructure that begins with guidance."
+      }
+    },
+    "closing": "Terpafy Grow doesn't compete with forums or crop management software. It defines a new category: the entry point of an ecosystem that connects cultivation to care. The differentiator is the cycle that begins with every conversation."
+  },
+  "principles": {
+    "title": "The filters that guide every recommendation.",
+    "preamble": "These are not decorative values. They are the criteria that determine how the specialist guides, what the platform does, and how each participant in the ecosystem is treated.",
+    "items": {
+      "science": {
+        "number": "01",
+        "title": "Science as Compass",
+        "body": "Every recommendation is backed by technical validation — not guesswork. We prioritize evidence over intuition, from substrate to dosage."
+      },
+      "intelligence": {
+        "number": "02",
+        "title": "Connected Intelligence",
+        "body": "The value is not in isolated guidance. It lies in the connection between what happens in cultivation and what it means for the patient at the end of the chain."
+      },
+      "care": {
+        "number": "03",
+        "title": "Care in Every Action",
+        "body": "What is produced here reaches people who depend on it for their wellbeing. Every recommendation is made with empathy and responsibility."
+      },
+      "transparency": {
+        "number": "04",
+        "title": "Radical Transparency",
+        "body": "We are open about what we know and the limitations of any recommendation. The grower's trust is built through honesty."
+      },
+      "ecosystem": {
+        "number": "05",
+        "title": "Strengthen the Ecosystem",
+        "body": "The grower who learns and grows strengthens the entire ecosystem. We build to give autonomy — not to create dependency."
+      },
+      "simplify": {
+        "number": "06",
+        "title": "Simplify the Complex",
+        "body": "Our responsibility is to make the complexity of cannabis accessible so any grower can make better decisions."
+      }
+    }
   }
 }
