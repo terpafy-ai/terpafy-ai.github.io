@@ -15,8 +15,7 @@ i18n
       en: { translation: en },
       es: { translation: es },
     },
-    lng: "pt",
-    fallbackLng: "pt",
+    fallbackLng: "en",
     supportedLngs: ["pt", "en", "es"],
     detection: {
       order: ["localStorage", "navigator"],

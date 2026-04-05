@@ -90,14 +90,14 @@ src/
 ├── components/
 │   ├── common/              # Logo, LanguageSwitcher, WhatsAppButton
 │   ├── layout/              # Header, Footer, Section
-│   ├── sections/            # Hero, Problem, Features, BigChat, HowItWorks, Benefits, CTA
+│   ├── sections/            # Hero, Problem, Features, Positioning, HowItWorks, ForWho, CTA
 │   └── ui/                  # shadcn/ui primitives (Button, Card, Badge…)
 ├── pages/
 │   ├── Home.tsx             # Composes all homepage sections
 │   ├── PrivacyPolicy.tsx    # Privacy policy (8 sections, LGPD)
 │   └── TermsOfService.tsx   # Terms of service (5 sections + disclaimer)
 ├── i18n/
-│   ├── config.ts            # i18next setup (PT default, browser detection)
+│   ├── config.ts            # i18next setup (en-US default, browser language detection)
 │   └── locales/             # pt.json, en.json, es.json
 ├── hooks/                   # Custom React hooks
 ├── types/                   # TypeScript interfaces
@@ -110,6 +110,20 @@ public/
 └── workflows/
     └── deploy.yml           # CI: typecheck → lint → build → deploy to Pages
 ```
+
+---
+
+## Security
+
+Security headers are applied via `<meta http-equiv>` tags in `index.html` (compatible with GitHub Pages static hosting):
+
+- `Content-Security-Policy` — restricts script/style/font/image sources
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: SAMEORIGIN`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy` — denies camera, microphone, geolocation
+
+All external links use `rel="noopener noreferrer"`. No `dangerouslySetInnerHTML` is used anywhere.
 
 ---
 
