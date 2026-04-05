@@ -146,6 +146,9 @@
       }
     }
   },
+  "manifesto": {
+    "description": "O Terpafy Grow começa onde o problema começa: na orientação ao cultivador. Cada conversa é o primeiro passo de um ciclo que, com o tempo, conecta o que é produzido ao que o paciente experimenta e transforma fragmentação em previsibilidade."
+  },
   "cta": {
     "badge": "Disponível agora",
     "quote": "Toda jornada desconectada gera incerteza.",

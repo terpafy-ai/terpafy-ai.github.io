@@ -6,6 +6,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ForWho } from "@/components/sections/ForWho";
 import { MarketContext } from "@/components/sections/MarketContext";
 import { Principles } from "@/components/sections/Principles";
+import { Manifesto } from "@/components/sections/Manifesto";
 import { CTA } from "@/components/sections/CTA";
 
 export function Home() {
@@ -19,6 +20,7 @@ export function Home() {
       <ForWho />
       <MarketContext />
       <Principles />
+      <Manifesto />
       <CTA />
     </main>
   );

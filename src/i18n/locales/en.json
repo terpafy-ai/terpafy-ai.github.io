@@ -146,6 +146,9 @@
       }
     }
   },
+  "manifesto": {
+    "description": "Terpafy Grow starts where the problem starts: in guiding the grower. Each conversation is the first step in a cycle that, over time, connects what is produced to what the patient experiences — transforming fragmentation into predictability."
+  },
   "cta": {
     "badge": "Available now",
     "quote": "Every disconnected journey creates uncertainty.",
