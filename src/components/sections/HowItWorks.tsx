@@ -53,13 +53,13 @@ function BotBubble({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[10px_10px_5px_10px] border border-[#3a3a3a] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)] backdrop-blur-[16px]",
+        "overflow-hidden rounded-[10px_10px_5px_10px] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)] outline outline-1 -outline-offset-1 outline-[#3a3a3a] backdrop-blur-lg",
         className,
       )}
     >
       <div className="px-[15px] pt-[15px] pb-[15px]">
-        <p className="text-[14px] font-medium leading-[1.5] text-[#3a3a3a]">{children}</p>
-        <p className="mt-1 text-right text-[12px] font-medium leading-[1.5] text-[#3a3a3a]">
+        <p className="text-[14px] font-medium leading-5 text-[#3a3a3a]">{children}</p>
+        <p className="mt-1 text-right text-[12px] font-medium leading-4 text-[#3a3a3a]">
           {time}
         </p>
       </div>
@@ -82,7 +82,7 @@ function BotBubble({
  *   User bubble 1  :  left=478  top=65   width=390   (z-index 20)
  *   Bot bubble     :  left=545  top=180  width=500   (z-index 20)
  *   User bubble 2  :  left=478  top=308  width=143   (z-index 20)
- *   Bot plain text :  left=406  top=424  width=625   (z-index 20)
+ *   Bot bubble 2   :  left=406  top=424  width=677   (z-index 20)
  */
 export function HowItWorks() {
   const { t } = useTranslation();
@@ -110,7 +110,7 @@ export function HowItWorks() {
 
       {/* ── Desktop composition (no horizontal padding — positions are from 1200px edge) ── */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
-        <div className="relative overflow-visible" style={{ minHeight: 570 }}>
+        <div className="relative overflow-visible" style={{ minHeight: 640 }}>
           {/* Logo marks — behind everything.
               SVG has width="100%" height="100%" which prevents intrinsic ratio
               detection; we must supply explicit pixel height (viewBox 495.866×490.6
@@ -150,15 +150,10 @@ export function HowItWorks() {
             <UserBubble time={userMsg2?.time ?? ""}>{userMsg2?.text}</UserBubble>
           </div>
 
-          {/* Last bot message — plain text, no bubble (node 37:1766).
-              bg-background ensures the text reads against the page colour
-              rather than the asterisk blade that partially underlaps it. */}
-          <p
-            className="absolute bg-background text-[14px] font-medium leading-[1.5] text-[#3a3a3a]"
-            style={{ left: 406, top: 424, width: 625, zIndex: 20 }}
-          >
-            {botMsg2?.text}
-          </p>
+          {/* Last bot message — BotBubble (node 37:1766) */}
+          <div className="absolute" style={{ left: 406, top: 424, width: 677, zIndex: 20 }}>
+            <BotBubble time={botMsg2?.time ?? ""}>{botMsg2?.text}</BotBubble>
+          </div>
         </div>
       </div>
 
@@ -170,9 +165,11 @@ export function HowItWorks() {
 
           if (isLastMsg) {
             return (
-              <p key={i} className="text-sm font-medium leading-[1.5] text-[#3a3a3a]">
-                {msg.text}
-              </p>
+              <div key={i} className="flex justify-start">
+                <BotBubble time={msg.time} className="max-w-[80%]">
+                  {msg.text}
+                </BotBubble>
+              </div>
             );
           }
 
