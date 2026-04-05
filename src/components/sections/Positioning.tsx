@@ -1,4 +1,5 @@
-import { ArrowRight, Check, X } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { TickCircle, CloseCircle } from "vuesax-icons-react";
 import { useTranslation } from "react-i18next";
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? "";
@@ -37,7 +38,8 @@ export function Positioning() {
             <ul className="flex flex-col gap-[26px]">
               {isItems.map((item, i) => (
                 <li key={i} className="flex items-center gap-4">
-                  <Check
+                  <TickCircle
+                    variant="Outline"
                     className="h-[22px] w-[22px] flex-shrink-0 text-[#f2594b]"
                     aria-hidden="true"
                   />
@@ -57,7 +59,8 @@ export function Positioning() {
             <ul className="flex flex-col gap-[26px]">
               {isNotItems.map((item, i) => (
                 <li key={i} className="flex items-center gap-4">
-                  <X
+                  <CloseCircle
+                    variant="Outline"
                     className="h-[22px] w-[22px] flex-shrink-0 text-[#8c8c8c]"
                     aria-hidden="true"
                   />
