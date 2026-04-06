@@ -13,6 +13,26 @@
       "secure": "Seguro y Privado",
       "medical": "Grado Médico",
       "easy": "Fácil de Usar"
+    },
+    "orientaLabel": "GUÍAS",
+    "orientaTags": [
+      "Cultivadores principiantes",
+      "Productores intermedios",
+      "Growers avanzados",
+      "Asociación de pacientes"
+    ],
+    "ctaTagline": "Terpafy Grow · Especialista en cultivo",
+    "ctaHeadline": "Habla con Terpafy Grow ahora.",
+    "ctaSubtitle": "Puedes preguntar lo que quieras sobre tu cultivo, de lo básico a lo avanzado. El especialista está aquí.",
+    "ecosystemLabel": "PARTE DEL ECOSISTEMA",
+    "ecosystemDescription": "Terpafy Grow es la puerta de entrada al ecosistema Terpafy. Los datos generados aquí conectan el cultivo al cuidado del paciente y la investigación médica.",
+    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "chatWidget": {
+      "header": "Terpafy Grow · Cultivation Specialist",
+      "subheader": "Habla con Terpafy Grow ahora.",
+      "welcome": "Bienvenido a TerpafyGrow",
+      "welcomeSub": "Un especialista en cultivo de cannabis disponible para orientar tu planta",
+      "placeholder": "Escribe tu pregunta..."
     }
   },
   "features": {
@@ -20,24 +40,47 @@
     "title": "Un especialista en cultivo. Disponible ahora.",
     "subtitle": "No es una búsqueda. No es un foro. Es una conversación con un especialista en cultivo de cannabis que entiende tu contexto y orienta según lo que está pasando con tu planta ahora.",
     "cta": "Hablar con Terpafy Grow",
+    "highlightTitle": "Terpafy Grow",
+    "highlightSub": "Especialista en cultivo de cannabis",
+    "highlightBody": "Aquí para ayudar con preguntas prácticas sobre tu cultivo — desde la primera plántula hasta operaciones avanzadas. No importa el nivel: pregunta sin preocupación. Cada orientación se construye a partir de lo que estás viviendo en tu ciclo ahora.",
     "items": {
-      "monitoring": {
-        "title": "Diagnóstico de Plantas",
-        "description": "Describe lo que ves y recibe orientación precisa para tu planta."
+      "knowledge": {
+        "title": "Conocimiento especializado",
+        "description": "VPD, pH, EC, perfil de terpenos, manejo de nutrientes, plagas, poda, floración — profundidad técnica real sobre cannabis."
       },
-      "reminders": {
-        "title": "Gestión de Ciclos",
-        "description": "Haz seguimiento de etapas de cultivo, riego, nutrición e iluminación con soporte inteligente."
+      "adaptive": {
+        "title": "Se adapta a tu nivel",
+        "description": "Principiante o avanzado. El lenguaje, la profundidad y el tipo de orientación cambian según quién pregunta."
       },
-      "security": {
-        "title": "Privacidad Total",
-        "description": "Tu información de cultivo está protegida y nunca se comparte sin consentimiento."
+      "immediate": {
+        "title": "Cuando lo necesitas",
+        "description": "Los problemas de cultivo no esperan. La orientación está disponible cuando el cultivador identifica el problema — no al día siguiente."
       },
-      "education": {
-        "title": "Base de Conocimiento",
-        "description": "Genética, sustrato, poda, cosecha, extracción — todo en una conversación."
+      "contextual": {
+        "title": "Diagnóstico contextual",
+        "description": "Pregunta lo que necesita antes de orientar. No entrega respuestas prefabricadas — entrega diagnósticos basados en tu caso."
+      },
+      "explains": {
+        "title": "Explica el porqué",
+        "description": "Además de la orientación inmediata, explica el razonamiento. Aprendes mientras resuelves — y la próxima vez lo identificas solo."
+      },
+      "ecosystem": {
+        "title": "Parte del ecosistema",
+        "description": "Terpafy Grow es la puerta de entrada. Con el tiempo, lo que sucede aquí conecta el cultivo al cuidado del paciente."
       }
     }
+  },
+  "bigChat": {
+    "title1": "Bienvenido a Terpafy",
+    "titleBrand": "Grow",
+    "subtitle": "Un especialista en cultivo de cannabis disponible para orientar tu planta",
+    "placeholder": "Escribe tu pregunta...",
+    "defend": "Lo que defendemos",
+    "defendDesc": "Orientación técnica confiable en el momento justo.",
+    "different": "Cómo lo hacemos diferente",
+    "differentDesc": "Especialista accesible, con diagnóstico claro y sin suposiciones.",
+    "horizon": "El horizonte",
+    "horizonDesc": "El primer paso de un ecosistema mayor del cannabis."
   },
   "howItWorks": {
     "label": "Cómo funciona",
@@ -278,6 +321,22 @@
     "disclaimer": {
       "title": "Aviso Legal",
       "text": "Por tratarse de documentos legales que involucran datos sensibles y responsabilidad civil, es altamente recomendable que estos textos sean revisados y validados por un abogado especializado en Derecho Digital y LGPD antes de ser publicados y utilizados."
+    }
+  },
+  "problem": {
+    "label": "El problema",
+    "imageAlt": "Paciente satisfecha con los resultados del cultivo",
+    "title": "El cultivador tiene dudas. Internet tiene opiniones. Son cosas distintas.",
+    "stat": "73%",
+    "statLabel": "de los pacientes reportan variación en resultados entre lotes del mismo producto.",
+    "body": "Foros, grupos de WhatsApp y búsquedas en Google ofrecen información en cantidad — pero sin contexto, sin responsabilidad técnica y sin conocimiento de tu cultivo específico. El resultado es prueba, error y lote comprometido.",
+    "cta": "Hablar con Terpafy Grow",
+    "ctaSecondary": "Ver cómo funciona",
+    "cards": {
+      "generic": { "title": "Respuestas genéricas que no resuelven", "body": "Foros y grupos entregan opiniones contradictorias. El cultivador aplica la orientación equivocada y pierde tiempo — y a veces el lote entero." },
+      "late": { "title": "Problemas identificados demasiado tarde", "body": "Deficiencias, desviaciones de pH, plagas — sin orientación en el momento correcto, el daño ya está hecho cuando el cultivador lo nota." },
+      "variation": { "title": "Variación entre lotes sin explicación", "body": "El cultivador repite el proceso y obtiene resultados diferentes. Sin orientación estructurada, imposible saber qué cambió." },
+      "noFeedback": { "title": "Ningún retorno sobre lo que el producto produce", "body": "El cultivador entrega y no sabe más nada. No hay ciclo de información entre lo que se produce y lo que el paciente experimenta." }
     }
   },
   "nav": {

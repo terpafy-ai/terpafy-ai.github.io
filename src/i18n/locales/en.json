@@ -13,6 +13,26 @@
       "secure": "Secure & Private",
       "medical": "Medical Grade",
       "easy": "Easy to Use"
+    },
+    "orientaLabel": "GUIDES",
+    "orientaTags": [
+      "Beginner growers",
+      "Intermediate producers",
+      "Advanced growers",
+      "Patient associations"
+    ],
+    "ctaTagline": "Terpafy Grow · Cultivation Specialist",
+    "ctaHeadline": "Talk to Terpafy Grow now.",
+    "ctaSubtitle": "Ask anything about your cultivation, from basic to advanced. The specialist is here.",
+    "ecosystemLabel": "PART OF THE ECOSYSTEM",
+    "ecosystemDescription": "Terpafy Grow is the gateway to the Terpafy ecosystem. The data generated here connects cultivation to patient care and medical research.",
+    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "chatWidget": {
+      "header": "Terpafy Grow · Cultivation Specialist",
+      "subheader": "Talk to Terpafy Grow now.",
+      "welcome": "Welcome to TerpafyGrow",
+      "welcomeSub": "A cannabis cultivation specialist available to guide your plant",
+      "placeholder": "Type your question..."
     }
   },
   "features": {
@@ -20,24 +40,47 @@
     "title": "A cultivation specialist. Available now.",
     "subtitle": "Not a search engine. Not a forum. A conversation with a cannabis cultivation specialist who understands your context and guides based on what's happening with your plant right now.",
     "cta": "Talk to Terpafy Grow",
+    "highlightTitle": "Terpafy Grow",
+    "highlightSub": "Cannabis cultivation specialist",
+    "highlightBody": "Here to help with practical questions about your cultivation — from the first seedling to advanced operations. No matter the level: ask without worry. Each guidance is built from what you are experiencing in your cycle right now.",
     "items": {
-      "monitoring": {
-        "title": "Plant Diagnosis",
-        "description": "Describe what you see and receive accurate guidance for your plant."
+      "knowledge": {
+        "title": "Specialized knowledge",
+        "description": "VPD, pH, EC, terpene profile, nutrient management, pests, pruning, flowering — real technical depth on cannabis."
       },
-      "reminders": {
-        "title": "Cycle Management",
-        "description": "Track cultivation stages, watering, nutrition, and lighting with smart support."
+      "adaptive": {
+        "title": "Adapts to your level",
+        "description": "Beginner or advanced. The language, depth, and type of guidance change based on who is asking."
       },
-      "security": {
-        "title": "Full Privacy",
-        "description": "Your cultivation information is protected and never shared without consent."
+      "immediate": {
+        "title": "When you need it",
+        "description": "Cultivation problems don't wait. Guidance is available when the grower identifies the problem — not the next day."
       },
-      "education": {
-        "title": "Knowledge Base",
-        "description": "Genetics, substrate, pruning, harvest, extraction — all in one conversation."
+      "contextual": {
+        "title": "Contextual diagnosis",
+        "description": "Asks what it needs before guiding. Doesn't deliver canned answers — delivers diagnoses based on your case."
+      },
+      "explains": {
+        "title": "Explains the why",
+        "description": "Beyond immediate guidance, explains the reasoning. You learn while you solve — and next time you identify it yourself."
+      },
+      "ecosystem": {
+        "title": "Part of the ecosystem",
+        "description": "Terpafy Grow is the entry point. Over time, what happens here connects cultivation to patient care."
       }
     }
+  },
+  "bigChat": {
+    "title1": "Welcome to Terpafy",
+    "titleBrand": "Grow",
+    "subtitle": "A cannabis cultivation specialist available to guide your plant",
+    "placeholder": "Type your question...",
+    "defend": "What we stand for",
+    "defendDesc": "Reliable technical guidance at the right moment.",
+    "different": "How we do it differently",
+    "differentDesc": "Accessible specialist, with clear diagnosis and no guesswork.",
+    "horizon": "The horizon",
+    "horizonDesc": "The first step of a larger cannabis ecosystem."
   },
   "howItWorks": {
     "label": "How it works",
@@ -278,6 +321,22 @@
     "disclaimer": {
       "title": "Legal Notice",
       "text": "As these are legal documents involving sensitive data and civil liability, it is highly recommended that these texts be reviewed and validated by a lawyer specialized in Digital Law and LGPD before being published and used."
+    }
+  },
+  "problem": {
+    "label": "The problem",
+    "imageAlt": "Patient happy with cultivation results",
+    "title": "The grower has doubts. The internet has opinions. Those are different things.",
+    "stat": "73%",
+    "statLabel": "of patients report variation in results between batches of the same product.",
+    "body": "Forums, WhatsApp groups and Google searches offer information in quantity — but without context, without technical accountability and without knowledge of your specific cultivation. The result is trial, error and a compromised batch.",
+    "cta": "Talk to Terpafy Grow",
+    "ctaSecondary": "See how it works",
+    "cards": {
+      "generic": { "title": "Generic answers that don't solve anything", "body": "Forums and groups deliver contradictory opinions. The grower applies the wrong guidance and wastes time — and sometimes the entire batch." },
+      "late": { "title": "Problems identified too late", "body": "Deficiencies, pH deviations, pests — without guidance at the right moment, the damage is already done when the grower notices." },
+      "variation": { "title": "Batch variation without explanation", "body": "The grower repeats the process and gets different results. Without structured guidance, it's impossible to know what changed." },
+      "noFeedback": { "title": "No feedback on what the product produces", "body": "The grower delivers and hears nothing more. There is no information cycle between what is produced and what the patient experiences." }
     }
   },
   "nav": {

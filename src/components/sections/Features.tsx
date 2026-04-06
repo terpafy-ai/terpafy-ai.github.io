@@ -1,80 +1,83 @@
 import { useTranslation } from "react-i18next";
-import { Activity, Notification, Shield, Book1 } from "vuesax-icons-react";
-import { Section } from "@/components/layout/Section";
-import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { I3DCubeScan } from "vuesax-icons-react";
+import { ChatButton } from "@/components/common/ChatButton";
 
-const FEATURE_ICONS = {
-  monitoring: Activity,
-  reminders: Notification,
-  security: Shield,
-  education: Book1,
-} as const;
+const FEATURE_KEYS = [
+  "knowledge",
+  "adaptive",
+  "immediate",
+  "contextual",
+  "explains",
+  "ecosystem",
+] as const;
 
-/**
- * Features section — Figma: two-column layout with label, headline, and
- * description on the right. Feature cards below.
- */
 export function Features() {
   const { t } = useTranslation();
 
   return (
-    <section id="features" className="bg-white">
-      {/* Primary 2-col intro — matches Figma features.png */}
-      <Section size="lg">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <section id="features" className="bg-background py-16 sm:py-24">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        {/* Header two-col */}
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
           {/* Left */}
           <div>
-            <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary">
-              <span className="inline-block h-px w-6 bg-primary" aria-hidden="true" />
+            <p className="mb-4 flex items-center gap-3 text-[20px] font-normal text-[#f2594b]">
+              <span className="inline-block h-px w-8 bg-[#f2594b]" aria-hidden="true" />
               {t("features.label")}
             </p>
-            <h2 className="font-heading text-4xl font-black leading-tight text-foreground sm:text-5xl">
+            <h2 className="text-[40px] font-bold leading-tight text-[#3a3a3a]">
               {t("features.title")}
             </h2>
           </div>
 
           {/* Right */}
           <div className="flex flex-col gap-6">
-            <p className="text-lg leading-relaxed text-foreground-muted">
+            <p className="text-[13px] leading-relaxed text-[#848484]">
               {t("features.subtitle")}
             </p>
-            <WhatsAppButton
-              variant="primary"
-              messageKey="hero.whatsappMessage"
-              className="self-start"
-            >
+            <ChatButton variant="primary" className="self-start">
               {t("features.cta")}
-            </WhatsAppButton>
+            </ChatButton>
           </div>
         </div>
-      </Section>
 
-      {/* Feature cards grid */}
-      <Section size="sm" className="pt-0">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {(Object.keys(FEATURE_ICONS) as Array<keyof typeof FEATURE_ICONS>).map(
-            (key) => {
-              const Icon = FEATURE_ICONS[key];
-              return (
-                <div
-                  key={key}
-                  className="rounded-xl border border-border bg-background p-6"
-                >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon variant="Bold" className="h-5 w-5 text-primary" aria-hidden="true" />
-                  </div>
-                  <h3 className="mb-2 font-semibold text-foreground">
-                    {t(`features.items.${key}.title`)}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-foreground-muted">
-                    {t(`features.items.${key}.description`)}
-                  </p>
-                </div>
-              );
-            },
-          )}
+        {/* Highlight card */}
+        <div className="mt-10 flex flex-col gap-[10px] rounded-[4px] border border-[#f2594b] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px]">
+          <I3DCubeScan
+            variant="Bold"
+            className="size-[24px] text-[#f2594b]"
+            aria-hidden="true"
+          />
+          <p className="text-[14px] font-bold text-[#3a3a3a]">
+            {t("features.highlightTitle")} · {t("features.highlightSub")}
+          </p>
+          <p className="text-[13px] font-medium text-[#848484]">
+            {t("features.highlightBody")}
+          </p>
         </div>
-      </Section>
+
+        {/* 6-card grid */}
+        <div className="mt-8 grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURE_KEYS.map((key) => (
+            <div
+              key={key}
+              className="flex flex-col gap-[10px] rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px]"
+            >
+              <I3DCubeScan
+                variant="Bold"
+                className="size-[24px] text-[#848484]"
+                aria-hidden="true"
+              />
+              <p className="text-[14px] font-bold text-[#848484]">
+                {t(`features.items.${key}.title`)}
+              </p>
+              <p className="text-[13px] font-medium text-[#848484]">
+                {t(`features.items.${key}.description`)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
