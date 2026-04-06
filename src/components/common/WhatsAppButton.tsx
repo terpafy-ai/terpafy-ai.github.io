@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const WHATSAPP_NUMBER =
-  import.meta.env.VITE_WHATSAPP_NUMBER ?? "5511960011592";
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? "";
 
 interface WhatsAppButtonProps {
   /** "primary" = large full-width-ish CTA button | "inline" = ghost-like link */
