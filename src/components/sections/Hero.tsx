@@ -3,6 +3,8 @@ import { AirplaneSquare, TickCircle } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
 import { ChatPreviewWidget } from "@/components/common/ChatPreviewWidget";
+import { ChatCTA } from "@/components/sections/ChatCTA";
+import { BigChat } from "@/components/sections/BigChat";
 
 /**
  * Hero section — Figma reference: node 13:4694 (left column) + 13:4600 (chat preview).
@@ -97,7 +99,9 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-x-[39px] gap-y-2 md:flex-nowrap">
               {orientaTags.map((tag) => (
                 <div key={tag} className="flex shrink-0 items-center gap-2">
-                  <AirplaneSquare variant="Bold" className="size-[20px] shrink-0 text-foreground" aria-hidden="true" />
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-foreground" aria-hidden="true">
+                    <AirplaneSquare variant="Bold" className="h-4 w-4 text-background" />
+                  </span>
                   <span className="whitespace-nowrap text-[12px] text-foreground">{tag}</span>
                 </div>
               ))}
@@ -134,6 +138,10 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* ── ChatCTA + BigChat — Figma: 13:4599, 13:4592, 41:556, 3:734 ── */}
+      <ChatCTA />
+      <BigChat />
     </section>
   );
 }

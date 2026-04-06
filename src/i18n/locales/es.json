@@ -26,7 +26,13 @@
     "ctaSubtitle": "Puedes preguntar lo que quieras sobre tu cultivo, de lo básico a lo avanzado. El especialista está aquí.",
     "ecosystemLabel": "PARTE DEL ECOSISTEMA",
     "ecosystemDescription": "Terpafy Grow es la puerta de entrada al ecosistema Terpafy. Los datos generados aquí conectan el cultivo al cuidado del paciente y la investigación médica.",
-    "ecosystemPills": ["Grow", "Care", "Med", "Assoc", "Marketing"],
+    "ecosystemPills": [
+      "Grow",
+      "Care",
+      "Med",
+      "Assoc",
+      "Marketing"
+    ],
     "chatWidget": {
       "header": "Terpafy Grow · Cultivation Specialist",
       "subheader": "Habla con Terpafy Grow ahora.",
@@ -86,13 +92,30 @@
   },
   "howItWorks": {
     "label": "Cómo funciona",
+    "capabilityLabel": "Capacidad",
     "title": "Cada conversación. Una orientación real.",
     "transcript": {
       "messages": [
-        { "role": "user", "time": "11:15", "text": "Las hojas del medio tienen manchas amarillas entre las nervaduras." },
-        { "role": "bot",  "time": "11:15", "text": "Manchas entre nervaduras — buena observación. Para confirmar: ¿qué sustrato y qué pH estás usando para regar?" },
-        { "role": "user", "time": "11:18", "text": "Coco coir, pH 5.9." },
-        { "role": "bot",  "time": "11:19", "text": "Coco a pH 5.9 bloquea la absorción de magnesio — este es el cuadro clásico de deficiencia de Mg por pH bajo. Corrige a 6.0\u20136.2 y agrega 1g/L de sulfato de magnesio por 2 semanas. ¿Quieres el paso a paso?" }
+        {
+          "role": "user",
+          "time": "11:15",
+          "text": "Las hojas del medio tienen manchas amarillas entre las nervaduras."
+        },
+        {
+          "role": "bot",
+          "time": "11:15",
+          "text": "Manchas entre nervaduras — buena observación. Para confirmar: ¿qué sustrato y qué pH estás usando para regar?"
+        },
+        {
+          "role": "user",
+          "time": "11:18",
+          "text": "Coco coir, pH 5.9."
+        },
+        {
+          "role": "bot",
+          "time": "11:19",
+          "text": "Coco a pH 5.9 bloquea la absorción de magnesio — este es el cuadro clásico de deficiencia de Mg por pH bajo. Corrige a 6.0–6.2 y agrega 1g/L de sulfato de magnesio por 2 semanas. ¿Quieres el paso a paso?"
+        }
       ]
     },
     "capacities": {
@@ -124,59 +147,16 @@
       }
     }
   },
-  "benefits": {
-    "label": "Para quién",
-    "title": "Cada perfil. Una ganancia real.",
-    "subtitle": "Terpafy Grow fue construido para quienes están en la punta de la producción — y para quienes dependen de esa calidad para cuidar a las personas.",
-    "patients": {
-      "title": "Para Cultivadores",
-      "subtitle": "De principiante a avanzado, con orientación en el momento correcto",
-      "items": {
-        "never": {
-          "title": "Nunca Sin Respuesta",
-          "description": "Especialista disponible en cualquier momento para tu cultivo"
-        },
-        "privacy": {
-          "title": "Privacidad Garantizada",
-          "description": "Tu información de cultivo está completamente protegida"
-        },
-        "communication": {
-          "title": "Solo WhatsApp",
-          "description": "Sin app adicional, sin registro complicado"
-        }
-      }
-    },
-    "professionals": {
-      "title": "Para Asociaciones y Clínicas",
-      "subtitle": "La calidad en el cultivo impacta directamente el tratamiento del paciente",
-      "items": {
-        "realtime": {
-          "title": "Orientación Técnica a Escala",
-          "description": "Los cultivadores asistidos producen con más consistencia y calidad"
-        },
-        "insights": {
-          "title": "Trazabilidad de Origen",
-          "description": "Conecta cultivo, extracción y resultado clínico con más confianza"
-        },
-        "workflow": {
-          "title": "Integración con el Ecosistema",
-          "description": "Terpafy Grow se conecta con Care, Med y Assoc"
-        }
-      }
-    },
-    "trust": {
-      "lgpd": "Conforme LGPD",
-      "encryption": "Cifrado 256-bit",
-      "support": "Soporte 24/7"
-    }
+  "manifesto": {
+    "description": "Terpafy Grow comienza donde comienza el problema: en la orientación al cultivador. Cada conversación es el primer paso de un ciclo que, con el tiempo, conecta lo que se produce con lo que el paciente experimenta y transforma la fragmentación en previsibilidad."
   },
   "cta": {
+    "badge": "Disponible ahora",
     "quote": "Todo viaje desconectado genera incertidumbre.",
-    "title": "Empieza tu orientación ahora.",
-    "subtitle": "Terpafy Grow empieza donde empieza el problema: en la orientación al cultivador. Cada conversación transforma la duda en previsibilidad.",
+    "title": "Empieza con Grow. El ecosistema viene contigo.",
+    "subtitle": "Terpafy Grow está disponible ahora. Haz tu primera pregunta y experimenta el comienzo del primer ecosistema de inteligencia cannabica del mundo.",
     "button": "Hablar con Terpafy Grow",
-    "whatsappMessage": "Hola! Quiero comenzar a usar Terpafy Grow.",
-    "learnMore": "Ver cómo funciona",
+    "ctaSecondary": "Ver cómo funciona",
     "note": "Gratis para empezar · Sin tarjeta de crédito · Privacidad garantizada"
   },
   "footer": {
@@ -195,8 +175,7 @@
       "privacy": "Privacidad y Seguridad",
       "terms": "Términos y Condiciones",
       "compliance": "Compliance y Ética",
-      "contact": "Contacto",
-      "contactMessage": "Hola! Tengo una pregunta sobre Terpafy. Pueden ayudarme?"
+      "contact": "Contacto"
     },
     "suite": "Terpafy Grow · Care · Med · Assoc · Marketplace",
     "copyright": "© {{year}} Terpafy. Todos los derechos reservados.",
@@ -356,23 +335,143 @@
     "cta": "Hablar con Terpafy Grow",
     "ctaSecondary": "Ver cómo funciona",
     "cards": {
-      "generic": { "title": "Respuestas genéricas que no resuelven", "body": "Foros y grupos entregan opiniones contradictorias. El cultivador aplica la orientación equivocada y pierde tiempo — y a veces el lote entero." },
-      "late": { "title": "Problemas identificados demasiado tarde", "body": "Deficiencias, desviaciones de pH, plagas — sin orientación en el momento correcto, el daño ya está hecho cuando el cultivador lo nota." },
-      "variation": { "title": "Variación entre lotes sin explicación", "body": "El cultivador repite el proceso y obtiene resultados diferentes. Sin orientación estructurada, imposible saber qué cambió." },
-      "noFeedback": { "title": "Ningún retorno sobre lo que el producto produce", "body": "El cultivador entrega y no sabe más nada. No hay ciclo de información entre lo que se produce y lo que el paciente experimenta." }
+      "generic": {
+        "title": "Respuestas genéricas que no resuelven",
+        "body": "Foros y grupos entregan opiniones contradictorias. El cultivador aplica la orientación equivocada y pierde tiempo — y a veces el lote entero."
+      },
+      "late": {
+        "title": "Problemas identificados demasiado tarde",
+        "body": "Deficiencias, desviaciones de pH, plagas — sin orientación en el momento correcto, el daño ya está hecho cuando el cultivador lo nota."
+      },
+      "variation": {
+        "title": "Variación entre lotes sin explicación",
+        "body": "El cultivador repite el proceso y obtiene resultados diferentes. Sin orientación estructurada, imposible saber qué cambió."
+      },
+      "noFeedback": {
+        "title": "Ningún retorno sobre lo que el producto produce",
+        "body": "El cultivador entrega y no sabe más nada. No hay ciclo de información entre lo que se produce y lo que el paciente experimenta."
+      }
     }
   },
   "nav": {
     "home": "Inicio",
-    "features": "Cómo Funciona",
-    "howItWorks": "El Consultor",
+    "problem": "El Problema",
+    "features": "Terpafy Grow",
+    "howItWorks": "Cómo Funciona",
     "benefits": "Para Quién",
-    "forWho": "Para quién",
+    "forWho": "Para Quién",
     "cta": "Hablar con Grow"
   },
   "lang": {
     "pt": "Português",
     "en": "English",
     "es": "Español"
+  },
+  "positioning": {
+    "label": "Posicionamiento",
+    "title": "No es otro grupo más. Es orientación con responsabilidad.",
+    "cta": "Habla con Terpafy Grow",
+    "isLabel": "Terpafy Grow es:",
+    "isNotLabel": "Terpafy Grow no es:",
+    "is": [
+      "Orientación técnica especializada en cannabis",
+      "Diagnóstico contextual, no una respuesta genérica",
+      "Lenguaje adaptado a tu nivel",
+      "La puerta de entrada al ecosistema Terpafy",
+      "Disponible ahora, para cualquier cultivador"
+    ],
+    "isNot": [
+      "Un foro o grupo de WhatsApp informal",
+      "Una búsqueda con resultados sin contexto",
+      "Un software de gestión de cultivo aislado",
+      "Una plataforma para cultivo recreativo",
+      "Una herramienta desconectada del cuidado"
+    ]
+  },
+  "forWho": {
+    "label": "Para quién",
+    "title": "Cada perfil. Un beneficio real.",
+    "subtitle": "Terpafy Grow fue construido para quienes están en la punta de la producción — y para quienes dependen de la calidad de esa punta para cuidar a las personas.",
+    "personas": {
+      "beginner": {
+        "title": "Cultivador Principiante",
+        "subtitle": "El que está empezando",
+        "body": "No necesitas dominar VPD, EC o pH desde el primer día. Terpafy Grow adapta el lenguaje y la profundidad a lo que ya sabes — y te ayuda a entender lo que está pasando en tu planta ahora, sin tener que buscar en varios sitios al mismo tiempo."
+      },
+      "association": {
+        "title": "Director de Asociación",
+        "subtitle": "El gestor que necesita garantizar",
+        "body": "Lo que se produce en tu operación llega a pacientes que dependen de ello. Grow funciona como soporte técnico continuo: valida decisiones de cultivo, anticipa problemas y garantiza que la orientación esté alineada al estándar que tu asociación necesita mantener."
+      },
+      "advanced": {
+        "title": "Cultivador Avanzado",
+        "subtitle": "El grower que quiere precisión",
+        "body": "Ya sabes cultivar. Lo que falta es un punto de verificación que contextualice lo que muestran los datos — pH inestable, estrés lumínico, interacciones de nutrientes — y ayude a tomar decisiones precisas sin el ruido del foro. El especialista está aquí para eso."
+      },
+      "doctor": {
+        "title": "Médico Prescriptor",
+        "subtitle": "El clínico que necesita una base",
+        "body": "La eficacia de lo que prescribes empieza en el cultivo. Terpafy Grow conecta al especialista en cultivo con el médico prescriptor — garantizando que el perfil de la planta que orienta sea compatible con lo que el paciente necesita, basado en evidencia y trazabilidad."
+      }
+    }
+  },
+  "market": {
+    "label": "––– Contexto de mercado",
+    "title": "El mercado creció en regulación. No en orientación.",
+    "paradoxTitle": "La paradoja de la industria",
+    "paradoxBody1": "El cannabis medicinal tiene más acceso y regulación que nunca, pero el cultivador sigue tomando decisiones basadas en foros e intuición.",
+    "paradoxBody2": "Los grupos y foros ofrecen información en volumen, pero sin contexto, sin responsabilidad técnica y sin conocimiento del cultivo específico de cada productor.",
+    "paradoxBox2Rest": "ocupa el vacío: orientación especializada y contextualizada que transforma cada conversación en el inicio de un ciclo de datos conectado al cuidado.",
+    "paradoxBox3": "El software de cultivo aislado entrega dashboards, pero no orienta sobre qué hacer con los datos, y no conecta los resultados con los desenlaces del paciente.",
+    "stats": {
+      "market": {
+        "value": "US$ 57 mil mm",
+        "label": "Mercado global de cannabis en 2028",
+        "description": "Crecimiento impulsado por la regulación y la demanda de tratamientos basados en evidencia. La trazabilidad y la estandarización pasan a ser requisitos, no diferenciales."
+      },
+      "traceability": {
+        "value": "+90%",
+        "label": "De las operaciones sin trazabilidad estructurada",
+        "description": "La mayoría de los cultivadores licenciados todavía dependen de procesos manuales. El estándar regulatorio que avanza exige infraestructura de datos que comienza con la orientación."
+      }
+    },
+    "closing": "Terpafy Grow no compite con foros ni con software de cultivo. Define una nueva categoría: el punto de entrada de un ecosistema que conecta el cultivo con el cuidado. El diferencial es el ciclo que comienza en cada conversación."
+  },
+  "principles": {
+    "label": "––– Principios",
+    "title": "Los filtros que guían cada orientación.",
+    "preamble": "Estos no son valores decorativos. Son los criterios que determinan cómo orienta el especialista, qué hace la plataforma y cómo se trata a cada participante del ecosistema.",
+    "items": {
+      "science": {
+        "number": "01",
+        "title": "Ciencia como Brújula",
+        "body": "Cada orientación está respaldada por validación técnica — no por suposiciones. Priorizamos la evidencia sobre la intuición, desde el sustrato hasta la dosificación."
+      },
+      "intelligence": {
+        "number": "02",
+        "title": "Inteligencia Conectada",
+        "body": "El valor no está en la orientación aislada. Está en la conexión entre lo que ocurre en el cultivo y lo que eso significa para el paciente al final de la cadena."
+      },
+      "care": {
+        "number": "03",
+        "title": "Cuidado en Cada Acción",
+        "body": "Lo que se produce aquí llega a personas que dependen de ello para su bienestar. Cada orientación se realiza con empatía y responsabilidad."
+      },
+      "transparency": {
+        "number": "04",
+        "title": "Transparencia Radical",
+        "body": "Somos abiertos sobre lo que sabemos y las limitaciones de cualquier orientación. La confianza del cultivador se construye con honestidad."
+      },
+      "ecosystem": {
+        "number": "05",
+        "title": "Fortalecer el Ecosistema",
+        "body": "El cultivador que aprende y crece fortalece todo el ecosistema. Construimos para dar autonomía — no para crear dependencia."
+      },
+      "simplify": {
+        "number": "06",
+        "title": "Simplificar lo Complejo",
+        "body": "Nuestra responsabilidad es hacer que la complejidad del cannabis sea accesible para que cualquier cultivador tome mejores decisiones."
+      }
+    }
   }
 }

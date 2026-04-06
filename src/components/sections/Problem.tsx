@@ -5,8 +5,6 @@ import { ChatButton } from "@/components/common/ChatButton";
 
 const CARD_KEYS = ["generic", "late", "variation", "noFeedback"] as const;
 
-// Permanent assets — downloaded from Figma node 2072:2772
-const IMG_PHOTO = "/assets/problem-person.png";
 const IMG_DECO = "/assets/problem-logo-marks.svg";
 
 /**
@@ -26,7 +24,7 @@ export function Problem() {
     <section id="problem" className="bg-background py-16 sm:py-24">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
 
-        {/* ── Two-column: content + image ── */}
+        {/* ── Two-column: content left, logo marks right ── */}
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left — text content */}
@@ -81,34 +79,16 @@ export function Problem() {
             </div>
           </div>
 
-          {/* Right — circular photo with decorative overlay — Figma node 2072:2772
-               Layout: logo marks behind (extend slightly left of circle),
-               woman in circle on top.
-               SVG has preserveAspectRatio="none" + width/height 100% so we must
-               supply explicit pixel dimensions (viewBox 540.16×534.434).
-               At width=470: height = 470 × (534.434/540.16) ≈ 465px. */}
-          <div className="flex items-center justify-center lg:justify-end">
-            <div className="relative" style={{ width: 490, height: 465 }}>
-              {/* Logo marks — behind, left-anchored, overflows left of circle */}
-              <img
-                src={IMG_DECO}
-                alt=""
-                aria-hidden="true"
-                style={{ position: "absolute", left: 0, top: 0, width: 470, height: 465, zIndex: 0 }}
-              />
-              {/* Person photo — circle, right-anchored, overlaps marks */}
-              <div
-                className="absolute overflow-hidden rounded-full"
-                style={{ right: 0, top: 0, width: 420, height: 420, zIndex: 10 }}
-              >
-                <img
-                  src={IMG_PHOTO}
-                  alt={t("problem.imageAlt")}
-                  className="h-full w-full object-cover object-[center_20%]"
-                />
-              </div>
-            </div>
+          {/* Right — decorative logo marks (no human image yet) */}
+          <div className="hidden items-center justify-center lg:flex lg:justify-end">
+            <img
+              src={IMG_DECO}
+              alt=""
+              aria-hidden="true"
+              style={{ width: 470, height: 465 }}
+            />
           </div>
+
         </div>
 
         {/* ── Horizontal snap carousel — Figma: 37:1915 ── */}
@@ -117,12 +97,12 @@ export function Problem() {
             {CARD_KEYS.map((key) => (
               <div
                 key={key}
-                className="flex w-[300px] shrink-0 snap-start flex-col gap-[10px] rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px] sm:w-[360px]"
+                className="flex w-[300px] shrink-0 snap-start items-center overflow-clip rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px] sm:w-[360px]"
               >
                 <div className="flex items-start gap-[10px]">
                   <I3DCubeScan
                     variant="Bold"
-                    className="mt-0.5 size-[24px] shrink-0 text-[#848484]"
+                    className="size-[24px] shrink-0 text-[#848484]"
                     aria-hidden="true"
                   />
                   <div className="flex flex-col gap-[10px]">

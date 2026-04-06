@@ -8,6 +8,8 @@ import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
 import { ChatButton } from "@/components/common/ChatButton";
 
 const NAV_LINKS = [
+  { labelKey: "nav.home", href: "/" },
+  { labelKey: "nav.problem", href: "/#problem" },
   { labelKey: "nav.features", href: "/#features" },
   { labelKey: "nav.howItWorks", href: "/#how-it-works" },
   { labelKey: "nav.forWho", href: "/#for-who" },
@@ -76,32 +78,32 @@ export function Header() {
             : "bg-transparent",
         )}
       >
-        <div className="mx-auto grid h-16 max-w-[1200px] grid-cols-3 items-center px-4 sm:px-6 lg:px-8">
-          {/* Logo — left column */}
+        <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-4 px-4 sm:px-6 lg:px-8">
+          {/* Logo — shrink-0 so it never compresses */}
           <Link
             to="/"
             aria-label="Terpafy Grow — página inicial"
-            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             <Logo />
           </Link>
 
-          {/* Desktop nav — center column, always centered */}
-          <nav aria-label="Navegação principal" className="hidden md:flex md:items-center md:justify-center md:gap-8">
+          {/* Desktop nav — grows to fill available space, centred */}
+          <nav aria-label="Navegação principal" className="hidden flex-1 items-center justify-center gap-4 md:flex lg:gap-8">
             {NAV_LINKS.map(({ labelKey, href }) => (
               <a
                 key={href}
                 href={href}
                 onClick={(e) => handleNavClick(e, href)}
-                className="text-sm font-medium text-foreground-muted transition-colors hover:text-foreground"
+                className="whitespace-nowrap text-sm font-medium text-foreground-muted transition-colors hover:text-foreground"
               >
                 {t(labelKey)}
               </a>
             ))}
           </nav>
 
-          {/* Right column: language switcher + mobile toggle */}
-          <div className="flex items-center justify-end gap-3">
+          {/* Right: language switcher + mobile toggle — shrink-0 so it never compresses */}
+          <div className="ml-auto flex shrink-0 items-center gap-3 md:ml-0">
             <LanguageSwitcher />
             <button
               type="button"
