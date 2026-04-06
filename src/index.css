@@ -60,6 +60,12 @@
   --font-heading: "Anton", serif;
   --font-body: "Inter", "Gotham", "Montserrat", sans-serif;
 
+  /* ─── Shadows — source: figma/Shadows node 2:15780 ─── */
+  --shadow-1: 0 2px 4px rgba(41, 41, 41, 0.08);
+  --shadow-2: 0 4px 8px rgba(41, 41, 41, 0.08);
+  --shadow-3: 0 6px 12px rgba(41, 41, 41, 0.08);
+  --shadow-hover: 0 6px 12px rgba(41, 41, 41, 0.2);
+
   /* ─── Border Radius ─── */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;

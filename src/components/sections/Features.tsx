@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Activity, Bell, Shield, BookOpen } from "lucide-react";
+import { Activity, Notification, Shield, Book1 } from "vuesax-icons-react";
 import { Section } from "@/components/layout/Section";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
 const FEATURE_ICONS = {
   monitoring: Activity,
-  reminders: Bell,
+  reminders: Notification,
   security: Shield,
-  education: BookOpen,
+  education: Book1,
 } as const;
 
 /**
@@ -61,7 +61,7 @@ export function Features() {
                   className="rounded-xl border border-border bg-background p-6"
                 >
                   <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon variant="Bold" className="h-5 w-5 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="mb-2 font-semibold text-foreground">
                     {t(`features.items.${key}.title`)}

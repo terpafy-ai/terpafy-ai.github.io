@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { TickCircle, ShieldTick, Flash } from "vuesax-icons-react";
 import { Section } from "@/components/layout/Section";
 
 const PATIENT_KEYS = ["never", "privacy", "communication"] as const;
 const PROFESSIONAL_KEYS = ["realtime", "insights", "workflow"] as const;
-const TRUST_ICONS = [ShieldCheck, Zap, CheckCircle2] as const;
+const TRUST_ICONS = [ShieldTick, Flash, TickCircle] as const;
 const TRUST_KEYS = ["lgpd", "encryption", "support"] as const;
 
 /**
@@ -46,7 +46,8 @@ export function Benefits() {
             <ul className="space-y-4">
               {PATIENT_KEYS.map((key) => (
                 <li key={key} className="flex items-start gap-3">
-                  <CheckCircle2
+                  <TickCircle
+                    variant="Bold"
                     className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
                     aria-hidden="true"
                   />
@@ -74,7 +75,8 @@ export function Benefits() {
             <ul className="space-y-4">
               {PROFESSIONAL_KEYS.map((key) => (
                 <li key={key} className="flex items-start gap-3">
-                  <CheckCircle2
+                  <TickCircle
+                    variant="Bold"
                     className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
                     aria-hidden="true"
                   />
@@ -101,7 +103,7 @@ export function Benefits() {
                 key={key}
                 className="flex items-center justify-center gap-3 px-6 py-6"
               >
-                <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                <Icon variant="Bold" className="h-5 w-5 text-primary" aria-hidden="true" />
                 <span className="text-sm font-semibold text-foreground">
                   {t(`benefits.trust.${key}`)}
                 </span>
