@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "vuesax-icons-react";
 import { TickCircle, CloseCircle } from "vuesax-icons-react";
 import { useTranslation } from "react-i18next";
 
@@ -82,7 +82,7 @@ export function Positioning() {
             className="inline-flex items-center gap-2 rounded-[4px] bg-primary pl-8 pr-6 py-4 text-base font-normal text-white transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             {t("positioning.cta")}
-            <ArrowRight className="h-5 w-5" />
+            <ArrowRight variant="Bold" className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
       </div>

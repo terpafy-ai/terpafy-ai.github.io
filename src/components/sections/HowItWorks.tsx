@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { CopySuccess } from "vuesax-icons-react";
-import { ArrowRight } from "lucide-react";
+import { CopySuccess, ArrowRight } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { ChatButton } from "@/components/common/ChatButton";
 
@@ -37,7 +36,7 @@ function CapacityCard({ capacityKey }: { capacityKey: (typeof CAPACITY_KEYS)[num
         {bullets.map((bullet, i) => (
           <li key={i} className="flex items-center gap-4">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f2594b]" aria-hidden="true">
-              <ArrowRight className="h-4 w-4 text-white" />
+              <ArrowRight variant="Bold" className="h-4 w-4 text-white" aria-hidden="true" />
             </span>
             <span className="text-xs font-medium leading-5 text-[#71717a]">{bullet}</span>
           </li>
