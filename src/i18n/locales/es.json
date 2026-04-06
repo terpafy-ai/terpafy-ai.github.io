@@ -48,15 +48,15 @@
         "title": "Conocimiento especializado",
         "description": "VPD, pH, EC, perfil de terpenos, manejo de nutrientes, plagas, poda, floración — profundidad técnica real sobre cannabis."
       },
-      "adaptive": {
+      "adapts": {
         "title": "Se adapta a tu nivel",
         "description": "Principiante o avanzado. El lenguaje, la profundidad y el tipo de orientación cambian según quién pregunta."
       },
-      "immediate": {
+      "available": {
         "title": "Cuando lo necesitas",
         "description": "Los problemas de cultivo no esperan. La orientación está disponible cuando el cultivador identifica el problema — no al día siguiente."
       },
-      "contextual": {
+      "diagnosis": {
         "title": "Diagnóstico contextual",
         "description": "Pregunta lo que necesita antes de orientar. No entrega respuestas prefabricadas — entrega diagnósticos basados en tu caso."
       },
@@ -71,8 +71,10 @@
     }
   },
   "bigChat": {
-    "title1": "Bienvenido a ",
+    "title1": "Bienvenido a",
+    "title2": "Terpafy",
     "titleBrand": "Grow",
+    "comingSoon": "Próximamente — Terpafy Grow está en camino.",
     "subtitle": "Un especialista en cultivo de cannabis disponible para orientar tu planta",
     "placeholder": "Escribe tu pregunta...",
     "defend": "Lo que defendemos",
@@ -85,19 +87,40 @@
   "howItWorks": {
     "label": "Cómo funciona",
     "title": "Cada conversación. Una orientación real.",
-    "subtitle": "Sin aplicación, sin registro. Solo tú, tu planta y Terpafy Grow.",
-    "steps": {
-      "connect": {
-        "title": "Conecta por WhatsApp",
-        "description": "Inicia una conversación con Terpafy Grow en WhatsApp — sin descargar ninguna app."
+    "transcript": {
+      "messages": [
+        { "role": "user", "time": "11:15", "text": "Las hojas del medio tienen manchas amarillas entre las nervaduras." },
+        { "role": "bot",  "time": "11:15", "text": "Manchas entre nervaduras — buena observación. Para confirmar: ¿qué sustrato y qué pH estás usando para regar?" },
+        { "role": "user", "time": "11:18", "text": "Coco coir, pH 5.9." },
+        { "role": "bot",  "time": "11:19", "text": "Coco a pH 5.9 bloquea la absorción de magnesio — este es el cuadro clásico de deficiencia de Mg por pH bajo. Corrige a 6.0\u20136.2 y agrega 1g/L de sulfato de magnesio por 2 semanas. ¿Quieres el paso a paso?" }
+      ]
+    },
+    "capacities": {
+      "diagnosis": {
+        "number": "01",
+        "label": "Diagnóstico",
+        "title": "Pregunta lo que necesita saber antes de orientar.",
+        "body": "Terpafy Grow no entrega respuestas prefabricadas. Entiende el contexto de tu cultivo — fase, sustrato, síntomas, condiciones — antes de indicar cualquier acción. Eso hace la diferencia entre una orientación que funciona y una que empeora el problema.",
+        "bullets": [
+          "Hace las preguntas correctas para entender tu caso, sin jerga innecesaria",
+          "Identifica la causa más probable antes de recomendar la solución",
+          "Orienta cómo confirmar el diagnóstico por las señales visuales de la planta",
+          "Indica cuándo el problema es urgente versus cuándo puede monitorearse"
+        ],
+        "cta": "Hablar con Terpafy Grow"
       },
-      "track": {
-        "title": "Describe tu planta",
-        "description": "Cuéntanos lo que ves: síntomas, etapa, ambiente. El especialista entiende tu contexto."
-      },
-      "monitor": {
-        "title": "Recibe orientación precisa",
-        "description": "Cada respuesta está personalizada para tu cultivo, basada en lo que describiste ahora."
+      "adaptation": {
+        "number": "02",
+        "label": "Adaptación",
+        "title": "Del principiante al avanzado, sin cambiar de canal.",
+        "body": "Terpafy Grow identifica tu nivel y adapta la profundidad de la orientación. Los principiantes no reciben una clase técnica. Quienes ya dominan lo básico no reciben respuestas simplificadas.",
+        "bullets": [
+          "Lenguaje accesible para quienes están plantando sus primeras plántulas, sin intimidar",
+          "Profundidad técnica real para quienes trabajan con VPD, DLI, EC y perfil de terpenos",
+          "Explica el razonamiento, no solo la acción, para quienes quieren aprender mientras avanzan",
+          "El mismo especialista sigue la evolución del cultivador con el tiempo"
+        ],
+        "cta": "Hablar con Terpafy Grow"
       }
     }
   },

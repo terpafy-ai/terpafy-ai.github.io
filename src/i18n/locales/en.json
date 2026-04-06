@@ -48,15 +48,15 @@
         "title": "Specialized knowledge",
         "description": "VPD, pH, EC, terpene profile, nutrient management, pests, pruning, flowering — real technical depth on cannabis."
       },
-      "adaptive": {
+      "adapts": {
         "title": "Adapts to your level",
         "description": "Beginner or advanced. The language, depth, and type of guidance change based on who is asking."
       },
-      "immediate": {
+      "available": {
         "title": "When you need it",
         "description": "Cultivation problems don't wait. Guidance is available when the grower identifies the problem — not the next day."
       },
-      "contextual": {
+      "diagnosis": {
         "title": "Contextual diagnosis",
         "description": "Asks what it needs before guiding. Doesn't deliver canned answers — delivers diagnoses based on your case."
       },
@@ -71,8 +71,10 @@
     }
   },
   "bigChat": {
-    "title1": "Welcome to ",
+    "title1": "Welcome to",
+    "title2": "Terpafy",
     "titleBrand": "Grow",
+    "comingSoon": "Coming soon — Terpafy Grow is on its way.",
     "subtitle": "A cannabis cultivation specialist available to guide your plant",
     "placeholder": "Type your question...",
     "defend": "What we stand for",
@@ -85,19 +87,40 @@
   "howItWorks": {
     "label": "How it works",
     "title": "Every conversation. Real guidance.",
-    "subtitle": "No app, no sign-up. Just you, your plant, and Terpafy Grow.",
-    "steps": {
-      "connect": {
-        "title": "Connect via WhatsApp",
-        "description": "Start a conversation with Terpafy Grow on WhatsApp — no app to download."
+    "transcript": {
+      "messages": [
+        { "role": "user", "time": "11:15", "text": "The middle leaves have yellow spots between the veins." },
+        { "role": "bot",  "time": "11:15", "text": "Spots between veins — good observation. To confirm: what substrate and what pH are you watering with?" },
+        { "role": "user", "time": "11:18", "text": "Coco coir, pH 5.9." },
+        { "role": "bot",  "time": "11:19", "text": "Coco at pH 5.9 blocks magnesium absorption — this is the classic Mg deficiency from low pH. Correct to 6.0\u20136.2 and add 1g/L of magnesium sulfate for 2 weeks. Want the step by step?" }
+      ]
+    },
+    "capacities": {
+      "diagnosis": {
+        "number": "01",
+        "label": "Diagnosis",
+        "title": "Asks what it needs to know before guiding.",
+        "body": "Terpafy Grow doesn't deliver canned answers. It understands the context of your cultivation — stage, substrate, symptoms, conditions — before recommending any action. This makes the difference between guidance that works and guidance that makes things worse.",
+        "bullets": [
+          "Asks the right questions to understand your case, without unnecessary jargon",
+          "Identifies the most likely cause before recommending the solution",
+          "Guides you on how to confirm the diagnosis through the plant's visual signs",
+          "Indicates when the problem is urgent versus when it can be monitored"
+        ],
+        "cta": "Talk to Terpafy Grow"
       },
-      "track": {
-        "title": "Describe your plant",
-        "description": "Tell us what you see: symptoms, stage, environment. The specialist understands your context."
-      },
-      "monitor": {
-        "title": "Get precise guidance",
-        "description": "Every answer is personalized for your cultivation, based on what you described right now."
+      "adaptation": {
+        "number": "02",
+        "label": "Adaptation",
+        "title": "From beginner to advanced, without switching channels.",
+        "body": "Terpafy Grow identifies your level and adapts the depth of guidance. Beginners don't get a technical lecture. Those who already master the basics don't get simplified answers.",
+        "bullets": [
+          "Accessible language for those planting their first seedlings, without intimidating",
+          "Real technical depth for those working with VPD, DLI, EC, and terpene profiles",
+          "Explains the reasoning, not just the action, for those who want to learn along the way",
+          "The same specialist follows the grower's progress over time"
+        ],
+        "cta": "Talk to Terpafy Grow"
       }
     }
   },
