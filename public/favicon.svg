@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Terpafy">
+  <circle cx="16" cy="16" r="16" fill="#F2594B"/>
+  <text x="16" y="22" font-family="Anton, serif" font-size="18" fill="#F6F6F6" text-anchor="middle">T</text>
+  <!-- TODO: Replace with final favicon export from Figma (figma-export/assets/favicon.svg) -->
+</svg>

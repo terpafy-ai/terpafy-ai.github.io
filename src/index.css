@@ -1,37 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  /* ─── Brand Colors — source: figma-export/colors.md ─── */
+
+  /* Primary: Terpafy Pulse (Red) */
+  --color-primary: #f2594b;
+  --color-primary-dark: #b33327;
+  --color-primary-light: #f1877d;
+  --color-primary-lighter: #f2bcb7;
+  --color-primary-lightest: #eedddb;
+  --color-primary-foreground: #f6f6f6;
+
+  /* Secondary: Signal Intelligence (Yellow) */
+  --color-secondary: #eaf205;
+  --color-secondary-dark: #b0b601;
+  --color-secondary-light: #eff470;
+  --color-secondary-lighter: #ecefa3;
+  --color-secondary-lightest: #eeefcc;
+  --color-secondary-foreground: #3a3a3a;
+
+  /* Accent: Connected Flow (Cyan) */
+  --color-accent: #0aeded;
+  --color-accent-dark: #06aeae;
+  --color-accent-light: #78e9e9;
+  --color-accent-lighter: #b1eded;
+  --color-accent-lightest: #d9eded;
+  --color-accent-foreground: #3a3a3a;
+
+  /* Accent Green: Living Science (Olive) */
+  --color-accent-green: #93a603;
+  --color-accent-green-dark: #4a5402;
+  --color-accent-green-light: #bdc580;
+  --color-accent-green-foreground: #f6f6f6;
+
+  /* Neutrals */
+  --color-foreground: #3a3a3a;
+  --color-foreground-muted: #5c6068;
+  --color-background: #f6f6f6;
+  --color-background-dark: #3a3a3a;
+  --color-background-light: #d6d1dc;
+  --color-muted: #e8d8e9;
+  --color-muted-foreground: #5c6068;
+  --color-border: #d6d6d6;
+  --color-input: #d6d6d6;
+
+  /* Brand Secondaries */
+  --color-neutral-dark: #592e25;
+  --color-neutral-warm: #d9bfb0;
+
+  /* Semantic */
+  --color-ring: #f2594b;
+  --color-destructive: #b33327;
+  --color-destructive-foreground: #f6f6f6;
+  --color-success: #93a603;
+  --color-warning: #eaf205;
+  --color-error: #b33327;
+
+  /* ─── Typography — source: figma-export/typography.md ─── */
+  --font-heading: "Anton", serif;
+  --font-body: "Inter", "Gotham", "Montserrat", sans-serif;
+
+  /* ─── Border Radius ─── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius: 0.5rem;
+
+  /* ─── Spacing scale base ─── */
+  --spacing: 0.25rem;
+}
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+
   body {
-    font-family: 'Open Sans', sans-serif;
-    color: #2C2C2C;
-    background-color: white;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-  }
-}
 
-@layer components {
-  .btn-primary {
-    @apply bg-[#1E642E] hover:bg-[#164A22] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200;
-  }
-  
-  .btn-secondary {
-    @apply bg-[#9ACD32] hover:bg-[#7BA428] text-[#1E642E] font-semibold py-3 px-6 rounded-md transition-colors duration-200;
-  }
-  
-  .card {
-    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 }
