@@ -20,10 +20,10 @@ export function Principles() {
           <p className="mb-4 text-[20px] font-normal text-[#f2594b]">
             {t("principles.label")}
           </p>
-          <h2 className="mb-4 text-[40px] font-bold leading-tight text-[#3a3a3a]">
+          <h2 className="mb-4 text-[40px] font-bold leading-tight text-foreground">
             {t("principles.title")}
           </h2>
-          <p className="text-[13px] font-medium leading-relaxed text-[#848484]">
+          <p className="text-[13px] font-medium leading-relaxed text-foreground-muted">
             {t("principles.preamble")}
           </p>
         </div>
@@ -33,7 +33,7 @@ export function Principles() {
           {PRINCIPLE_KEYS.map((key) => (
             <div
               key={key}
-              className="rounded-[4px] border border-[#3a3a3a] bg-[rgba(255,255,255,0.5)] px-[21px] pb-[26px] pt-[27px] backdrop-blur-[10px]"
+              className="rounded-[4px] border border-border bg-card/80 px-[21px] pb-[26px] pt-[27px] backdrop-blur-[10px]"
             >
               {/* Number */}
               <p className="text-[10px] font-normal text-[#f2594b]">
@@ -41,12 +41,12 @@ export function Principles() {
               </p>
 
               {/* Title */}
-              <p className="mt-3 text-[14px] font-semibold text-[#3a3a3a]">
+              <p className="mt-3 text-[14px] font-semibold text-foreground">
                 {t(`principles.items.${key}.title`)}
               </p>
 
               {/* Body */}
-              <p className="mt-3 text-[14px] font-medium leading-relaxed text-[#848484]">
+              <p className="mt-3 text-[14px] font-medium leading-relaxed text-foreground-muted">
                 {t(`principles.items.${key}.body`)}
               </p>
             </div>

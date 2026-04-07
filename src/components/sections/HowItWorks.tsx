@@ -6,6 +6,8 @@ import { ChatButton } from "@/components/common/ChatButton";
 const CAPACITY_KEYS = ["diagnosis", "adaptation"] as const;
 
 const imgLogoMarks = "/assets/how-it-works-logo-marks.svg";
+const imgPerson = "/assets/how-it-works-person.png";
+const imgPerson2 = "/assets/how-it-works-person-2.png";
 
 function CapacityCard({ capacityKey }: { capacityKey: (typeof CAPACITY_KEYS)[number] }) {
   const { t } = useTranslation();
@@ -16,18 +18,18 @@ function CapacityCard({ capacityKey }: { capacityKey: (typeof CAPACITY_KEYS)[num
   return (
     <div className="mt-16 flex flex-col gap-6">
       {/* Badge */}
-      <span className="inline-flex self-start items-center gap-[8px] overflow-clip rounded-[4px] border border-[#f2594b] bg-[rgba(242,89,75,0.1)] pl-[32px] pr-[24px] py-[16px] text-[12px] font-normal leading-none text-[#f2594b] whitespace-nowrap">
+      <span className="inline-flex self-start items-center gap-[8px] overflow-clip rounded-[4px] border border-primary bg-primary/10 pl-[32px] pr-[24px] py-[16px] text-[12px] font-normal leading-none text-primary whitespace-nowrap">
         {t("howItWorks.capabilityLabel")} {t(`howItWorks.capacities.${capacityKey}.number`)} · {t(`howItWorks.capacities.${capacityKey}.label`)}
         <CopySuccess variant="Bold" className="h-5 w-5 shrink-0" aria-hidden="true" />
       </span>
 
       {/* Title */}
-      <h3 className="max-w-[897px] text-3xl font-bold leading-9 text-[#3a3a3a]">
+      <h3 className="max-w-[897px] text-3xl font-bold leading-9 text-foreground">
         {t(`howItWorks.capacities.${capacityKey}.title`)}
       </h3>
 
       {/* Body */}
-      <p className="max-w-[897px] text-xs font-medium leading-5 text-[#71717a]">
+      <p className="max-w-[897px] text-xs font-medium leading-5 text-foreground-muted">
         {t(`howItWorks.capacities.${capacityKey}.body`)}
       </p>
 
@@ -38,7 +40,7 @@ function CapacityCard({ capacityKey }: { capacityKey: (typeof CAPACITY_KEYS)[num
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f2594b]" aria-hidden="true">
               <ArrowRight variant="Bold" className="h-4 w-4 text-white" aria-hidden="true" />
             </span>
-            <span className="text-xs font-medium leading-5 text-[#71717a]">{bullet}</span>
+            <span className="text-xs font-medium leading-5 text-foreground-muted">{bullet}</span>
           </li>
         ))}
       </ul>
@@ -70,13 +72,13 @@ function UserBubble({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[10px_10px_10px_5px] border border-[#f2594b] bg-[rgba(242,89,75,0.2)] backdrop-blur-[16px]",
+        "overflow-hidden rounded-[10px_10px_10px_5px] border border-primary bg-primary/20 backdrop-blur-[16px]",
         className,
       )}
     >
       <div className="px-[10px] pt-[15px] pb-[15px]">
-        <p className="text-[14px] font-medium leading-[1.5] text-[#3a3a3a]">{children}</p>
-        <p className="mt-1 text-right text-[12px] font-medium leading-[1.5] text-[#3a3a3a]">
+        <p className="text-[14px] font-medium leading-[1.5] text-foreground">{children}</p>
+        <p className="mt-1 text-right text-[12px] font-medium leading-[1.5] text-foreground">
           {time}
         </p>
       </div>
@@ -96,13 +98,13 @@ function BotBubble({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[10px_10px_5px_10px] bg-gradient-to-b from-[rgba(58,58,58,0.3)] to-[rgba(160,160,160,0.03)] outline outline-1 -outline-offset-1 outline-[#3a3a3a] backdrop-blur-lg",
+        "overflow-hidden rounded-[10px_10px_5px_10px] bg-gradient-to-b from-foreground/30 to-[rgba(160,160,160,0.03)] outline outline-1 -outline-offset-1 outline-border backdrop-blur-lg",
         className,
       )}
     >
       <div className="px-[15px] pt-[15px] pb-[15px]">
-        <p className="text-[14px] font-medium leading-5 text-[#3a3a3a]">{children}</p>
-        <p className="mt-1 text-right text-[12px] font-medium leading-4 text-[#3a3a3a]">
+        <p className="text-[14px] font-medium leading-5 text-foreground">{children}</p>
+        <p className="mt-1 text-right text-[12px] font-medium leading-4 text-foreground">
           {time}
         </p>
       </div>
@@ -144,7 +146,7 @@ export function HowItWorks() {
             <span className="inline-block h-px w-8 bg-[#f2594b]" aria-hidden="true" />
             {t("howItWorks.label")}
           </p>
-          <h2 className="text-[40px] font-bold leading-[1.12] text-[#3a3a3a]">
+          <h2 className="text-[40px] font-bold leading-[1.12] text-foreground">
             {t("howItWorks.title")}
           </h2>
         </div>
@@ -154,7 +156,7 @@ export function HowItWorks() {
 
       {/* Composition 1 (logo left, bubbles right) */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
-        <div className="relative overflow-visible" style={{ minHeight: 640 }}>
+        <div className="relative overflow-visible" style={{ minHeight: 700 }}>
           {/* Logo marks — behind the oval crop (node 33:442) */}
           <img
             src={imgLogoMarks}
@@ -163,6 +165,20 @@ export function HowItWorks() {
             className="absolute"
             style={{ left: 85, top: 0, width: 540, height: 534, zIndex: 10 }}
           />
+
+          {/* Man circular photo (node 37:1677) — overlaps left edge */}
+          <div
+            className="absolute overflow-hidden rounded-full"
+            style={{ left: -120, top: 135, width: 532, height: 532, zIndex: 20 }}
+          >
+            <img
+              src={imgPerson}
+              alt=""
+              aria-hidden="true"
+              className="absolute"
+              style={{ left: 69, top: -92, width: 371, height: 681, objectFit: "cover" }}
+            />
+          </div>
 
           {/* User bubble 1 (node 37:1682) — top-right of composition */}
           <div className="absolute" style={{ left: 478, top: 65, width: 390, zIndex: 30 }}>
@@ -193,8 +209,8 @@ export function HowItWorks() {
 
       {/* Composition 2 (logo right, bubbles left) */}
       <div className="mx-auto hidden max-w-[1200px] lg:block">
-        <div className="relative overflow-visible" style={{ minHeight: 520 }}>
-          {/* Logo marks — right side, behind oval (node 33:442) */}
+        <div className="relative overflow-visible" style={{ minHeight: 640 }}>
+          {/* Logo marks — right side, behind oval (node 37:1844) */}
           <img
             src={imgLogoMarks}
             alt=""
@@ -202,6 +218,19 @@ export function HowItWorks() {
             className="absolute"
             style={{ left: 466, top: 0, width: 480, height: 480, zIndex: 10 }}
           />
+
+          {/* Woman circular photo (node 37:1843 / 37:1852) */}
+          <div
+            className="absolute overflow-hidden rounded-full"
+            style={{ left: 528, top: 17, width: 533, height: 533, zIndex: 20 }}
+          >
+            <img
+              src={imgPerson2}
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
 
           {/* User bubble 1 (node 37:1864) */}
           <div className="absolute" style={{ left: 173, top: 41, width: 403, zIndex: 30 }}>

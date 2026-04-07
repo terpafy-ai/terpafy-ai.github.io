@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Prevent horizontal scrollbar from decorative overflow (e.g. Problem section bleed) */
+html,
+body {
+  overflow-x: hidden;
+}
+
 @theme {
   /* ─── Brand Colors — source: figma-export/colors.md ─── */
 
@@ -55,6 +61,7 @@
   --color-success: #93a603;
   --color-warning: #eaf205;
   --color-error: #b33327;
+  --color-card: #ffffff;
 
   /* ─── Typography — source: figma-export/typography.md ─── */
   --font-heading: "Anton", serif;
@@ -102,4 +109,42 @@
   h6 {
     font-family: var(--font-heading);
   }
+}
+
+/* ── Dark mode — OS preference ─────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #3a3a3a;
+    --color-foreground: #f6f6f6;
+    --color-foreground-muted: #848484;
+    --color-background-dark: #1e1e1e;
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-muted: rgba(255, 255, 255, 0.08);
+    --color-primary-lightest: rgba(242, 89, 75, 0.15);
+    --color-card: #2a2a2a;
+  }
+}
+
+/* ── Dark mode — manual class toggle (overrides OS preference) */
+.dark {
+  --color-background: #3a3a3a;
+  --color-foreground: #f6f6f6;
+  --color-foreground-muted: #848484;
+  --color-background-dark: #1e1e1e;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-muted: rgba(255, 255, 255, 0.08);
+  --color-primary-lightest: rgba(242, 89, 75, 0.15);
+  --color-card: #2a2a2a;
+}
+
+/* ── Light mode — explicit class (overrides OS dark preference) */
+.light {
+  --color-background: #f6f6f6;
+  --color-foreground: #3a3a3a;
+  --color-foreground-muted: #5c6068;
+  --color-background-dark: #3a3a3a;
+  --color-border: #d6d6d6;
+  --color-muted: #e8d8e9;
+  --color-primary-lightest: #eedddb;
+  --color-card: #ffffff;
 }
