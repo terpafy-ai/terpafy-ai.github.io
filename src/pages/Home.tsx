@@ -4,9 +4,9 @@ import { Features } from "@/components/sections/Features";
 import { Positioning } from "@/components/sections/Positioning";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ForWho } from "@/components/sections/ForWho";
+import { Manifesto } from "@/components/sections/Manifesto";
 import { MarketContext } from "@/components/sections/MarketContext";
 import { Principles } from "@/components/sections/Principles";
-import { Manifesto } from "@/components/sections/Manifesto";
 import { CTA } from "@/components/sections/CTA";
 
 export function Home() {
@@ -18,9 +18,9 @@ export function Home() {
       <Positioning />
       <HowItWorks />
       <ForWho />
+      <Manifesto />
       <MarketContext />
       <Principles />
-      <Manifesto />
       <CTA />
     </main>
   );

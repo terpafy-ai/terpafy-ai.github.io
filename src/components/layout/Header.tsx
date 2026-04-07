@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HambergerMenu, CloseCircle } from "vuesax-icons-react";
+import { HambergerMenu, CloseCircle, Moon, Sun } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/common/Logo";
 import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
@@ -25,6 +25,26 @@ export function Header() {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") return true;
+    if (saved === "light") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  // Apply .dark / .light class on <html> and persist to localStorage
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+      root.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.add("light");
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
 
   const isHome = pathname === "/";
 
@@ -102,9 +122,27 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right: language switcher + mobile toggle — shrink-0 so it never compresses */}
+          {/* Right: language switcher + dark toggle + mobile menu toggle */}
           <div className="ml-auto flex shrink-0 items-center gap-3 md:ml-0">
             <LanguageSwitcher />
+
+            {/* Dark mode toggle */}
+            <button
+              type="button"
+              aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
+              onClick={() => setIsDark((prev) => !prev)}
+              className={cn(
+                "flex items-center justify-center rounded-md p-2",
+                "text-foreground-muted transition-colors hover:text-foreground",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+              )}
+            >
+              {isDark ? (
+                <Sun variant="Bold" className="h-5 w-5" aria-hidden="true" />
+              ) : (
+                <Moon variant="Bold" className="h-5 w-5" aria-hidden="true" />
+              )}
+            </button>
             <button
               type="button"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}

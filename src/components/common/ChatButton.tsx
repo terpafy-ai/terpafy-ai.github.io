@@ -4,6 +4,7 @@ import { ArrowRight } from "vuesax-icons-react";
 import { cn } from "@/lib/utils";
 
 const CHAT_URL = import.meta.env.VITE_CHAT_URL ?? "";
+const SHOW_CHAT_BUTTON = import.meta.env.VITE_SHOW_CHAT_BUTTON === "true";
 
 interface ChatButtonProps {
   variant?: "primary" | "inline";
@@ -14,7 +15,8 @@ interface ChatButtonProps {
 /**
  * Reusable chat platform CTA button.
  * URL comes from VITE_CHAT_URL env var.
- * When unset, shows a visible "em breve" badge instead of navigating.
+ * Set VITE_SHOW_CHAT_BUTTON=true to make the button visible.
+ * When VITE_CHAT_URL is unset, shows a visible "em breve" badge instead of navigating.
  */
 export function ChatButton({
   variant = "primary",
@@ -23,6 +25,8 @@ export function ChatButton({
 }: ChatButtonProps) {
   const { t } = useTranslation();
   const [showSoon, setShowSoon] = useState(false);
+
+  if (!SHOW_CHAT_BUTTON) return null;
 
   function handleClick(e: React.MouseEvent) {
     if (CHAT_URL) {

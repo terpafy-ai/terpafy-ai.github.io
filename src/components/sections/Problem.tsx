@@ -6,6 +6,8 @@ import { ChatButton } from "@/components/common/ChatButton";
 const CARD_KEYS = ["generic", "late", "variation", "noFeedback"] as const;
 
 const IMG_DECO = "/assets/problem-logo-marks.svg";
+const IMG_PERSON = "/assets/problem-person.png";
+const IMG_PERSON_FULL = "/assets/problem-person-full.png";
 
 /**
  * Problem section — Figma: 37:1672 (image) + 37:1915 (carousel cards).
@@ -45,7 +47,7 @@ export function Problem() {
                 <p className="text-[40px] font-extrabold leading-none text-[#f2594b]">
                   {t("problem.stat")}
                 </p>
-                <p className="max-w-[237px] text-[14px] font-medium leading-[1.5] text-[#848484]">
+                <p className="max-w-[237px] text-[14px] font-medium leading-[1.5] text-foreground-muted">
                   {t("problem.statLabel")}
                 </p>
               </div>
@@ -79,13 +81,53 @@ export function Problem() {
             </div>
           </div>
 
-          {/* Right — decorative logo marks (no human image yet) */}
-          <div className="hidden items-center justify-center lg:flex lg:justify-end">
+          {/* Right — 3-layer composition (Figma: 2072:2772 logo_image_woman)      */}
+          {/* Fixed 600×843 frame matching Figma. Overflows right intentionally.   */}
+          {/* Section has no overflow clip — elements bleed naturally to viewport.  */}
+          <div className="relative hidden lg:block" style={{ width: 600, height: 843 }}>
+
+            {/* Layer 1 (back) — Oval/circle crop of kitchen-background photo */}
+            {/* Rendered via CSS mask on Rectangle (33:441) at page x=687,y=1916 */}
+            {/* Frame-relative: circle at left=70, top=314, size=497×497            */}
+            {/* Photo inside: position relative to circle = left=4, top=-259        */}
+            <div
+              className="absolute overflow-hidden rounded-full"
+              style={{ left: 70, top: 314, width: 497, height: 497, zIndex: 0 }}
+            >
+              <img
+                src={IMG_PERSON}
+                alt=""
+                aria-hidden="true"
+                className="absolute max-w-none"
+                style={{ left: 4, top: -259, width: 521 }}
+              />
+            </div>
+
+            {/* Layer 2 (middle) — Logo marks, horizontal-flip transform */}
+            {/* Figma 33:442: inset-[19.73%_9.91%_75.11%_47.89%], canvas 1280×10349  */}
+            {/* frame-relative left=0 (47.89%×1280−613=0), top=181 (19.73%×10349−1861) */}
             <img
               src={IMG_DECO}
               alt=""
               aria-hidden="true"
-              style={{ width: 470, height: 465 }}
+              className="absolute"
+              style={{
+                left: 0,
+                top: 181,
+                width: 540,
+                height: 534,
+                zIndex: 10,
+                transform: "rotate(180deg) scaleY(-1)",
+              }}
+            />
+
+            {/* Layer 3 (front) — Full woman cutout (transparent-background PNG) */}
+            {/* Figma: 33:453 at frame-relative left=37, top=0, size=563×843      */}
+            <img
+              src={IMG_PERSON_FULL}
+              alt="Cultivadora satisfeita com a orientação do Terpafy Grow"
+              className="absolute"
+              style={{ left: 37, top: 0, width: 563, height: 843, zIndex: 20 }}
             />
           </div>
 
@@ -97,19 +139,19 @@ export function Problem() {
             {CARD_KEYS.map((key) => (
               <div
                 key={key}
-                className="flex w-[300px] shrink-0 snap-start items-center overflow-clip rounded-[4px] border border-[#3a3a3a] bg-[rgba(132,132,132,0.1)] px-[32px] py-[16px] sm:w-[360px]"
+                className="flex w-[300px] shrink-0 snap-start items-center overflow-clip rounded-[4px] border border-border bg-muted px-[32px] py-[16px] sm:w-[360px]"
               >
                 <div className="flex items-start gap-[10px]">
                   <I3DCubeScan
                     variant="Bold"
-                    className="size-[24px] shrink-0 text-[#848484]"
+                    className="size-[24px] shrink-0 text-foreground-muted"
                     aria-hidden="true"
                   />
                   <div className="flex flex-col gap-[10px]">
-                    <p className="text-[14px] font-bold leading-[1.5] text-[#848484]">
+                    <p className="text-[14px] font-bold leading-[1.5] text-foreground-muted">
                       {t(`problem.cards.${key}.title`)}
                     </p>
-                    <p className="text-[13px] font-medium leading-[1.5] text-[#848484]">
+                    <p className="text-[13px] font-medium leading-[1.5] text-foreground-muted">
                       {t(`problem.cards.${key}.body`)}
                     </p>
                   </div>

@@ -53,8 +53,8 @@ export function Hero() {
                 {t("hero.titleLine3")}
               </h1>
 
-              {/* Subtitle — Figma: Inter Medium 14px, #848484 */}
-              <p className="mt-6 max-w-xl text-[14px] font-medium leading-relaxed text-[#848484]">
+              {/* Subtitle — Figma: Inter Medium 14px, muted */}
+              <p className="mt-6 max-w-xl text-[14px] font-medium leading-relaxed text-foreground-muted">
                 {t("hero.subtitle")}
               </p>
 
@@ -91,11 +91,11 @@ export function Hero() {
       </div>
 
       {/* ── ORIENTA — full-bleed strip, Figma: 41:1049 ── */}
-      <div className="border-t border-[rgba(58,58,58,0.2)] bg-background">
+      <div className="border-t border-border bg-background">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 py-5 md:flex-row md:items-center md:gap-[39px] md:py-[30px]">
             <span className="shrink-0 text-[12px] text-foreground">{t("hero.orientaLabel")}</span>
-            <div className="hidden h-[23px] w-px shrink-0 bg-[rgba(58,58,58,0.2)] md:block" aria-hidden="true" />
+            <div className="hidden h-[23px] w-px shrink-0 bg-border md:block" aria-hidden="true" />
             <div className="flex flex-wrap items-center gap-x-[39px] gap-y-2 md:flex-nowrap">
               {orientaTags.map((tag) => (
                 <div key={tag} className="flex shrink-0 items-center gap-2">
@@ -111,14 +111,14 @@ export function Hero() {
       </div>
 
       {/* ── Ecosystem — full-bleed strip, Figma: 41:1065 ── */}
-      <div className="border-t border-[rgba(58,58,58,0.2)] bg-background">
+      <div className="border-t border-border bg-background">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:py-[28px]">
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-[39px]">
               <span className="shrink-0 whitespace-nowrap text-[12px] uppercase tracking-widest text-[#93a603]">
                 {t("hero.ecosystemLabel")}
               </span>
-              <div className="hidden h-[23px] w-px shrink-0 bg-[rgba(58,58,58,0.2)] md:block" aria-hidden="true" />
+              <div className="hidden h-[23px] w-px shrink-0 bg-border md:block" aria-hidden="true" />
               <p className="max-w-[600px] text-[12px] text-foreground">{t("hero.ecosystemDescription")}</p>
             </div>
             <div className="flex flex-wrap gap-x-[10px] gap-y-[7px] md:ml-auto">
@@ -128,7 +128,7 @@ export function Hero() {
                   className={
                     i === 0
                       ? "rounded-[4px] border border-[#93a603] bg-[rgba(147,166,3,0.1)] px-2.5 py-2 text-[10px] text-[#93a603]"
-                      : "rounded-[4px] border border-[#8a8a8a] bg-[rgba(138,138,138,0.1)] px-2.5 py-2 text-[10px] text-[#8a8a8a]"
+                      : "rounded-[4px] border border-foreground-muted bg-muted px-2.5 py-2 text-[10px] text-foreground-muted"
                   }
                 >
                   {pill}

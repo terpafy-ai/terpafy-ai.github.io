@@ -16,10 +16,10 @@ export function ChatCTA() {
         <p className="mb-[36px] text-[20px] font-normal leading-none text-[#f2594b]">
           {t("hero.ctaTagline")}
         </p>
-        <h2 className="mb-[28px] text-[50px] font-bold leading-none text-[#3a3a3a]">
+        <h2 className="mb-[28px] text-[50px] font-bold leading-none text-foreground">
           {t("hero.ctaHeadline")}
         </h2>
-        <p className="mx-auto max-w-[713px] text-[13px] font-medium leading-[150%] text-[#848484]">
+        <p className="mx-auto max-w-[713px] text-[13px] font-medium leading-[150%] text-foreground-muted">
           {t("hero.ctaSubtitle")}
         </p>
       </div>

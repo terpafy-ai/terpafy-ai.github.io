@@ -24,7 +24,7 @@ export function Positioning() {
         </p>
 
         {/* Headline */}
-        <h2 className="mb-12 text-center text-[40px] font-bold leading-[1.12] text-[#3a3a3a]">
+        <h2 className="mb-12 text-center text-[40px] font-bold leading-[1.12] text-foreground">
           {t("positioning.title")}
         </h2>
 
@@ -43,7 +43,7 @@ export function Positioning() {
                     className="h-[22px] w-[22px] flex-shrink-0 text-[#f2594b]"
                     aria-hidden="true"
                   />
-                  <span className="text-[13px] font-normal leading-none text-[#3a3a3a]">
+                  <span className="text-[13px] font-normal leading-none text-foreground">
                     {item}
                   </span>
                 </li>
@@ -52,8 +52,8 @@ export function Positioning() {
           </div>
 
           {/* Is not column */}
-          <div className="flex flex-col gap-[26px] rounded-[4px] border border-[#f0f0f0] bg-[rgba(240,240,240,0.2)] p-5">
-            <p className="text-[16px] font-semibold leading-none text-[#8c8c8c]">
+          <div className="flex flex-col gap-[26px] rounded-[4px] border border-border bg-muted/30 p-5">
+            <p className="text-[16px] font-semibold leading-none text-foreground-muted">
               {t("positioning.isNotLabel")}
             </p>
             <ul className="flex flex-col gap-[26px]">
@@ -61,10 +61,10 @@ export function Positioning() {
                 <li key={i} className="flex items-center gap-4">
                   <CloseCircle
                     variant="Outline"
-                    className="h-[22px] w-[22px] flex-shrink-0 text-[#8c8c8c]"
+                    className="h-[22px] w-[22px] flex-shrink-0 text-foreground-muted"
                     aria-hidden="true"
                   />
-                  <span className="text-[13px] font-normal leading-none text-[#8c8c8c]">
+                  <span className="text-[13px] font-normal leading-none text-foreground-muted">
                     {item}
                   </span>
                 </li>
