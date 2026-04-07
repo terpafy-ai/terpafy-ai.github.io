@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Send } from "vuesax-icons-react";
 
 const CHAT_URL = import.meta.env.VITE_CHAT_URL ?? "";
@@ -55,6 +56,7 @@ function TypingDots() {
 }
 
 export function ChatPreviewWidget() {
+  const { t } = useTranslation();
   const [value, setValue] = useState("");
   const [userMsg, setUserMsg] = useState("");
   const [botSoon, setBotSoon] = useState(false);
@@ -112,13 +114,13 @@ export function ChatPreviewWidget() {
         {/* Title */}
         <div className="min-w-0 flex-1">
           <p className="text-[12px] font-medium leading-none text-white">Terpafy Grow</p>
-          <p className="mt-1 text-[8px] leading-none text-[#4b4b4b]">Cannabis cultivation specialist</p>
+          <p className="mt-1 text-[8px] leading-none text-[#4b4b4b]">{t("bigChat.agentSubtitle")}</p>
         </div>
 
         {/* Online status */}
         <div className="flex shrink-0 items-center gap-1.5">
           <div className="size-[4px] rounded-full bg-secondary" />
-          <span className="text-[9px] font-medium text-secondary">Online</span>
+          <span className="text-[9px] font-medium text-secondary">{t("bigChat.statusOnline")}</span>
         </div>
       </div>
 
